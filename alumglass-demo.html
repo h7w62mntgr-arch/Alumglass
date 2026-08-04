@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlumGlass — Carpintería en aluminio y vidriería · Piriápolis</title>
+<meta name="description" content="Carpintería en aluminio, vidriería y service en general. Aberturas, mamparas, cerramientos y vidrios a medida. Piriápolis, Uruguay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2530;        /* gris azulado muy oscuro — textos fuertes */
+  --steel:#2E3E4E;      /* acero profundo — fondos oscuros / CTA */
+  --slate:#455568;      /* gris pizarra medio */
+  --accent:#3E7CA6;     /* azul vidrio — acento */
+  --accent-2:#6FA3C4;   /* azul claro */
+  --silver:#C3CDD6;     /* plata / aluminio */
+  --mist:#E3EAF0;       /* bruma clara */
+  --muted:#5C6B7A;      /* texto secundario */
+  --line:#E1E7EC;       /* líneas sobre blanco */
+  --line-2:#EEF2F5;
+  --bg:#FFFFFF;         /* fondo principal blanco */
+  --bg-soft:#F5F8FA;    /* gris muy suave para secciones */
+  --wa:#1F8A4C;         /* verde WhatsApp sobrio */
+  --wa-ink:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1180px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Fraunces',serif;font-weight:700;font-size:1.28rem;letter-spacing:.01em;color:var(--ink)}
+.logo small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-top:0}
+.nav-l{display:flex;gap:28px;align-items:center}
+.nav-l a{font-size:.88rem;font-weight:500;color:var(--slate);transition:color .2s}
+.nav-l a:hover,.nav-l a:focus-visible{color:var(--ink)}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:var(--wa-ink);font-weight:600;font-size:.85rem;padding:10px 18px;border-radius:6px;transition:transform .15s,box-shadow .2s,background .2s}
+.btn-wa:hover{transform:translateY(-1px);background:#1A7A43;box-shadow:0 8px 20px rgba(31,138,76,.22)}
+.btn-wa svg,.btn-big svg{width:17px;height:17px;fill:currentColor;flex:none}
+
+/* HERO */
+header{position:relative;padding:150px 24px 88px;background:var(--bg);border-bottom:1px solid var(--line)}
+.hero{max-width:1180px;margin:0 auto;position:relative}
+.hero .label{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.hero .label::before{content:"";width:32px;height:1px;background:var(--accent)}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:1.05;letter-spacing:-.015em;max-width:15ch;margin-bottom:24px;color:var(--ink)}
+h1 em{font-style:italic;color:var(--accent)}
+.hero p{color:var(--muted);font-size:1.08rem;max-width:34rem;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+.btn-big{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:var(--wa-ink);font-weight:600;padding:15px 26px;border-radius:6px;font-size:1rem;transition:transform .15s,box-shadow .2s,background .2s}
+.btn-big:hover{transform:translateY(-2px);background:#1A7A43;box-shadow:0 12px 28px rgba(31,138,76,.24)}
+.btn-line{display:inline-flex;align-items:center;padding:15px 26px;border:1px solid var(--line);border-radius:6px;font-weight:600;color:var(--ink);transition:border-color .2s,background .2s}
+.btn-line:hover{border-color:var(--accent);background:var(--bg-soft)}
+/* datos — signature */
+.course{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg-soft)}
+.course div{padding:22px 26px;border-right:1px solid var(--line)}
+.course div:last-child{border-right:0}
+.course b{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;display:block;color:var(--ink)}
+.course span{font-size:.82rem;color:var(--muted)}
+
+/* OBRAS */
+section{padding:88px 24px}
+.wrap{max-width:1180px;margin:0 auto}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.12;margin-top:12px;color:var(--ink)}
+.head p{color:var(--muted);max-width:26rem;font-size:.95rem}
+.masonry{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:14px}
+.obra{border-radius:10px;overflow:hidden;position:relative;background:linear-gradient(160deg,var(--mist),var(--silver));border:1px solid var(--line)}
+.obra.tall{grid-row:span 2}
+.obra .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--slate);font-family:'Inter',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:16px}
+.obra .cap{position:absolute;left:0;right:0;bottom:0;padding:38px 18px 15px;background:linear-gradient(transparent,rgba(20,30,40,.85));color:#fff;font-weight:600;font-size:.92rem}
+.obra .cap small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin-bottom:2px}
+
+/* SERVICIOS — soft section */
+.soft{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc-card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:32px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,23,25,.08);border-color:var(--line)}
+.svc-card .n{font-family:'Fraunces',serif;font-style:italic;font-weight:600;color:var(--accent);font-size:1rem}
+.svc-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.22rem;margin:10px 0 10px;color:var(--ink)}
+.svc-card p{color:var(--muted);font-size:.93rem}
+
+/* POR QUÉ */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:880px;margin:0 auto}
+.person{border:1px solid var(--line);border-radius:10px;padding:34px;background:var(--bg)}
+.person h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.36rem;margin:10px 0 8px;color:var(--ink)}
+.person p{color:var(--muted);font-size:.93rem}
+
+/* CTA */
+.cta{background:var(--ink);border-top:1px solid var(--ink);text-align:center}
+.cta .label{color:var(--accent-2)}
+.cta h2{max-width:18ch;margin:14px auto;color:#fff}
+.cta p{color:var(--silver);max-width:34rem;margin:0 auto 32px}
+.cta .tels{display:flex;gap:26px;justify-content:center;margin-top:26px;flex-wrap:wrap;color:var(--accent-2);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:500;letter-spacing:.02em}
+
+footer{border-top:1px solid var(--line);padding:32px 24px;background:var(--bg)}
+.foot{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:90;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 28px rgba(31,138,76,.32);transition:transform .15s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+@media (max-width:920px){
+  .masonry{grid-template-columns:repeat(2,1fr)}
+  .svc{grid-template-columns:1fr}
+  .duo{grid-template-columns:1fr}
+  .course{grid-template-columns:1fr}
+  .course div{border-right:0;border-bottom:1px solid var(--line)}
+  .course div:last-child{border-bottom:0}
+  .nav-l a:not(.btn-wa){display:none}
+}
+@media (max-width:560px){.masonry{grid-template-columns:1fr;grid-auto-rows:240px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <div class="logo">ALUMGLASS<small>Aluminio · Vidriería</small></div>
+    <div class="nav-l">
+      <a href="#trabajos">Trabajos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#porque">Por qué nosotros</a>
+      <a class="btn-wa" href="https://wa.me/59891607217" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+        Pedir presupuesto
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="hero">
+    <div class="label">Carpintería en aluminio · Vidriería · Service</div>
+    <h1>Aberturas y cerramientos <em>a medida</em>, con terminación de taller.</h1>
+    <p>Aluminio, vidrio y service en general en Piriápolis y toda la zona. Medimos, fabricamos y colocamos: una sola empresa a cargo de todo tu proyecto.</p>
+    <div class="hero-cta">
+      <a class="btn-big" href="https://wa.me/59891607217" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+        Consultar por WhatsApp
+      </a>
+      <a class="btn-line" href="#trabajos">Ver trabajos</a>
+    </div>
+    <div class="course rv">
+      <div><b>Aluminio</b><span>Aberturas, ventanas, puertas y cerramientos fabricados a medida</span></div>
+      <div><b>Vidriería</b><span>Vidrios, espejos y mamparas de baño cortados y colocados</span></div>
+      <div><b>Service</b><span>Reparación de aberturas, cambio de vidrios y mantenimiento</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="trabajos">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <div class="label">Trabajos</div>
+        <h2>El trabajo habla solo.</h2>
+      </div>
+      <p>Una selección de trabajos realizados. Cerramientos, aberturas, mamparas y vidrios a medida.</p>
+    </div>
+    <div class="masonry">
+      <div class="obra tall rv"><div class="ph">Foto de trabajo<br>(cerramiento de vidrio)</div><div class="cap"><small>Cerramiento</small>Cerramiento de aluminio y vidrio</div></div>
+      <div class="obra rv"><div class="ph">Foto de trabajo<br>(ventana negra)</div><div class="cap"><small>Aberturas</small>Ventana de aluminio línea negra</div></div>
+      <div class="obra rv"><div class="ph">Foto de trabajo<br>(mampara de baño)</div><div class="cap"><small>Vidriería</small>Mampara de baño a medida</div></div>
+      <div class="obra rv"><div class="ph">Foto de trabajo<br>(puerta de entrada)</div><div class="cap"><small>Aberturas</small>Puerta de aluminio con vidrio</div></div>
+      <div class="obra tall rv"><div class="ph">Foto de trabajo<br>(cerramiento de patio)</div><div class="cap"><small>Cerramiento</small>Cierre de galería con vidrio</div></div>
+      <div class="obra rv"><div class="ph">Foto de trabajo<br>(taller)</div><div class="cap"><small>Taller</small>Fabricación propia</div></div>
+      <div class="obra rv"><div class="ph">Foto de trabajo<br>(vidrio a medida)</div><div class="cap"><small>Vidriería</small>Vidrios y espejos a medida</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="servicios">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <div class="label">Servicios</div>
+        <h2>Todo el aluminio y el vidrio, en un solo lugar.</h2>
+      </div>
+      <p>Fabricación propia y colocación a cargo del mismo equipo. Presupuesto claro, sin sorpresas.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-card rv">
+        <div class="n">i.</div>
+        <h3>Carpintería en aluminio</h3>
+        <p>Ventanas, puertas, portones y cerramientos fabricados a medida. Líneas modernas, corredizas y línea negra. Del plano a la colocación.</p>
+      </div>
+      <div class="svc-card rv">
+        <div class="n">ii.</div>
+        <h3>Vidriería</h3>
+        <p>Vidrios, espejos y mamparas de baño cortados y colocados. Cambio de vidrios rotos y templados a medida para todo tipo de ambiente.</p>
+      </div>
+      <div class="svc-card rv">
+        <div class="n">iii.</div>
+        <h3>Service en general</h3>
+        <p>Reparación y mantenimiento de aberturas, cambio de rodamientos, sellado y ajustes. Dejamos tus ventanas y puertas como nuevas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="wrap">
+    <div class="head rv" style="justify-content:center;text-align:center">
+      <div style="margin:0 auto">
+        <div class="label">Por qué nosotros</div>
+        <h2>Taller propio, trabajo prolijo.</h2>
+      </div>
+    </div>
+    <div class="duo">
+      <div class="person rv">
+        <div class="label">Fabricación a medida</div>
+        <h3>Hecho en nuestro taller</h3>
+        <p>No revendemos: fabricamos. Cada abertura y cerramiento se hace a medida en nuestro taller, con los materiales y la terminación que corresponde a cada obra.</p>
+      </div>
+      <div class="person rv">
+        <div class="label">Zona Piriápolis</div>
+        <h3>Cerca y a tiempo</h3>
+        <p>Trabajamos en Piriápolis y toda la zona. Vamos a tomar las medidas, presupuestamos claro y cumplimos con los tiempos que acordamos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap rv">
+    <div class="label">Presupuesto sin compromiso</div>
+    <h2>Contanos qué necesitás.</h2>
+    <p>Escribinos por WhatsApp con tu idea, medidas o foto y te respondemos con un presupuesto claro.</p>
+    <a class="btn-big" href="https://wa.me/59891607217" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <div class="tels">
+      <span>📞 091 607 217</span>
+      <span>📍 Piriápolis, Maldonado</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <div>© 2026 AlumGlass · Carpintería en aluminio y vidriería</div>
+    <div class="label" style="font-size:.62rem">Aluminio · Vidriería · Service · Piriápolis</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/59891607217" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+</a>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>
