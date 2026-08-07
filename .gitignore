@@ -1,2 +1,5 @@
 .claude/
 regueira-construcciones-demo.html
+
+# Paquetes de entrega generados localmente
+*.zip
