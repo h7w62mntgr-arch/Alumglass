@@ -4,136 +4,84 @@
 <meta charset="UTF-8">
 <title>Presupuesto — Sitio web Logística Sanitaria LS</title>
 <style>
-@page{ size:A4; margin:16mm 15mm 18mm 15mm; }
+@page{ size:A4; margin:16mm 15mm 16mm 15mm; }
 
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:'Liberation Sans','Arial',sans-serif;
-  font-size:10pt;
-  line-height:1.55;
-  color:#101828;
-}
+body{font-family:'Liberation Sans','Arial',sans-serif;font-size:10pt;line-height:1.5;color:#101828}
 .check{font-family:'DejaVu Sans',sans-serif}
 
-/* ---------- Paleta ---------- */
-:root{
-  --navy:#0B3C7A;
-  --blue:#1565C0;
-  --soft:#F2F6FC;
-  --line:#D9E2EE;
-  --muted:#5B6779;
-}
-
-h1{font-size:19pt;line-height:1.15;color:#0B3C7A;letter-spacing:-.01em}
-h2{font-size:12pt;color:#0B3C7A;margin-bottom:6pt;letter-spacing:-.01em}
-h3{font-size:10.5pt;color:#101828;margin-bottom:3pt}
-p{margin-bottom:6pt}
+h2{font-size:11.5pt;color:#0B3C7A;letter-spacing:-.01em}
+h3{font-size:10.5pt}
+p{margin-bottom:5pt}
 .muted{color:#5B6779}
 .small{font-size:8.6pt}
-.xsmall{font-size:7.8pt}
-strong{font-weight:700}
 
-.eyebrow{
-  font-size:7.6pt;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#1565C0;
-}
-
-/* ---------- Encabezado ---------- */
-.header{
-  display:flex;justify-content:space-between;align-items:flex-start;
-  border-bottom:2.5pt solid #0B3C7A;padding-bottom:10pt;margin-bottom:14pt;
-}
+/* Encabezado */
+.header{display:flex;justify-content:space-between;align-items:flex-start;
+  border-bottom:2.5pt solid #0B3C7A;padding-bottom:9pt;margin-bottom:12pt}
 .brand{display:flex;gap:10pt;align-items:center}
-.mark{
-  width:42pt;height:42pt;border-radius:7pt;background:#0B3C7A;color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-size:16pt;font-weight:700;letter-spacing:.02em;
-}
+.mark{width:40pt;height:40pt;border-radius:7pt;background:#0B3C7A;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:15pt;font-weight:700}
 .brand .name{font-size:12.5pt;font-weight:700;line-height:1.2}
-.brand .sub{font-size:7.6pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1565C0}
-.doc-meta{text-align:right;font-size:8.6pt;color:#5B6779;line-height:1.5}
-.doc-meta .num{font-size:10.5pt;font-weight:700;color:#101828}
+.brand .sub{font-size:7.4pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1565C0}
+.doc-meta{text-align:right;font-size:8.6pt;color:#5B6779;line-height:1.45}
+.doc-meta .num{font-size:10pt;font-weight:700;color:#101828}
 
-/* ---------- Bloques de datos ---------- */
-.parties{display:flex;gap:10pt;margin-bottom:14pt}
-.party{
-  flex:1;border:1pt solid #D9E2EE;border-radius:5pt;padding:9pt 11pt;background:#fff;
-}
-.party .lbl{font-size:7.4pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1565C0;margin-bottom:4pt}
-.party .who{font-size:10.5pt;font-weight:700;margin-bottom:2pt}
-.party .det{font-size:8.6pt;color:#5B6779;line-height:1.5}
+.intro{background:#F2F6FC;border-left:3pt solid #1565C0;border-radius:0 4pt 4pt 0;
+  padding:8pt 11pt;margin-bottom:14pt}
+.intro p{margin-bottom:0;font-size:9.2pt}
 
-.intro{
-  background:#F2F6FC;border-left:3pt solid #1565C0;border-radius:0 5pt 5pt 0;
-  padding:9pt 12pt;margin-bottom:16pt;
-}
-.intro p{margin-bottom:0;font-size:9.4pt}
+/* Títulos de sección */
+.section{margin-bottom:14pt}
+.section-title{display:flex;align-items:center;gap:7pt;margin-bottom:8pt;
+  padding-bottom:4pt;border-bottom:1pt solid #D9E2EE}
+.section-title .n{width:15pt;height:15pt;border-radius:50%;background:#0B3C7A;color:#fff;
+  font-size:8pt;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
 
-/* ---------- Tabla de planes ---------- */
-table{width:100%;border-collapse:collapse}
-.plans{margin-bottom:10pt;border:1pt solid #D9E2EE;border-radius:5pt;overflow:hidden}
-.plans th,.plans td{padding:6.5pt 9pt;border-bottom:.75pt solid #E7EDF5;vertical-align:top}
-.plans thead th{background:#0B3C7A;color:#fff;font-size:8.6pt;text-align:left;border-bottom:0}
-.plans thead th.c{text-align:center;width:26%}
-.plans tbody td.c{text-align:center}
-.plans tbody tr:last-child td{border-bottom:0}
-.plans tbody tr.group td{background:#F2F6FC;font-weight:700;font-size:8.4pt;letter-spacing:.08em;text-transform:uppercase;color:#0B3C7A}
-.plans td.feat{font-size:9pt}
-.plans td.feat span{display:block;font-size:8.2pt;color:#5B6779;line-height:1.45}
-.yes{color:#1F8A4C;font-weight:700;font-size:11pt}
-.no{color:#B9C4D2;font-weight:700;font-size:11pt}
-.price-row td{background:#F7FAFD;border-top:1.2pt solid #0B3C7A!important;padding-top:9pt;padding-bottom:9pt}
-.price{font-size:16pt;font-weight:700;color:#0B3C7A;line-height:1.1}
-.price small{display:block;font-size:7.6pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5B6779;margin-top:2pt}
+/* Planes */
+.plans{display:flex;gap:11pt}
+.plan{flex:1;border:1pt solid #D9E2EE;border-radius:6pt;overflow:hidden;page-break-inside:avoid}
+.plan.best{border:1.5pt solid #0B3C7A}
+.plan .top{background:#F7FAFD;padding:9pt 12pt;border-bottom:1pt solid #D9E2EE}
+.plan.best .top{background:#0B3C7A}
+.plan .top .t{font-size:8pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1565C0}
+.plan.best .top .t{color:#9CC4EE}
+.plan .top .p{font-size:19pt;font-weight:700;color:#0B3C7A;line-height:1.15}
+.plan.best .top .p{color:#fff}
+.plan .top .u{font-size:8pt;color:#5B6779}
+.plan.best .top .u{color:#C9DBF0}
+.plan ul{list-style:none;padding:10pt 12pt;margin:0}
+.plan li{font-size:9pt;padding-left:13pt;position:relative;margin-bottom:4pt;line-height:1.4}
+.plan li::before{content:"✓";font-family:'DejaVu Sans',sans-serif;position:absolute;left:0;color:#1F8A4C;font-weight:700}
+.plan li.head{padding-left:0;font-weight:700;color:#0B3C7A;font-size:8.6pt}
+.plan li.head::before{content:""}
 
-/* ---------- Tabla simple ---------- */
-.simple{border:1pt solid #D9E2EE;border-radius:5pt;overflow:hidden;margin-bottom:12pt}
-.simple th,.simple td{padding:6pt 9pt;border-bottom:.75pt solid #E7EDF5;font-size:9pt;text-align:left}
-.simple thead th{background:#F2F6FC;color:#0B3C7A;font-size:8.4pt;letter-spacing:.06em;text-transform:uppercase}
-.simple tbody tr:last-child td{border-bottom:0}
-.simple td.r{text-align:right;font-weight:700;white-space:nowrap}
-
-/* ---------- Cajas ---------- */
-.box{border:1pt solid #D9E2EE;border-radius:5pt;padding:10pt 12pt;margin-bottom:12pt}
+/* Cajas */
+.box{border:1pt solid #D9E2EE;border-radius:5pt;padding:9pt 12pt;page-break-inside:avoid}
 .box.warn{background:#FFF8E6;border-color:#EFDCA8}
-.box.warn h3{color:#7A5B12}
-.box h3{margin-bottom:5pt}
-.cols{display:flex;gap:10pt}
+.box.warn h3{color:#7A5B12;margin-bottom:4pt}
+.cols{display:flex;gap:11pt}
 .cols > *{flex:1}
+.mant{display:flex;justify-content:space-between;align-items:center;gap:12pt}
+.mant .pr{font-size:14pt;font-weight:700;color:#0B3C7A;white-space:nowrap;text-align:right;line-height:1.1}
+.mant .pr small{display:block;font-size:7.4pt;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5B6779}
 
-ul{margin:0 0 6pt 13pt}
-li{margin-bottom:2.5pt;font-size:9pt}
-ol.terms{margin:0 0 0 14pt}
-ol.terms > li{margin-bottom:6pt;font-size:8.9pt;line-height:1.5}
+ul.tight{margin:0 0 0 13pt}
+ul.tight li{font-size:9pt;margin-bottom:2pt}
+ol.terms{margin:0 0 0 13pt}
+ol.terms > li{font-size:8.6pt;line-height:1.45;margin-bottom:4pt}
 ol.terms > li strong{color:#0B3C7A}
 
-.section{margin-bottom:16pt}
-.section-title{
-  display:flex;align-items:center;gap:7pt;margin-bottom:8pt;
-  padding-bottom:4pt;border-bottom:1pt solid #D9E2EE;
-}
-.section-title .n{
-  width:16pt;height:16pt;border-radius:50%;background:#0B3C7A;color:#fff;
-  font-size:8.5pt;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none;
-}
-.section-title h2{margin-bottom:0}
-
-/* ---------- Firmas ---------- */
-.signs{display:flex;gap:24pt;margin-top:26pt}
-.sign{flex:1;border-top:1pt solid #101828;padding-top:5pt;font-size:8.4pt;color:#5B6779}
+/* Firmas */
+.signs{display:flex;gap:24pt;margin-top:22pt}
+.sign{flex:1;border-top:1pt solid #101828;padding-top:5pt;font-size:8.2pt;color:#5B6779}
 .sign strong{display:block;font-size:9pt;color:#101828}
-
-.footer-note{
-  margin-top:14pt;padding-top:7pt;border-top:1pt solid #D9E2EE;
-  font-size:7.8pt;color:#5B6779;display:flex;justify-content:space-between;
-}
-
-.page-break{page-break-before:always}
-.avoid-break{page-break-inside:avoid}
+.footer-note{margin-top:12pt;padding-top:6pt;border-top:1pt solid #D9E2EE;
+  font-size:7.6pt;color:#5B6779;display:flex;justify-content:space-between}
 </style>
 </head>
 <body>
 
-<!-- ============ PÁGINA 1 ============ -->
 <div class="header">
   <div class="brand">
     <div class="mark">LS</div>
@@ -144,302 +92,129 @@ ol.terms > li strong{color:#0B3C7A}
   </div>
   <div class="doc-meta">
     <div class="num">PRESUPUESTO N.º PRE-2026-001</div>
-    <div>Fecha de emisión: 7 de agosto de 2026</div>
-    <div>Validez de la oferta: 15 días corridos</div>
-    <div>Moneda: dólares estadounidenses (USD)</div>
-  </div>
-</div>
-
-<div class="parties">
-  <div class="party">
-    <div class="lbl">Presupuesto dirigido a</div>
-    <div class="who">Logística Sanitaria LS</div>
-    <div class="det">
-      Barraca · Ferretería · Sanitaria<br>
-      Pan de Azúcar 2542 esq. 8 de Octubre<br>
-      Unión, Montevideo — CP 11400, Uruguay<br>
-      Instagram: @barracasanitarials
-    </div>
-  </div>
-  <div class="party">
-    <div class="lbl">Emitido por</div>
-    <div class="who">[Nombre del proveedor / estudio]</div>
-    <div class="det">
-      Desarrollo y diseño web<br>
-      RUT: [completar]<br>
-      Tel. / WhatsApp: [completar]<br>
-      Correo: [completar]
-    </div>
+    <div>Fecha: 7 de agosto de 2026</div>
+    <div>Validez: 15 días corridos</div>
+    <div>Moneda: dólares (USD)</div>
   </div>
 </div>
 
 <div class="intro">
-  <p><strong>Objeto del presupuesto.</strong> Diseño, desarrollo y puesta en línea de un sitio web institucional y catálogo de productos para Logística Sanitaria LS, con diseño responsivo (computadora, tablet y celular), enlace directo a WhatsApp y formulario de solicitud de presupuesto. Se ofrecen dos planes alternativos y un servicio mensual de mantenimiento opcional.</p>
+  <p><strong>Objeto.</strong> Diseño, desarrollo y publicación de un sitio web con catálogo de productos, responsivo (celular, tablet y computadora), con botón de WhatsApp y formulario de presupuesto.</p>
 </div>
 
 <div class="section">
-  <div class="section-title"><span class="n">1</span><h2>Planes disponibles</h2></div>
+  <div class="section-title"><span class="n">1</span><h2>Planes</h2></div>
 
-  <table class="plans">
-    <thead>
-      <tr>
-        <th style="width:48%">Alcance incluido</th>
-        <th class="c">Plan Básico</th>
-        <th class="c">Plan Completo</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="group"><td colspan="3">Diseño y estructura</td></tr>
-      <tr>
-        <td class="feat">Sitio de una página (one page)<span>Inicio, rubros, servicios, nosotros y contacto</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Diseño responsivo<span>Adaptado a celular, tablet y computadora</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Diseño a medida con identidad de la empresa<span>Colores, logotipo y tipografías institucionales</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Páginas internas adicionales<span>Hasta 5 secciones separadas (rubros, catálogo, empresa, etc.)</span></td>
-        <td class="c check"><span class="no">—</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
+  <div class="plans">
+    <div class="plan">
+      <div class="top">
+        <div class="t">Plan Básico</div>
+        <div class="p">USD 400</div>
+        <div class="u">Pago único</div>
+      </div>
+      <ul>
+        <li>Sitio de una página con diseño a medida</li>
+        <li>Responsivo en celular, tablet y PC</li>
+        <li>Hasta 20 productos</li>
+        <li>WhatsApp, formulario, mapa y horarios</li>
+        <li>SEO básico</li>
+        <li>2 revisiones · soporte 15 días</li>
+      </ul>
+    </div>
 
-      <tr class="group"><td colspan="3">Contenido y catálogo</td></tr>
-      <tr>
-        <td class="feat">Carga de productos<span>Alta inicial de productos con foto, descripción y categoría</span></td>
-        <td class="c feat">Hasta 20</td>
-        <td class="c feat">Hasta 60</td>
-      </tr>
-      <tr>
-        <td class="feat">Buscador y filtros por rubro<span>Sanitaria, barraca y ferretería</span></td>
-        <td class="c check"><span class="no">—</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Redacción de textos comerciales<span>Sobre la base de la información que aporte el cliente</span></td>
-        <td class="c check"><span class="no">—</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Optimización de imágenes provistas por el cliente</td>
-        <td class="c check"><span class="yes">✓</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-
-      <tr class="group"><td colspan="3">Contacto y funcionalidades</td></tr>
-      <tr>
-        <td class="feat">Botón de WhatsApp y clic para llamar</td>
-        <td class="c check"><span class="yes">✓</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Formulario de solicitud de presupuesto<span>Envío al correo de la empresa</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Mapa de ubicación y horarios</td>
-        <td class="c check"><span class="yes">✓</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Formulario avanzado con lista de materiales<span>Carga de varios ítems y envío del pedido por correo</span></td>
-        <td class="c check"><span class="no">—</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Integración con Instagram y redes</td>
-        <td class="c check"><span class="no">—</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-
-      <tr class="group"><td colspan="3">Posicionamiento y entrega</td></tr>
-      <tr>
-        <td class="feat">SEO técnico básico<span>Títulos, descripciones, velocidad y datos estructurados</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Ficha de Google Empresa y Google Analytics<span>Configuración inicial y vinculación</span></td>
-        <td class="c check"><span class="no">—</span></td>
-        <td class="c check"><span class="yes">✓</span></td>
-      </tr>
-      <tr>
-        <td class="feat">Rondas de correcciones incluidas</td>
-        <td class="c feat">2</td>
-        <td class="c feat">4</td>
-      </tr>
-      <tr>
-        <td class="feat">Capacitación de uso y entrega de accesos</td>
-        <td class="c feat">—</td>
-        <td class="c feat">1 sesión</td>
-      </tr>
-      <tr>
-        <td class="feat">Soporte posterior a la entrega<span>Corrección de errores propios del desarrollo</span></td>
-        <td class="c feat">15 días</td>
-        <td class="c feat">30 días</td>
-      </tr>
-
-      <tr class="price-row">
-        <td class="feat"><strong>Precio total (pago único)</strong><span>Valores expresados en dólares estadounidenses</span></td>
-        <td class="c"><div class="price">USD 400<small>Plan Básico</small></div></td>
-        <td class="c"><div class="price">USD 500<small>Plan Completo</small></div></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p class="small muted">Los importes corresponden a un pago único por el desarrollo y la puesta en línea del sitio. No incluyen impuestos en caso de corresponder, ni los servicios de terceros detallados en el punto 4.</p>
+    <div class="plan best">
+      <div class="top">
+        <div class="t">Plan Completo</div>
+        <div class="p">USD 500</div>
+        <div class="u">Pago único</div>
+      </div>
+      <ul>
+        <li class="head">Todo lo del Plan Básico, más:</li>
+        <li>Hasta 5 secciones internas</li>
+        <li>Hasta 60 productos con buscador y filtros por rubro</li>
+        <li>Formulario con lista de materiales</li>
+        <li>Google Empresa, Analytics e Instagram</li>
+        <li>4 revisiones · soporte 30 días · capacitación</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <div class="section">
   <div class="section-title"><span class="n">2</span><h2>Mantenimiento mensual (opcional)</h2></div>
-
-  <table class="simple">
-    <thead>
-      <tr>
-        <th style="width:56%">Servicio</th>
-        <th>Alcance mensual</th>
-        <th class="r">Precio</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Plan de mantenimiento y actualización de productos</strong><br><span class="small muted">Altas, bajas y modificaciones de productos, precios y fotos; copias de seguridad; actualizaciones de seguridad; ajustes menores de contenido y soporte por WhatsApp o correo en horario hábil.</span></td>
-        <td class="small">Hasta 30 actualizaciones de productos por mes y hasta 2 h de ajustes de contenido</td>
-        <td class="r">USD 50 / mes</td>
-      </tr>
-      <tr>
-        <td>Actualizaciones adicionales de productos<br><span class="small muted">Por encima del tope mensual incluido</span></td>
-        <td class="small">Según volumen</td>
-        <td class="r">A cotizar</td>
-      </tr>
-      <tr>
-        <td>Nuevas funcionalidades o secciones<br><span class="small muted">Desarrollo no previsto en el plan contratado</span></td>
-        <td class="small">Según requerimiento</td>
-        <td class="r">A cotizar</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p class="small muted">El mantenimiento es opcional y se factura de forma mensual. Puede contratarse junto con cualquiera de los dos planes o incorporarse más adelante. No es obligatorio para la entrega del sitio.</p>
+  <div class="box">
+    <div class="mant">
+      <div>
+        <h3>Actualización de productos y soporte</h3>
+        <p class="small muted" style="margin-bottom:0">Altas, bajas y cambios de productos, precios y fotos; copias de seguridad y actualizaciones de seguridad. Incluye hasta 30 actualizaciones de productos por mes; por encima de ese volumen se cotiza aparte. No es obligatorio y puede contratarse después.</p>
+      </div>
+      <div class="pr">USD 50<small>por mes</small></div>
+    </div>
+  </div>
 </div>
 
 <div class="section">
   <div class="section-title"><span class="n">3</span><h2>Plazos y forma de pago</h2></div>
-
   <div class="cols">
     <div class="box">
-      <h3>Plazos de ejecución</h3>
-      <ul>
-        <li><strong>Plan Básico:</strong> 7 a 10 días hábiles.</li>
-        <li><strong>Plan Completo:</strong> 12 a 18 días hábiles.</li>
+      <h3>Plazos</h3>
+      <ul class="tight">
+        <li>Plan Básico: 7 a 10 días hábiles.</li>
+        <li>Plan Completo: 12 a 18 días hábiles.</li>
       </ul>
-      <p class="small muted" style="margin-bottom:0">Los plazos comienzan a correr desde la aprobación del presupuesto, el pago del anticipo y la entrega completa del material por parte del cliente (logotipo, fotos, listado de productos y textos de referencia). Las demoras en la entrega de material o en la aprobación de las revisiones extienden el plazo en la misma medida.</p>
+      <p class="small muted" style="margin:4pt 0 0">Cuentan desde el anticipo y la entrega del material (logo, fotos y listado de productos).</p>
     </div>
     <div class="box">
-      <h3>Forma de pago</h3>
-      <ul>
-        <li><strong>50 %</strong> de anticipo a la aprobación del presupuesto.</li>
-        <li><strong>50 %</strong> restante contra entrega y aprobación final, antes de la publicación.</li>
-        <li>Mantenimiento: mensual y por adelantado, con facturación el mismo día de cada mes.</li>
+      <h3>Pago</h3>
+      <ul class="tight">
+        <li>50 % de anticipo al aprobar.</li>
+        <li>50 % contra entrega, antes de publicar.</li>
+        <li>Mantenimiento: mensual y por adelantado.</li>
       </ul>
-      <p class="small muted" style="margin-bottom:0">Medios de pago aceptados: transferencia bancaria, depósito o efectivo. El pago en pesos uruguayos se convierte al tipo de cambio comprador del BROU del día de la factura.</p>
+      <p class="small muted" style="margin:4pt 0 0">Transferencia, depósito o efectivo. En pesos, al cambio comprador del BROU del día.</p>
     </div>
   </div>
 </div>
 
-<div class="section">
-  <div class="section-title"><span class="n">4</span><h2>Servicios no incluidos</h2></div>
-
-  <div class="box warn avoid-break">
+<div class="section" style="page-break-inside:avoid">
+  <div class="section-title"><span class="n">4</span><h2>No incluido</h2></div>
+  <div class="box warn">
     <h3>Dominio y hosting — a cargo del cliente</h3>
-    <p class="small" style="margin-bottom:5pt"><strong>El precio de los planes no incluye el dominio (por ejemplo, .com o .com.uy) ni el servicio de alojamiento web (hosting), ni el correo corporativo.</strong> Ambos son servicios de terceros que se contratan y se pagan directamente a los proveedores correspondientes, a nombre del cliente y por su cuenta.</p>
-    <p class="small" style="margin-bottom:0">El proveedor puede asesorar en la contratación y realizar la configuración técnica inicial sin costo adicional, pero <strong>no asume responsabilidad alguna por el funcionamiento, la disponibilidad, las caídas del servicio, las renovaciones, los aumentos de precio, la pérdida del dominio por falta de pago ni por cualquier otra contingencia atribuible a dichos proveedores externos.</strong></p>
+    <p class="small" style="margin-bottom:0"><strong>El precio no incluye dominio, hosting ni correo corporativo.</strong> Son servicios de terceros que se contratan y se pagan a nombre del cliente. Asesoramos y dejamos la configuración inicial hecha, pero <strong>no nos hacemos cargo de su funcionamiento, caídas, renovaciones, aumentos de precio ni de la pérdida del dominio por falta de pago.</strong></p>
   </div>
-
-  <p class="small" style="margin-bottom:4pt">Tampoco se encuentran comprendidos en el precio, salvo cotización expresa por separado:</p>
-  <div class="cols">
-    <div>
-      <ul>
-        <li>Producción de fotografía y video profesional.</li>
-        <li>Diseño de logotipo o identidad de marca.</li>
-        <li>Redacción de contenidos ajenos al sitio.</li>
-        <li>Licencias de imágenes, tipografías o software de terceros.</li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li>Publicidad paga (Google Ads, Meta Ads) y su gestión.</li>
-        <li>Tienda en línea con pasarela de pagos.</li>
-        <li>Integración con sistemas de stock o facturación.</li>
-        <li>Gestión de redes sociales y community management.</li>
-      </ul>
-    </div>
-  </div>
+  <p class="small muted" style="margin-top:6pt;margin-bottom:0">Tampoco incluye: fotografía y video profesional, diseño de logotipo, licencias de imágenes o software de terceros, publicidad paga y su gestión, tienda en línea con pasarela de pagos, integración con sistemas de stock o facturación, y gestión de redes sociales.</p>
 </div>
 
 <div class="section">
   <div class="section-title"><span class="n">5</span><h2>Términos y condiciones</h2></div>
-
   <ol class="terms">
-    <li><strong>Validez de la oferta.</strong> El presente presupuesto tiene una validez de 15 días corridos a partir de su fecha de emisión. Vencido ese plazo, los precios y condiciones quedan sujetos a revisión.</li>
-
-    <li><strong>Aceptación.</strong> Se considera aceptado el presupuesto con la firma del presente documento o con la confirmación por escrito del cliente (correo electrónico o mensaje de WhatsApp), junto con el pago del anticipo previsto. La aceptación implica el conocimiento y la conformidad con estos términos.</li>
-
-    <li><strong>Dominio, hosting y servicios de terceros.</strong> El dominio, el alojamiento web y el correo corporativo no están incluidos en el precio y se contratan a nombre y por cuenta del cliente. El proveedor no se hace responsable por su funcionamiento, disponibilidad, interrupciones, renovaciones, vencimientos, variaciones de precio ni por la pérdida de datos o del dominio derivada de la falta de pago o de decisiones del proveedor de dichos servicios.</li>
-
-    <li><strong>Material a cargo del cliente.</strong> El cliente se obliga a entregar el logotipo, las fotografías, el listado de productos, los datos de contacto y demás contenidos necesarios dentro de los 5 días hábiles siguientes a la aceptación. El cliente declara contar con los derechos de uso de todo el material que aporte y responde por su contenido.</li>
-
-    <li><strong>Revisiones.</strong> Cada plan incluye la cantidad de rondas de correcciones indicada en el punto 1. Las revisiones deben solicitarse de forma consolidada y por escrito. Las rondas adicionales o los cambios sobre elementos ya aprobados se cotizan por separado.</li>
-
-    <li><strong>Cambios de alcance.</strong> Toda funcionalidad, sección o requerimiento no previsto en el plan contratado constituye un cambio de alcance y se presupuesta de manera independiente, pudiendo modificar el plazo de entrega acordado.</li>
-
-    <li><strong>Plazos.</strong> Los plazos indicados son estimados y se computan en días hábiles. Se suspenden mientras el proveedor se encuentre a la espera de material, respuestas, aprobaciones o pagos por parte del cliente.</li>
-
-    <li><strong>Pagos y mora.</strong> El anticipo no es reintegrable una vez iniciados los trabajos de diseño. El saldo debe abonarse antes de la publicación del sitio. El atraso en los pagos habilita al proveedor a suspender los trabajos y el servicio de mantenimiento hasta su regularización.</li>
-
-    <li><strong>Propiedad y entrega.</strong> Una vez abonada la totalidad del precio, el cliente adquiere la titularidad del sitio, de sus contenidos y de los accesos correspondientes. Hasta ese momento, el trabajo permanece en propiedad del proveedor. Se exceptúan las bibliotecas, componentes y licencias de terceros, que se rigen por sus propias condiciones.</li>
-
-    <li><strong>Garantía.</strong> Se garantiza la corrección sin costo de errores propios del desarrollo durante el período de soporte indicado en el punto 1, contado desde la publicación. La garantía no comprende fallas originadas en el hosting, en el dominio, en servicios de terceros, ni en modificaciones realizadas por el cliente o por personas ajenas al proveedor.</li>
-
-    <li><strong>Mantenimiento.</strong> El plan de mantenimiento es opcional, de contratación mensual y renovación automática. Puede ser cancelado por cualquiera de las partes con un preaviso de 30 días. Los meses ya facturados no se reintegran. Sin plan de mantenimiento vigente, las modificaciones posteriores a la entrega se cotizan por hora o por trabajo.</li>
-
-    <li><strong>Portafolio.</strong> Salvo indicación expresa en contrario del cliente, el proveedor podrá exhibir el trabajo realizado en su portafolio y en sus redes sociales, con fines de difusión profesional.</li>
-
-    <li><strong>Confidencialidad.</strong> El proveedor mantendrá la confidencialidad de la información comercial, de precios y de clientes a la que acceda con motivo del trabajo.</li>
-
-    <li><strong>Limitación de responsabilidad.</strong> La responsabilidad total del proveedor, por cualquier concepto, no excederá el monto efectivamente abonado por el cliente en virtud del presente presupuesto. No se responde por lucro cesante, pérdida de ventas ni daños indirectos.</li>
-
-    <li><strong>Jurisdicción.</strong> Toda controversia derivada del presente se rige por la legislación de la República Oriental del Uruguay y se somete a los tribunales de la ciudad de Montevideo.</li>
+    <li><strong>Validez.</strong> La oferta vale 15 días corridos desde su fecha; vencido el plazo, los precios quedan sujetos a revisión.</li>
+    <li><strong>Aceptación.</strong> Se acepta con la firma de este documento o por escrito (correo o WhatsApp), junto con el pago del anticipo.</li>
+    <li><strong>Dominio y hosting.</strong> No están incluidos y se contratan a nombre del cliente. No respondemos por su funcionamiento, disponibilidad, renovaciones, vencimientos, variaciones de precio ni por la pérdida del dominio o de datos por falta de pago o por decisiones del proveedor de esos servicios.</li>
+    <li><strong>Material del cliente.</strong> El logo, las fotos, el listado de productos y los datos de contacto se entregan dentro de los 5 días hábiles de aceptado el presupuesto. El cliente responde por los derechos y el contenido del material que aporta.</li>
+    <li><strong>Revisiones y cambios.</strong> Cada plan incluye las revisiones indicadas, solicitadas por escrito y en conjunto. Las revisiones adicionales y todo pedido no previsto en el plan se cotizan aparte y pueden extender el plazo.</li>
+    <li><strong>Plazos.</strong> Son estimados, en días hábiles, y se suspenden mientras se esperen materiales, respuestas, aprobaciones o pagos del cliente.</li>
+    <li><strong>Pagos.</strong> El anticipo no se reintegra una vez iniciado el diseño. El saldo se abona antes de publicar. El atraso habilita a suspender los trabajos y el mantenimiento.</li>
+    <li><strong>Propiedad.</strong> Pagada la totalidad, el sitio, sus contenidos y accesos pasan a ser del cliente, salvo componentes y licencias de terceros, que se rigen por sus propias condiciones.</li>
+    <li><strong>Garantía.</strong> Corregimos sin costo los errores propios del desarrollo durante el período de soporte de cada plan. No cubre fallas del hosting, del dominio, de servicios de terceros ni cambios hechos por el cliente o por terceros.</li>
+    <li><strong>Mantenimiento.</strong> Es opcional, mensual y de renovación automática; se cancela con 30 días de preaviso y los meses ya facturados no se reintegran.</li>
+    <li><strong>Responsabilidad.</strong> Nuestra responsabilidad total no supera el monto efectivamente abonado. No respondemos por lucro cesante ni daños indirectos.</li>
+    <li><strong>Portafolio y jurisdicción.</strong> Salvo indicación en contrario, podemos mostrar el trabajo en nuestro portafolio. Rige la legislación uruguaya y la jurisdicción de los tribunales de Montevideo.</li>
   </ol>
 </div>
 
-<div class="section avoid-break">
+<div class="section" style="page-break-inside:avoid">
   <div class="section-title"><span class="n">6</span><h2>Conformidad</h2></div>
-  <p class="small">Marque el plan contratado: &nbsp; <span class="check">☐</span> Plan Básico — USD 400 &nbsp;&nbsp; <span class="check">☐</span> Plan Completo — USD 500 &nbsp;&nbsp; <span class="check">☐</span> Mantenimiento mensual — USD 50/mes</p>
-
+  <p class="small">Plan contratado: &nbsp; <span class="check">☐</span> Plan Básico — USD 400 &nbsp;&nbsp; <span class="check">☐</span> Plan Completo — USD 500 &nbsp;&nbsp; <span class="check">☐</span> Mantenimiento — USD 50/mes</p>
   <div class="signs">
-    <div class="sign">
-      <strong>Por el cliente</strong>
-      Logística Sanitaria LS — Aclaración, firma y fecha
-    </div>
-    <div class="sign">
-      <strong>Por el proveedor</strong>
-      [Nombre del proveedor / estudio] — Firma y fecha
-    </div>
+    <div class="sign"><strong>Firma del cliente</strong>Aclaración y fecha</div>
+    <div class="sign"><strong>Firma</strong>Aclaración y fecha</div>
   </div>
 </div>
 
 <div class="footer-note">
   <span>Presupuesto PRE-2026-001 · Sitio web Logística Sanitaria LS</span>
-  <span>Documento emitido en dólares estadounidenses (USD) · Validez 15 días</span>
+  <span>Precios en USD · Validez 15 días</span>
 </div>
 
 </body>
