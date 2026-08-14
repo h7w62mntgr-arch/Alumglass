@@ -1,267 +1,835 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AlumGlass — Carpintería en aluminio y vidriería · Piriápolis</title>
-<meta name="description" content="Carpintería en aluminio, vidriería y service en general. Aberturas, mamparas, cerramientos y vidrios a medida. Piriápolis, Uruguay.">
+<title>Metalúrgica Roscini — Portones, techos, rejas y pergolas a medida</title>
+<meta name="description" content="Fábrica de portones, techos metálicos, rejas, cierres y pergolas. Fabricación e instalación a medida, con planificación, ejecución cuidada y cumplimiento de tiempos. San Luis, Argentina.">
+<meta name="theme-color" content="#0E0E0E">
+<meta property="og:title" content="Metalúrgica Roscini — Portones, techos y estructuras a medida">
+<meta property="og:description" content="Fabricamos e instalamos portones, techos metálicos, rejas, cierres y pergolas. Presupuesto a medida, sin cargo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0E0E'/%3E%3Cpath d='M6 22V10l10-4 10 4v12' fill='none' stroke='%23F04E1E' stroke-width='2.4'/%3E%3Cpath d='M6 17h20M6 21h20' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
 <style>
 :root{
-  --ink:#1B2530;        /* gris azulado muy oscuro — textos fuertes */
-  --steel:#2E3E4E;      /* acero profundo — fondos oscuros / CTA */
-  --slate:#455568;      /* gris pizarra medio */
-  --accent:#3E7CA6;     /* azul vidrio — acento */
-  --accent-2:#6FA3C4;   /* azul claro */
-  --silver:#C3CDD6;     /* plata / aluminio */
-  --mist:#E3EAF0;       /* bruma clara */
-  --muted:#5C6B7A;      /* texto secundario */
-  --line:#E1E7EC;       /* líneas sobre blanco */
-  --line-2:#EEF2F5;
-  --bg:#FFFFFF;         /* fondo principal blanco */
-  --bg-soft:#F5F8FA;    /* gris muy suave para secciones */
-  --wa:#1F8A4C;         /* verde WhatsApp sobrio */
-  --wa-ink:#FFFFFF;
+  /* marca */
+  --brand:#F04E1E;        /* naranja Roscini */
+  --brand-2:#FF6B3D;      /* naranja claro */
+  --brand-ink:#B8380F;    /* naranja oscuro */
+  --ink:#0E0E0E;          /* negro base */
+  --coal:#151515;         /* negro sección */
+  --graphite:#1E1E1E;     /* gris muy oscuro */
+  --steel:#2A2A2A;        /* gris metal */
+  --paper:#FFFFFF;
+  --paper-2:#F6F5F3;      /* gris papel */
+  --line:#E4E1DC;
+  --line-dark:#2E2E2E;
+  --muted:#6A6764;        /* texto secundario claro */
+  --muted-dark:#A8A5A1;   /* texto secundario oscuro */
+  --wa:#25A05A;
+  --radius:12px;
+  --maxw:1200px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit}
-.label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--brand);color:#fff}
 
-/* NAV */
-nav{position:fixed;inset:0 0 auto;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav-in{max-width:1180px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Fraunces',serif;font-weight:700;font-size:1.28rem;letter-spacing:.01em;color:var(--ink)}
-.logo small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-top:0}
-.nav-l{display:flex;gap:28px;align-items:center}
-.nav-l a{font-size:.88rem;font-weight:500;color:var(--slate);transition:color .2s}
-.nav-l a:hover,.nav-l a:focus-visible{color:var(--ink)}
-.btn-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:var(--wa-ink);font-weight:600;font-size:.85rem;padding:10px 18px;border-radius:6px;transition:transform .15s,box-shadow .2s,background .2s}
-.btn-wa:hover{transform:translateY(-1px);background:#1A7A43;box-shadow:0 8px 20px rgba(31,138,76,.22)}
-.btn-wa svg,.btn-big svg{width:17px;height:17px;fill:currentColor;flex:none}
+h1,h2,h3,h4,.display{font-family:'Archivo',system-ui,sans-serif;letter-spacing:-.025em;line-height:1.05}
+h1{font-weight:800;font-size:clamp(2.4rem,6.2vw,4.5rem)}
+h2{font-weight:800;font-size:clamp(1.9rem,4vw,3rem)}
+h3{font-weight:700;font-size:1.18rem;letter-spacing:-.015em;line-height:1.25}
 
-/* HERO */
-header{position:relative;padding:150px 24px 88px;background:var(--bg);border-bottom:1px solid var(--line)}
-.hero{max-width:1180px;margin:0 auto;position:relative}
-.hero .label{display:flex;align-items:center;gap:12px;margin-bottom:22px}
-.hero .label::before{content:"";width:32px;height:1px;background:var(--accent)}
-h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:1.05;letter-spacing:-.015em;max-width:15ch;margin-bottom:24px;color:var(--ink)}
-h1 em{font-style:italic;color:var(--accent)}
-.hero p{color:var(--muted);font-size:1.08rem;max-width:34rem;margin-bottom:34px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
-.btn-big{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:var(--wa-ink);font-weight:600;padding:15px 26px;border-radius:6px;font-size:1rem;transition:transform .15s,box-shadow .2s,background .2s}
-.btn-big:hover{transform:translateY(-2px);background:#1A7A43;box-shadow:0 12px 28px rgba(31,138,76,.24)}
-.btn-line{display:inline-flex;align-items:center;padding:15px 26px;border:1px solid var(--line);border-radius:6px;font-weight:600;color:var(--ink);transition:border-color .2s,background .2s}
-.btn-line:hover{border-color:var(--accent);background:var(--bg-soft)}
-/* datos — signature */
-.course{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg-soft)}
-.course div{padding:22px 26px;border-right:1px solid var(--line)}
-.course div:last-child{border-right:0}
-.course b{font-family:'Fraunces',serif;font-weight:600;font-size:1.3rem;display:block;color:var(--ink)}
-.course span{font-size:.82rem;color:var(--muted)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{padding:clamp(64px,8vw,110px) 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand)}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--brand)}
+.mark{background:var(--brand);color:#fff;padding:0 .18em;border-radius:3px;display:inline-block;transform:skewX(-4deg)}
+.mark > span{display:inline-block;transform:skewX(4deg)}
+.nb{white-space:nowrap}
+[id]{scroll-margin-top:92px}
+.lead{color:var(--muted);font-size:1.06rem;max-width:38rem}
+.on-dark .lead,.on-dark p{color:var(--muted-dark)}
 
-/* OBRAS */
-section{padding:88px 24px}
-.wrap{max-width:1180px;margin:0 auto}
-.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
-h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.12;margin-top:12px;color:var(--ink)}
-.head p{color:var(--muted);max-width:26rem;font-size:.95rem}
-.masonry{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:14px}
-.obra{border-radius:10px;overflow:hidden;position:relative;background:linear-gradient(160deg,var(--mist),var(--silver));border:1px solid var(--line)}
-.obra.tall{grid-row:span 2}
-.obra .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--slate);font-family:'Inter',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:16px}
-.obra .cap{position:absolute;left:0;right:0;bottom:0;padding:38px 18px 15px;background:linear-gradient(transparent,rgba(20,30,40,.85));color:#fff;font-weight:600;font-size:.92rem}
-.obra .cap small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin-bottom:2px}
+/* ---------- botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:-.01em;padding:14px 22px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.btn svg{width:18px;height:18px;fill:currentColor;flex:none}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#1F8C4E;transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,160,90,.28)}
+.btn-brand{background:var(--brand);color:#fff}
+.btn-brand:hover{background:#D8420F;transform:translateY(-2px);box-shadow:0 12px 26px rgba(240,78,30,.3)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink);background:var(--paper-2)}
+.on-dark .btn-ghost{border-color:#3A3A3A;color:#fff}
+.on-dark .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-sm{padding:10px 16px;font-size:.86rem}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:4px}
 
-/* SERVICIOS — soft section */
-.soft{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.svc-card{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:32px;transition:transform .2s,box-shadow .2s,border-color .2s}
-.svc-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,23,25,.08);border-color:var(--line)}
-.svc-card .n{font-family:'Fraunces',serif;font-style:italic;font-weight:600;color:var(--accent);font-size:1rem}
-.svc-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.22rem;margin:10px 0 10px;color:var(--ink)}
-.svc-card p{color:var(--muted);font-size:.93rem}
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(14,14,14,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dark)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 22px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff}
+.brand-mark{width:36px;height:36px;flex:none}
+.brand-txt{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:.02em;line-height:1}
+.brand-txt small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.54rem;letter-spacing:.34em;color:var(--brand);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:.9rem;font-weight:500;color:#D6D3D0;transition:color .18s}
+.nav-links a:hover{color:#fff}
+.nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.nav-toggle span{display:block;width:22px;height:2px;background:#fff;margin:4px 0;transition:transform .25s,opacity .2s}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-/* POR QUÉ */
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:880px;margin:0 auto}
-.person{border:1px solid var(--line);border-radius:10px;padding:34px;background:var(--bg)}
-.person h3{font-family:'Fraunces',serif;font-weight:600;font-size:1.36rem;margin:10px 0 8px;color:var(--ink)}
-.person p{color:var(--muted);font-size:.93rem}
+/* ---------- hero ---------- */
+header.hero{position:relative;background:var(--ink);color:#fff;padding:132px 0 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+   radial-gradient(900px 460px at 78% -8%,rgba(240,78,30,.22),transparent 62%),
+   repeating-linear-gradient(122deg,rgba(255,255,255,.028) 0 2px,transparent 2px 9px);
+  pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;padding-bottom:76px}
+.hero h1{margin:20px 0 20px;max-width:13ch}
+.hero .lead{margin-bottom:32px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{margin-top:20px;font-size:.86rem;color:var(--muted-dark)}
+.hero-note b{color:#fff;font-weight:600}
+.hero-note .tick{color:var(--brand);font-weight:700;margin-right:6px}
 
-/* CTA */
-.cta{background:var(--ink);border-top:1px solid var(--ink);text-align:center}
-.cta .label{color:var(--accent-2)}
-.cta h2{max-width:18ch;margin:14px auto;color:#fff}
-.cta p{color:var(--silver);max-width:34rem;margin:0 auto 32px}
-.cta .tels{display:flex;gap:26px;justify-content:center;margin-top:26px;flex-wrap:wrap;color:var(--accent-2);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:500;letter-spacing:.02em}
+/* tarjeta visual del hero */
+.hero-card{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line-dark);background:var(--graphite);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.hero-card .art{height:400px}
+.hero-card .tag{position:absolute;top:16px;left:16px;background:var(--brand);color:#fff;font-family:'Archivo',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:6px}
+.hero-card .foot{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.9));display:flex;justify-content:space-between;align-items:end;gap:14px}
+.hero-card .foot b{font-family:'Archivo',sans-serif;font-size:1rem;font-weight:700}
+.hero-card .foot span{font-size:.78rem;color:var(--muted-dark);display:block}
 
-footer{border-top:1px solid var(--line);padding:32px 24px;background:var(--bg)}
-.foot{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+/* barra de datos */
+.bar{border-top:1px solid var(--line-dark);background:var(--coal);position:relative}
+.bar-in{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:grid;grid-template-columns:repeat(4,1fr)}
+.bar-in > div{padding:26px 22px 26px 0;border-right:1px solid var(--line-dark)}
+.bar-in > div:last-child{border-right:0}
+.bar-in b{display:block;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;color:#fff;letter-spacing:-.01em}
+.bar-in span{font-size:.83rem;color:var(--muted-dark)}
 
-.wa-float{position:fixed;bottom:22px;right:22px;z-index:90;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 28px rgba(31,138,76,.32);transition:transform .15s}
-.wa-float:hover{transform:scale(1.08)}
-.wa-float svg{width:28px;height:28px;fill:#fff}
+/* ---------- arte metálico (sin fotos) ---------- */
+.art{position:relative;background:#1A1A1A;overflow:hidden}
+.art::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(255,255,255,.09),transparent 42%,rgba(0,0,0,.42))}
+.art-porton{background:
+  repeating-linear-gradient(180deg,#333 0 22px,#242424 22px 26px),
+  #242424}
+.art-levadizo{background:
+  repeating-linear-gradient(180deg,#3A3A3A 0 30px,#232323 30px 34px),
+  linear-gradient(90deg,#2C2C2C,#191919)}
+.art-reja{background:
+  repeating-linear-gradient(90deg,#3B3B3B 0 7px,transparent 7px 30px),
+  linear-gradient(180deg,#212121,#141414)}
+.art-techo{background:
+  repeating-linear-gradient(96deg,#343434 0 12px,#1E1E1E 12px 26px),
+  #1E1E1E}
+.art-pergola{background:
+  repeating-linear-gradient(90deg,#343434 0 10px,transparent 10px 46px),
+  repeating-linear-gradient(180deg,#2E2E2E 0 8px,transparent 8px 52px),
+  linear-gradient(160deg,#242424,#151515)}
+.art-cierre{background:
+  repeating-linear-gradient(45deg,#333 0 4px,transparent 4px 22px),
+  repeating-linear-gradient(-45deg,#333 0 4px,transparent 4px 22px),
+  #1B1B1B}
+.art-estructura{background:
+  repeating-linear-gradient(60deg,#383838 0 6px,transparent 6px 40px),
+  repeating-linear-gradient(-60deg,#2F2F2F 0 6px,transparent 6px 40px),
+  linear-gradient(180deg,#232323,#141414)}
 
-.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
-.rv.on{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+/* ---------- servicios ---------- */
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:26px;flex-wrap:wrap;margin-bottom:42px}
+.sec-head h2{margin-top:12px;max-width:18ch}
+.sec-head .lead{font-size:.98rem}
+.grid-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(14,14,14,.12);border-color:#D6D2CC}
+.card .art{height:158px}
+.card-body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
+.card-body h3{margin-bottom:8px}
+.card-body p{color:var(--muted);font-size:.93rem;flex:1}
+.card-body .more{margin-top:14px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.84rem;color:var(--brand);display:inline-flex;align-items:center;gap:6px}
+.card-body .more::after{content:"→";transition:transform .2s}
+.card:hover .more::after{transform:translateX(4px)}
 
-@media (max-width:920px){
-  .masonry{grid-template-columns:repeat(2,1fr)}
-  .svc{grid-template-columns:1fr}
-  .duo{grid-template-columns:1fr}
-  .course{grid-template-columns:1fr}
-  .course div{border-right:0;border-bottom:1px solid var(--line)}
-  .course div:last-child{border-bottom:0}
-  .nav-l a:not(.btn-wa){display:none}
+/* ---------- oferta destacada ---------- */
+.soft{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.offer{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--paper)}
+.offer-art{position:relative;min-height:340px}
+.offer-art .badge{position:absolute;z-index:2;left:20px;bottom:20px;background:#fff;border-radius:10px;padding:14px 18px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.offer-art .badge small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.offer-art .badge b{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.6rem;letter-spacing:-.02em}
+.offer-body{padding:clamp(26px,3.4vw,44px)}
+.offer-body h2{font-size:clamp(1.7rem,3vw,2.3rem);margin:12px 0 14px}
+.check{list-style:none;margin:20px 0 26px;display:grid;gap:11px}
+.check li{display:flex;gap:11px;align-items:flex-start;font-size:.95rem;color:var(--muted)}
+.check li b{color:var(--ink);font-weight:600}
+.check li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:5px;background:var(--brand);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat,linear-gradient(#000,#000);
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat}
+.fineprint{font-size:.78rem;color:var(--muted);margin-top:14px}
+
+/* ---------- proceso ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{position:relative;padding:26px 22px;border:1px solid var(--line-dark);border-radius:var(--radius);background:var(--graphite)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:'Archivo',sans-serif;font-weight:800;font-size:2.1rem;color:transparent;-webkit-text-stroke:1.5px var(--brand);display:block;margin-bottom:12px;letter-spacing:-.03em}
+.step h3{color:#fff;margin-bottom:7px}
+.step p{color:var(--muted-dark);font-size:.9rem}
+
+/* ---------- trabajos ---------- */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:206px;gap:14px}
+.tile{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.tile.w2{grid-column:span 2}
+.tile.h2{grid-row:span 2}
+.tile .art{position:absolute;inset:0}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:42px 16px 15px;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff;z-index:2}
+.tile .cap small{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-2);margin-bottom:3px}
+.tile .cap b{font-family:'Archivo',sans-serif;font-weight:700;font-size:.98rem;letter-spacing:-.01em}
+
+/* ---------- responsabilidad ---------- */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.value{padding:28px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line)}
+.value .ico{width:44px;height:44px;border-radius:10px;background:rgba(240,78,30,.1);display:grid;place-items:center;margin-bottom:16px}
+.value .ico svg{width:22px;height:22px;fill:var(--brand)}
+.value h3{margin-bottom:7px}
+.value p{color:var(--muted);font-size:.93rem}
+.quote{margin-top:44px;padding:34px;border-left:4px solid var(--brand);background:var(--paper);border-radius:0 var(--radius) var(--radius) 0}
+.quote p{font-family:'Archivo',sans-serif;font-weight:700;font-style:italic;font-size:clamp(1.15rem,2.4vw,1.6rem);letter-spacing:-.02em;line-height:1.3;max-width:34ch}
+
+/* ---------- presupuesto ---------- */
+.quote-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:start}
+form{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(22px,3vw,34px);box-shadow:0 20px 50px rgba(14,14,14,.07)}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:7px;color:var(--ink)}
+.field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:.95rem;color:var(--ink);background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;transition:border-color .2s,background .2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brand);background:var(--paper);outline:none}
+.field textarea{resize:vertical;min-height:96px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .btn{width:100%;margin-top:6px}
+.form-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+.contact-list{list-style:none;display:grid;gap:14px;margin-top:26px}
+.contact-list li{display:flex;gap:13px;align-items:center}
+.contact-list .ico{width:40px;height:40px;flex:none;border-radius:10px;background:var(--graphite);border:1px solid var(--line-dark);display:grid;place-items:center}
+.contact-list .ico svg{width:18px;height:18px;fill:var(--brand)}
+.contact-list b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;color:#fff}
+.contact-list span{font-size:.82rem;color:var(--muted-dark)}
+
+/* ---------- faq ---------- */
+.faq{max-width:820px;margin:0 auto}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+details summary{list-style:none;cursor:pointer;padding:20px 44px 20px 0;position:relative;font-family:'Archivo',sans-serif;font-weight:700;font-size:1.03rem;letter-spacing:-.015em}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"";position:absolute;right:6px;top:50%;width:13px;height:13px;margin-top:-7px;background:var(--brand);transition:transform .25s;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 5h2v14h-2z'/%3E%3Cpath d='M5 11h14v2H5z'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 5h2v14h-2z'/%3E%3Cpath d='M5 11h14v2H5z'/%3E%3C/svg%3E") center/contain no-repeat}
+details[open] summary::after{transform:rotate(135deg)}
+details p{color:var(--muted);font-size:.95rem;padding:0 44px 20px 0}
+
+/* ---------- cta final ---------- */
+.final{background:var(--brand);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(122deg,rgba(0,0,0,.06) 0 3px,transparent 3px 14px)}
+.final .wrap{position:relative}
+.final h2{margin:14px auto 16px;max-width:16ch}
+.final p{color:rgba(255,255,255,.9);max-width:36rem;margin:0 auto 30px}
+.final .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.final .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.final .btn-wa{background:#0E0E0E}
+.final .btn-wa:hover{background:#000;box-shadow:0 12px 26px rgba(0,0,0,.3)}
+.final .eyebrow{color:#fff}
+.final .eyebrow::before{background:#fff}
+.final-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#fff;padding:56px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid var(--line-dark)}
+.foot-grid p{color:var(--muted-dark);font-size:.9rem;margin-top:14px;max-width:32ch}
+.foot-col h4{font-family:'Archivo',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.foot-col a,.foot-col span{display:block;font-size:.9rem;color:var(--muted-dark);margin-bottom:9px;transition:color .18s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:.8rem;color:var(--muted-dark)}
+
+/* ---------- whatsapp flotante ---------- */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:150;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:13px 18px;border-radius:40px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.9rem;box-shadow:0 14px 34px rgba(37,160,90,.36);transition:transform .18s}
+.wa-float:hover{transform:translateY(-3px)}
+.wa-float svg{width:22px;height:22px;fill:#fff;flex:none}
+
+/* ---------- reveal (solo con JS: sin JS el contenido se ve igual) ---------- */
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.js .rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .btn:hover,.card:hover,.wa-float:hover{transform:none}
 }
-@media (max-width:560px){.masonry{grid-template-columns:1fr;grid-auto-rows:240px}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1040px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;padding-bottom:60px}
+  .hero-card .art{height:300px}
+  .bar-in{grid-template-columns:repeat(2,1fr)}
+  .bar-in > div{border-right:0;border-bottom:1px solid var(--line-dark)}
+  .bar-in > div:nth-child(odd){border-right:1px solid var(--line-dark)}
+  .grid-svc{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .offer{grid-template-columns:1fr}
+  .offer-art{min-height:230px}
+  .quote-grid{grid-template-columns:1fr;gap:32px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .nav-toggle{display:block}
+  .nav-links{position:fixed;top:72px;left:0;right:0;background:var(--ink);border-bottom:1px solid var(--line-dark);box-shadow:0 24px 40px rgba(0,0,0,.45);flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 22px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .22s,transform .22s}
+  .nav-links.open{transform:none;opacity:1;pointer-events:auto}
+  .nav-links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line-dark);font-size:1rem}
+  .nav-links .btn{margin-top:16px}
+  .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .values{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .bar-in{grid-template-columns:1fr}
+  .bar-in > div:nth-child(odd){border-right:0}
+  .grid-svc,.steps{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr;grid-auto-rows:200px}
+  .tile.w2,.tile.h2{grid-column:auto;grid-row:auto}
+  .field-row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .wa-float span{display:none}
+  .wa-float{padding:15px;border-radius:50%}
+  .btn{width:100%}
+  .hero-cta .btn,.final-cta .btn{width:100%}
+}
 </style>
+<script>document.documentElement.className += ' js';</script>
 </head>
 <body>
 
+<!-- ===================== NAV ===================== -->
 <nav>
   <div class="nav-in">
-    <div class="logo">ALUMGLASS<small>Aluminio · Vidriería</small></div>
-    <div class="nav-l">
-      <a href="#trabajos">Trabajos</a>
+    <a class="brand" href="#inicio" aria-label="Metalúrgica Roscini — inicio">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="8" fill="#1E1E1E"/>
+        <path d="M8 28V13l12-5 12 5v15" fill="none" stroke="#F04E1E" stroke-width="2.6"/>
+        <path d="M8 20h24M8 24.5h24" stroke="#fff" stroke-width="2.2"/>
+      </svg>
+      <span class="brand-txt">ROSCINI<small>Metalúrgica</small></span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links">
       <a href="#servicios">Servicios</a>
-      <a href="#porque">Por qué nosotros</a>
-      <a class="btn-wa" href="https://wa.me/59891607217" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
-        Pedir presupuesto
+      <a href="#techos">Techos de chapa</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#presupuesto">Contacto</a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+        Presupuesto
       </a>
     </div>
   </div>
 </nav>
 
-<header>
-  <div class="hero">
-    <div class="label">Carpintería en aluminio · Vidriería · Service</div>
-    <h1>Aberturas y cerramientos <em>a medida</em>, con terminación de taller.</h1>
-    <p>Aluminio, vidrio y service en general en Piriápolis y toda la zona. Medimos, fabricamos y colocamos: una sola empresa a cargo de todo tu proyecto.</p>
-    <div class="hero-cta">
-      <a class="btn-big" href="https://wa.me/59891607217" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
-        Consultar por WhatsApp
-      </a>
-      <a class="btn-line" href="#trabajos">Ver trabajos</a>
+<!-- ===================== HERO ===================== -->
+<header class="hero on-dark" id="inicio">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Portones · Techos · Rejas · Pergolas</span>
+        <h1>Trabajos en metal <span class="nb"><span class="mark"><span>a medida</span></span>,</span> pensados para durar.</h1>
+        <p class="lead">Fabricamos e instalamos portones, techos metálicos, rejas, cierres y estructuras. Fabricación propia, medidas exactas e instalación incluida: un solo responsable de principio a fin.</p>
+        <div class="hero-cta">
+          <a class="btn btn-wa" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+            Pedir presupuesto
+          </a>
+          <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
+        </div>
+        <p class="hero-note"><span class="tick" aria-hidden="true">✓</span><b>Presupuesto sin cargo</b> · respondemos el mismo día</p>
+      </div>
+
+      <div class="hero-card rv">
+        <div class="art art-porton" role="img" aria-label="Portón corredizo de chapa con paneles horizontales"></div>
+        <span class="tag">Fabricación propia</span>
+        <div class="foot">
+          <div>
+            <b>Portón corredizo a medida</b>
+            <span>Diseño, fabricación e instalación</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="course rv">
-      <div><b>Aluminio</b><span>Aberturas, ventanas, puertas y cerramientos fabricados a medida</span></div>
-      <div><b>Vidriería</b><span>Vidrios, espejos y mamparas de baño cortados y colocados</span></div>
-      <div><b>Service</b><span>Reparación de aberturas, cambio de vidrios y mantenimiento</span></div>
+  </div>
+
+  <div class="bar">
+    <div class="bar-in">
+      <div><b>A medida</b><span>Cada proyecto se calcula según el espacio y el uso</span></div>
+      <div><b>Fabricación propia</b><span>Taller equipado: no tercerizamos el trabajo</span></div>
+      <div><b>Instalación incluida</b><span>Nos vamos con el trabajo terminado y funcionando</span></div>
+      <div><b>Tiempos cumplidos</b><span>Fecha de entrega acordada por escrito</span></div>
     </div>
   </div>
 </header>
 
+<!-- ===================== SERVICIOS ===================== -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Servicios</span>
+        <h2>Soluciones metalúrgicas para casas, comercios y obras.</h2>
+      </div>
+      <p class="lead">Fabricación e instalación de portones, rejas, techos, cierres y estructuras. Todo medido, calculado y ejecutado por el mismo equipo.</p>
+    </div>
+
+    <div class="grid-svc">
+      <article class="card rv">
+        <div class="art art-porton" role="img" aria-label="Portón corredizo"></div>
+        <div class="card-body">
+          <h3>Portones corredizos</h3>
+          <p>Portones resistentes y funcionales, con guías, rodamientos y refuerzos calculados para el peso real de la hoja. Preparados para automatizar.</p>
+          <a class="more" href="#presupuesto">Consultar</a>
+        </div>
+      </article>
+
+      <article class="card rv">
+        <div class="art art-levadizo" role="img" aria-label="Portón levadizo"></div>
+        <div class="card-body">
+          <h3>Portones levadizos</h3>
+          <p>Ideales cuando no hay lugar para correr la hoja. Mecanismo balanceado, apertura suave y terminaciones prolijas por dentro y por fuera.</p>
+          <a class="more" href="#presupuesto">Consultar</a>
+        </div>
+      </article>
+
+      <article class="card rv">
+        <div class="art art-techo" role="img" aria-label="Techo de chapa"></div>
+        <div class="card-body">
+          <h3>Techos metálicos</h3>
+          <p>Techos de chapa con estructura sólida y calculada, aislante y pendientes bien resueltas. Pensados para soportar el paso del tiempo.</p>
+          <a class="more" href="#techos">Ver precio por m²</a>
+        </div>
+      </article>
+
+      <article class="card rv">
+        <div class="art art-reja" role="img" aria-label="Reja de barrotes verticales"></div>
+        <div class="card-body">
+          <h3>Rejas a medida</h3>
+          <p>Rejas para ventanas, puertas y frentes que suman seguridad sin arruinar la fachada. Medidas exactas, diseño a elección y anclaje firme.</p>
+          <a class="more" href="#presupuesto">Consultar</a>
+        </div>
+      </article>
+
+      <article class="card rv">
+        <div class="art art-pergola" role="img" aria-label="Pergola metálica"></div>
+        <div class="card-body">
+          <h3>Pergolas y galerías</h3>
+          <p>Estructuras metálicas para patios y quinchos: sombra, resistencia y una terminación que acompaña el resto de la casa.</p>
+          <a class="more" href="#presupuesto">Consultar</a>
+        </div>
+      </article>
+
+      <article class="card rv">
+        <div class="art art-cierre" role="img" aria-label="Cierre perimetral"></div>
+        <div class="card-body">
+          <h3>Cierres perimetrales</h3>
+          <p>Cerramientos de terrenos, obras y depósitos. Postes, paños y portones de acceso resueltos como un solo sistema.</p>
+          <a class="more" href="#presupuesto">Consultar</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TECHOS (oferta) ===================== -->
+<section class="soft" id="techos">
+  <div class="wrap">
+    <div class="offer rv">
+      <div class="offer-art art art-techo" role="img" aria-label="Techo de chapa con estructura metálica">
+        <div class="badge">
+          <small>Precio por m²</small>
+          <b>$70.000</b>
+        </div>
+      </div>
+      <div class="offer-body">
+        <span class="eyebrow">Techo de chapa</span>
+        <h2>Calidad, rapidez y resistencia.</h2>
+        <p class="lead" style="font-size:.98rem">¿Buscás una solución confiable para tu techo? Tenemos lo que necesitás, con todo incluido en el precio.</p>
+        <ul class="check">
+          <li><b>Flete e instalación</b> incluidos en el presupuesto</li>
+          <li><b>Aislante de 10 mm</b> para calor, frío y ruido</li>
+          <li><b>Estructura sólida y calculada</b> según la luz a cubrir</li>
+          <li><b>Instalación en 48 hs</b> una vez fabricado</li>
+          <li><b>Financiación disponible</b> a convenir</li>
+        </ul>
+        <a class="btn btn-brand" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20quiero%20consultar%20por%20un%20techo%20de%20chapa." target="_blank" rel="noopener">Consultar por mi techo</a>
+        <p class="fineprint">Precio de referencia por m² a modo informativo. El valor final depende de la superficie, la luz a cubrir y el tipo de chapa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRABAJOS ===================== -->
 <section id="trabajos">
   <div class="wrap">
-    <div class="head rv">
+    <div class="sec-head rv">
       <div>
-        <div class="label">Trabajos</div>
-        <h2>El trabajo habla solo.</h2>
+        <span class="eyebrow">Trabajos</span>
+        <h2>Cada proyecto es diferente.</h2>
       </div>
-      <p>Una selección de trabajos realizados. Cerramientos, aberturas, mamparas y vidrios a medida.</p>
+      <p class="lead">Trabajos adaptados al espacio y a las necesidades de cada cliente: desde la fabricación hasta la instalación, cada detalle importa.</p>
     </div>
-    <div class="masonry">
-      <div class="obra tall rv"><div class="ph">Foto de trabajo<br>(cerramiento de vidrio)</div><div class="cap"><small>Cerramiento</small>Cerramiento de aluminio y vidrio</div></div>
-      <div class="obra rv"><div class="ph">Foto de trabajo<br>(ventana negra)</div><div class="cap"><small>Aberturas</small>Ventana de aluminio línea negra</div></div>
-      <div class="obra rv"><div class="ph">Foto de trabajo<br>(mampara de baño)</div><div class="cap"><small>Vidriería</small>Mampara de baño a medida</div></div>
-      <div class="obra rv"><div class="ph">Foto de trabajo<br>(puerta de entrada)</div><div class="cap"><small>Aberturas</small>Puerta de aluminio con vidrio</div></div>
-      <div class="obra tall rv"><div class="ph">Foto de trabajo<br>(cerramiento de patio)</div><div class="cap"><small>Cerramiento</small>Cierre de galería con vidrio</div></div>
-      <div class="obra rv"><div class="ph">Foto de trabajo<br>(taller)</div><div class="cap"><small>Taller</small>Fabricación propia</div></div>
-      <div class="obra rv"><div class="ph">Foto de trabajo<br>(vidrio a medida)</div><div class="cap"><small>Vidriería</small>Vidrios y espejos a medida</div></div>
+
+    <!--
+      Las texturas metálicas de abajo son marcadores de posición.
+      Para usar fotos reales, reemplazar cada <div class="art art-xxx"></div> por:
+      <img src="fotos/porton-corredizo.jpg" alt="Portón corredizo de chapa"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    -->
+    <div class="gallery">
+      <div class="tile w2 h2 rv">
+        <div class="art art-porton"></div>
+        <div class="cap"><small>Portones</small><b>Portón corredizo de chapa, línea recta</b></div>
+      </div>
+      <div class="tile rv">
+        <div class="art art-reja"></div>
+        <div class="cap"><small>Rejas</small><b>Reja de frente con barrotes</b></div>
+      </div>
+      <div class="tile rv">
+        <div class="art art-techo"></div>
+        <div class="cap"><small>Techos</small><b>Techo de chapa con aislante</b></div>
+      </div>
+      <div class="tile rv">
+        <div class="art art-levadizo"></div>
+        <div class="cap"><small>Portones</small><b>Portón levadizo para garaje</b></div>
+      </div>
+      <div class="tile rv">
+        <div class="art art-pergola"></div>
+        <div class="cap"><small>Pergolas</small><b>Pergola metálica para patio</b></div>
+      </div>
+      <div class="tile w2 rv">
+        <div class="art art-estructura"></div>
+        <div class="cap"><small>Estructuras</small><b>Estructura metálica para galpón</b></div>
+      </div>
+      <div class="tile rv">
+        <div class="art art-cierre"></div>
+        <div class="cap"><small>Cierres</small><b>Cierre perimetral de terreno</b></div>
+      </div>
+      <div class="tile rv">
+        <div class="art art-porton"></div>
+        <div class="cap"><small>Taller</small><b>Fabricación en taller propio</b></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="soft" id="servicios">
+<!-- ===================== PROCESO ===================== -->
+<section class="on-dark" style="background:var(--coal);border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)" id="proceso">
   <div class="wrap">
-    <div class="head rv">
+    <div class="sec-head rv">
       <div>
-        <div class="label">Servicios</div>
-        <h2>Todo el aluminio y el vidrio, en un solo lugar.</h2>
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2 style="color:#fff">Del primer mensaje al trabajo instalado.</h2>
       </div>
-      <p>Fabricación propia y colocación a cargo del mismo equipo. Presupuesto claro, sin sorpresas.</p>
+      <p class="lead">Un mal resultado no empieza en la fabricación: empieza antes. Por eso ordenamos el trabajo desde la primera consulta.</p>
     </div>
-    <div class="svc">
-      <div class="svc-card rv">
-        <div class="n">i.</div>
-        <h3>Carpintería en aluminio</h3>
-        <p>Ventanas, puertas, portones y cerramientos fabricados a medida. Líneas modernas, corredizas y línea negra. Del plano a la colocación.</p>
+
+    <div class="steps">
+      <div class="step rv">
+        <h3>Consulta</h3>
+        <p>Nos escribís por WhatsApp con la idea, la foto o las medidas que tengas. Te decimos qué necesitamos saber para avanzar.</p>
       </div>
-      <div class="svc-card rv">
-        <div class="n">ii.</div>
-        <h3>Vidriería</h3>
-        <p>Vidrios, espejos y mamparas de baño cortados y colocados. Cambio de vidrios rotos y templados a medida para todo tipo de ambiente.</p>
+      <div class="step rv">
+        <h3>Medición y proyecto</h3>
+        <p>Vamos al lugar, tomamos medidas exactas y analizamos necesidades, materiales y espacio disponible.</p>
       </div>
-      <div class="svc-card rv">
-        <div class="n">iii.</div>
-        <h3>Service en general</h3>
-        <p>Reparación y mantenimiento de aberturas, cambio de rodamientos, sellado y ajustes. Dejamos tus ventanas y puertas como nuevas.</p>
+      <div class="step rv">
+        <h3>Presupuesto a medida</h3>
+        <p>Te pasamos un presupuesto claro: materiales, plazo de fabricación y fecha de instalación. Sin sorpresas después.</p>
+      </div>
+      <div class="step rv">
+        <h3>Fabricación e instalación</h3>
+        <p>Fabricamos en nuestro taller e instalamos con nuestro equipo. Entregamos el trabajo probado y funcionando.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="porque">
+<!-- ===================== RESPONSABILIDAD ===================== -->
+<section class="soft" id="nosotros">
   <div class="wrap">
-    <div class="head rv" style="justify-content:center;text-align:center">
-      <div style="margin:0 auto">
-        <div class="label">Por qué nosotros</div>
-        <h2>Taller propio, trabajo prolijo.</h2>
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Por qué Roscini</span>
+        <h2>Trabajar con responsabilidad hace la diferencia.</h2>
+      </div>
+      <p class="lead">No se trata solo de hacer un trabajo, sino de hacerlo bien. En cada proyecto priorizamos tres cosas.</p>
+    </div>
+
+    <div class="values">
+      <div class="value rv">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v2H3zm2 4h14v2H5zm-2 4h18v2H3zm2 4h14v2H5zm-2 4h18v2H3z"/></svg></div>
+        <h3>Planificación</h3>
+        <p>Antes de cortar un caño ya sabemos medidas, materiales y cómo se resuelve cada detalle de la instalación.</p>
+      </div>
+      <div class="value rv">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 5.3 9 18l-5.7-5.7 1.4-1.4L9 15.2 20.3 3.9z"/><path d="M3 20h18v2H3z"/></svg></div>
+        <h3>Ejecución cuidada</h3>
+        <p>Soldaduras prolijas, escuadras que cierran y terminaciones que se ven bien de cerca, no solo en la foto.</p>
+      </div>
+      <div class="value rv">
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm1-13h-2v6l5 3 1-1.7-4-2.3z"/></svg></div>
+        <h3>Cumplimiento de tiempos</h3>
+        <p>Acordamos una fecha y la cumplimos. Si algo cambia, te avisamos antes: no después.</p>
       </div>
     </div>
-    <div class="duo">
-      <div class="person rv">
-        <div class="label">Fabricación a medida</div>
-        <h3>Hecho en nuestro taller</h3>
-        <p>No revendemos: fabricamos. Cada abertura y cerramiento se hace a medida en nuestro taller, con los materiales y la terminación que corresponde a cada obra.</p>
-      </div>
-      <div class="person rv">
-        <div class="label">Zona Piriápolis</div>
-        <h3>Cerca y a tiempo</h3>
-        <p>Trabajamos en Piriápolis y toda la zona. Vamos a tomar las medidas, presupuestamos claro y cumplimos con los tiempos que acordamos.</p>
-      </div>
+
+    <div class="quote rv">
+      <p>“Antes de hacer un portón, hay algo más importante que el diseño: que funcione bien todos los días.”</p>
     </div>
   </div>
 </section>
 
-<section class="cta">
+<!-- ===================== PRESUPUESTO ===================== -->
+<section class="on-dark" style="background:var(--ink)" id="presupuesto">
+  <div class="wrap">
+    <div class="quote-grid">
+      <div class="rv">
+        <span class="eyebrow">Presupuesto a medida</span>
+        <h2 style="color:#fff;margin:14px 0 16px">Contanos qué necesitás.</h2>
+        <p class="lead">Analizamos necesidades, materiales y espacios. Nuestro objetivo es ofrecer trabajos duraderos y funcionales. Si tenés un proyecto en mente, consultanos.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg></span>
+            <a href="https://wa.me/542664544838" target="_blank" rel="noopener"><b>2664 54-4838</b><span>WhatsApp · consultas y presupuestos</span></a>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1z"/></svg></span>
+            <a href="tel:+542664563238"><b>2664 56-3238</b><span>Teléfono alternativo</span></a>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg></span>
+            <a href="mailto:metalurgicaroscini@gmail.com"><b>metalurgicaroscini@gmail.com</b><span>Planos, medidas y consultas por escrito</span></a>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+            <span><b>San Luis, Argentina</b><span>Trabajamos en la ciudad y la zona</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <form id="form-presupuesto" class="rv" novalidate>
+        <div class="field">
+          <label for="f-nombre">Nombre y apellido</label>
+          <input id="f-nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-trabajo">¿Qué necesitás?</label>
+            <select id="f-trabajo" name="trabajo">
+              <option>Portón corredizo</option>
+              <option>Portón levadizo</option>
+              <option>Techo de chapa</option>
+              <option>Reja</option>
+              <option>Pergola o galería</option>
+              <option>Cierre perimetral</option>
+              <option>Estructura metálica</option>
+              <option>Otro trabajo en metal</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-medidas">Medidas aproximadas</label>
+            <input id="f-medidas" name="medidas" type="text" placeholder="Ej: 4 m x 2,10 m">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-localidad">Localidad</label>
+          <input id="f-localidad" name="localidad" type="text" placeholder="¿Dónde es el trabajo?">
+        </div>
+        <div class="field">
+          <label for="f-detalle">Contanos un poco más</label>
+          <textarea id="f-detalle" name="detalle" placeholder="El espacio, el uso que le vas a dar, plazos, o cualquier detalle que nos sirva."></textarea>
+        </div>
+        <button class="btn btn-wa" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+          Enviar consulta por WhatsApp
+        </button>
+        <p class="form-note">Se abre WhatsApp con el mensaje ya escrito. Vos solo tocás enviar.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section>
+  <div class="wrap">
+    <div class="faq">
+      <div class="sec-head rv" style="justify-content:center;text-align:center">
+        <div style="margin:0 auto">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2 style="margin:12px auto 0;max-width:20ch">¿Cuándo es el momento correcto para consultar?</h2>
+        </div>
+      </div>
+
+      <details class="rv">
+        <summary>¿Cuándo conviene pedir el presupuesto?</summary>
+        <p>Cuanto antes, mejor. Si el espacio todavía está en obra, podemos indicarte medidas y previsiones (columnas, dinteles, anclajes) para que después el trabajo entre perfecto y no haya que romper nada.</p>
+      </details>
+      <details class="rv">
+        <summary>¿El presupuesto tiene costo?</summary>
+        <p>No. La visita, la medición y el presupuesto son sin cargo y sin compromiso. Recién cuando aprobás el trabajo se define la seña y la fecha de fabricación.</p>
+      </details>
+      <details class="rv">
+        <summary>¿Cuánto tardan en entregar un trabajo?</summary>
+        <p>Depende del tipo y del tamaño. Al aprobar el presupuesto te damos una fecha concreta de fabricación e instalación, y la cumplimos. En techos de chapa, la instalación se realiza en 48 hs una vez fabricado.</p>
+      </details>
+      <details class="rv">
+        <summary>¿La instalación está incluida?</summary>
+        <p>Sí. Fabricamos e instalamos con nuestro propio equipo, así hay un solo responsable por el resultado final. El flete también está contemplado en el presupuesto.</p>
+      </details>
+      <details class="rv">
+        <summary>¿Los portones quedan preparados para motor?</summary>
+        <p>Sí. Si nos avisás desde el principio, dejamos la estructura, los rodamientos y los refuerzos preparados para automatizar, ahora o más adelante.</p>
+      </details>
+      <details class="rv">
+        <summary>¿Trabajan con financiación?</summary>
+        <p>Contamos con opciones de financiación a convenir según el trabajo. Consultanos por WhatsApp y vemos la forma de pago que mejor te sirva.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="final">
   <div class="wrap rv">
-    <div class="label">Presupuesto sin compromiso</div>
-    <h2>Contanos qué necesitás.</h2>
-    <p>Escribinos por WhatsApp con tu idea, medidas o foto y te respondemos con un presupuesto claro.</p>
-    <a class="btn-big" href="https://wa.me/59891607217" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
-      Escribir por WhatsApp
-    </a>
-    <div class="tels">
-      <span>📞 091 607 217</span>
-      <span>📍 Piriápolis, Maldonado</span>
+    <span class="eyebrow">Fabricación e instalación</span>
+    <h2>¿Tenés un proyecto en mente?</h2>
+    <p>Realizamos trabajos en metal resistentes, funcionales y pensados para durar. Escribinos y lo resolvemos juntos.</p>
+    <div class="final-cta">
+      <a class="btn btn-wa" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20tengo%20un%20proyecto%20en%20mente%20y%20quiero%20un%20presupuesto." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="tel:+542664563238">Llamar al 2664 56-3238</a>
     </div>
   </div>
 </section>
 
+<!-- ===================== FOOTER ===================== -->
 <footer>
-  <div class="foot">
-    <div>© 2026 AlumGlass · Carpintería en aluminio y vidriería</div>
-    <div class="label" style="font-size:.62rem">Aluminio · Vidriería · Service · Piriápolis</div>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#inicio">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="8" fill="#1E1E1E"/>
+            <path d="M8 28V13l12-5 12 5v15" fill="none" stroke="#F04E1E" stroke-width="2.6"/>
+            <path d="M8 20h24M8 24.5h24" stroke="#fff" stroke-width="2.2"/>
+          </svg>
+          <span class="brand-txt">ROSCINI<small>Metalúrgica</small></span>
+        </a>
+        <p>Fábrica de portones, techos, rejas y estructuras metálicas. Realizamos todo tipo de soluciones metalúrgicas. Nos distingue nuestra responsabilidad.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Servicios</h4>
+        <a href="#servicios">Portones corredizos</a>
+        <a href="#servicios">Portones levadizos</a>
+        <a href="#techos">Techos metálicos</a>
+        <a href="#servicios">Rejas a medida</a>
+        <a href="#servicios">Pergolas y cierres</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/542664544838" target="_blank" rel="noopener">WhatsApp 2664 54-4838</a>
+        <a href="tel:+542664563238">Tel. 2664 56-3238</a>
+        <a href="mailto:metalurgicaroscini@gmail.com">metalurgicaroscini@gmail.com</a>
+        <a href="https://instagram.com/metalurgicaroscini" target="_blank" rel="noopener">Instagram @metalurgicaroscini</a>
+        <span>San Luis, Argentina</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Metalúrgica Roscini · Todos los derechos reservados</span>
+      <span>Portones · Techos · Rejas · Pergolas · Cierres · Estructuras</span>
+    </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/59891607217" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+<a class="wa-float" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
+  <span>WhatsApp</span>
 </a>
 
 <script>
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+(function(){
+  "use strict";
+  var WA = "542664544838";
+
+  /* año dinámico */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* menú mobile */
+  var toggle = document.querySelector('.nav-toggle');
+  var links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', function(){
+    var open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    toggle.setAttribute('aria-label', open ? 'Abrir menú' : 'Cerrar menú');
+    links.classList.toggle('open', !open);
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.closest('a')){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','Abrir menú');
+    }
+  });
+
+  /* reveal al hacer scroll */
+  var els = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('on'); obs.unobserve(en.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ obs.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('on'); });
+  }
+
+  /* formulario -> WhatsApp con el mensaje pre-armado */
+  var form = document.getElementById('form-presupuesto');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre    = form.nombre.value.trim();
+    var trabajo   = form.trabajo.value;
+    var medidas   = form.medidas.value.trim();
+    var localidad = form.localidad.value.trim();
+    var detalle   = form.detalle.value.trim();
+
+    if(!nombre){ form.nombre.focus(); return; }
+
+    var msg = "Hola Roscini, soy " + nombre + "." +
+      "\nNecesito: " + trabajo +
+      (medidas   ? "\nMedidas aproximadas: " + medidas : "") +
+      (localidad ? "\nLocalidad: " + localidad : "") +
+      (detalle   ? "\nDetalle: " + detalle : "") +
+      "\n\nQuisiera un presupuesto. ¡Gracias!";
+
+    window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  });
+})();
 </script>
 
 </body>
