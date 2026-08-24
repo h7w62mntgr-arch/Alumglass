@@ -1,25 +1,35 @@
 <!DOCTYPE html>
+<!--
+  BellMar Aberturas — Aluminio & PVC
+  ------------------------------------------------------------------
+  DATOS A COMPLETAR antes de publicar (buscar y reemplazar en todo el archivo):
+    · 54XXXXXXXXXX              -> número de WhatsApp real (formato internacional, sin + ni espacios)
+    · +54 9 XXXX XX-XXXX        -> el mismo número, como se muestra en pantalla
+    · contacto@bellmaraberturas.com -> email real de la empresa
+    · "Consultanos por tu zona de cobertura" / "Fábrica y taller propio" -> ciudad y dirección reales
+  Instagram @bellmar_aluminios ya está enlazado.
+-->
 <html lang="es-AR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Metalúrgica Roscini — Portones, techos, rejas y pergolas a medida</title>
-<meta name="description" content="Fábrica de portones, techos metálicos, rejas, cierres y pergolas. Fabricación e instalación a medida, con planificación, ejecución cuidada y cumplimiento de tiempos. San Luis, Argentina.">
+<title>BellMar Aberturas — Ventanas y puertas de aluminio y PVC a medida</title>
+<meta name="description" content="Fábrica de aberturas de aluminio y PVC: ventanas, puertas, cerramientos, DVH y aberturas motorizadas. 30 años de experiencia, fabricación propia, entrega a domicilio e instalación.">
 <meta name="theme-color" content="#0E0E0E">
-<meta property="og:title" content="Metalúrgica Roscini — Portones, techos y estructuras a medida">
-<meta property="og:description" content="Fabricamos e instalamos portones, techos metálicos, rejas, cierres y pergolas. Presupuesto a medida, sin cargo.">
+<meta property="og:title" content="BellMar Aberturas — Aluminio &amp; PVC">
+<meta property="og:description" content="Fabricamos e instalamos ventanas, puertas y cerramientos en aluminio y PVC. Presupuesto a medida, sin cargo.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0E0E'/%3E%3Cpath d='M6 22V10l10-4 10 4v12' fill='none' stroke='%23F04E1E' stroke-width='2.4'/%3E%3Cpath d='M6 17h20M6 21h20' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0E0E'/%3E%3Crect x='7' y='6' width='18' height='20' rx='2' fill='none' stroke='%231E6FD9' stroke-width='2.4'/%3E%3Cpath d='M16 6v20M7 15h18' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
 <style>
 :root{
   /* marca */
-  --brand:#F04E1E;        /* naranja Roscini */
-  --brand-2:#FF6B3D;      /* naranja claro */
-  --brand-ink:#B8380F;    /* naranja oscuro */
+  --brand:#1E6FD9;        /* azul BellMar */
+  --brand-2:#5AA0FF;      /* azul claro */
+  --brand-ink:#134C99;    /* azul oscuro */
   --ink:#0E0E0E;          /* negro base */
   --coal:#151515;         /* negro sección */
   --graphite:#1E1E1E;     /* gris muy oscuro */
@@ -63,7 +73,7 @@ section{padding:clamp(64px,8vw,110px) 0}
 .btn-wa{background:var(--wa);color:#fff}
 .btn-wa:hover{background:#1F8C4E;transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,160,90,.28)}
 .btn-brand{background:var(--brand);color:#fff}
-.btn-brand:hover{background:#D8420F;transform:translateY(-2px);box-shadow:0 12px 26px rgba(240,78,30,.3)}
+.btn-brand:hover{background:#1857B8;transform:translateY(-2px);box-shadow:0 12px 26px rgba(30,111,217,.32)}
 .btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
 .btn-ghost:hover{border-color:var(--ink);background:var(--paper-2)}
 .on-dark .btn-ghost{border-color:#3A3A3A;color:#fff}
@@ -90,7 +100,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(14,14,14,.92
 /* ---------- hero ---------- */
 header.hero{position:relative;background:var(--ink);color:#fff;padding:132px 0 0;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:
-   radial-gradient(900px 460px at 78% -8%,rgba(240,78,30,.22),transparent 62%),
+   radial-gradient(900px 460px at 78% -8%,rgba(30,111,217,.24),transparent 62%),
    repeating-linear-gradient(122deg,rgba(255,255,255,.028) 0 2px,transparent 2px 9px);
   pointer-events:none}
 .hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;padding-bottom:76px}
@@ -117,33 +127,50 @@ header.hero{position:relative;background:var(--ink);color:#fff;padding:132px 0 0
 .bar-in b{display:block;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;color:#fff;letter-spacing:-.01em}
 .bar-in span{font-size:.83rem;color:var(--muted-dark)}
 
-/* ---------- arte metálico (sin fotos) ---------- */
-.art{position:relative;background:#1A1A1A;overflow:hidden}
-.art::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(255,255,255,.09),transparent 42%,rgba(0,0,0,.42))}
-.art-porton{background:
-  repeating-linear-gradient(180deg,#333 0 22px,#242424 22px 26px),
-  #242424}
-.art-levadizo{background:
-  repeating-linear-gradient(180deg,#3A3A3A 0 30px,#232323 30px 34px),
-  linear-gradient(90deg,#2C2C2C,#191919)}
-.art-reja{background:
-  repeating-linear-gradient(90deg,#3B3B3B 0 7px,transparent 7px 30px),
-  linear-gradient(180deg,#212121,#141414)}
-.art-techo{background:
-  repeating-linear-gradient(96deg,#343434 0 12px,#1E1E1E 12px 26px),
-  #1E1E1E}
-.art-pergola{background:
-  repeating-linear-gradient(90deg,#343434 0 10px,transparent 10px 46px),
-  repeating-linear-gradient(180deg,#2E2E2E 0 8px,transparent 8px 52px),
-  linear-gradient(160deg,#242424,#151515)}
-.art-cierre{background:
-  repeating-linear-gradient(45deg,#333 0 4px,transparent 4px 22px),
-  repeating-linear-gradient(-45deg,#333 0 4px,transparent 4px 22px),
-  #1B1B1B}
-.art-estructura{background:
-  repeating-linear-gradient(60deg,#383838 0 6px,transparent 6px 40px),
-  repeating-linear-gradient(-60deg,#2F2F2F 0 6px,transparent 6px 40px),
-  linear-gradient(180deg,#232323,#141414)}
+/* ---------- arte de aberturas (sin fotos) ---------- */
+.art{position:relative;background:#141A20;overflow:hidden}
+.art::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(255,255,255,.10),transparent 42%,rgba(0,0,0,.45))}
+
+/* ventana corrediza: dos hojas + montante central */
+.art-corrediza{background:
+  linear-gradient(90deg,transparent 48.4%,#3C4650 48.4% 51.6%,transparent 51.6%),
+  linear-gradient(180deg,#333D47 0 6%,transparent 6% 94%,#333D47 94%),
+  linear-gradient(150deg,#456A8D,#1C2833 58%,#233240)}
+/* puerta de aluminio: hoja con paño vidriado vertical */
+.art-puerta{background:
+  linear-gradient(90deg,transparent 32%,rgba(140,185,225,.40) 32% 68%,transparent 68%),
+  linear-gradient(90deg,#2A323A 0 8%,transparent 8% 92%,#2A323A 92%),
+  linear-gradient(180deg,#272F37,#161C22)}
+/* abertura de PVC: perfil blanco con vidrio */
+.art-pvc{background:
+  linear-gradient(90deg,#ECEFF2 0 7%,transparent 7% 93%,#ECEFF2 93%),
+  linear-gradient(180deg,#ECEFF2 0 9%,transparent 9% 91%,#ECEFF2 91%),
+  linear-gradient(150deg,#8FB3CE,#5C8099 62%,#3F5D77)}
+/* DVH: doble vidrio con cámara de aire */
+.art-dvh{background:
+  repeating-linear-gradient(122deg,rgba(255,255,255,.10) 0 2px,transparent 2px 26px),
+  linear-gradient(90deg,transparent 45%,#3A444E 45% 46.6%,transparent 46.6% 53.4%,#3A444E 53.4% 55%,transparent 55%),
+  linear-gradient(150deg,#48688A,#1D2A36)}
+/* celosías y postigones: lamas horizontales */
+.art-celosia{background:
+  linear-gradient(90deg,#414B55 0 6%,transparent 6% 94%,#414B55 94%),
+  repeating-linear-gradient(180deg,#414B55 0 10px,#1F262D 10px 15px),
+  #1F262D}
+/* paño fijo: vidrio grande con reflejo */
+.art-fijo{background:
+  linear-gradient(112deg,rgba(255,255,255,.17) 0 17%,transparent 17% 33%,rgba(255,255,255,.09) 33% 41%,transparent 41%),
+  linear-gradient(160deg,#4C7194,#243544 70%,#1A2733)}
+/* abertura motorizada: cortina de enrollar */
+.art-motorizada{background:
+  linear-gradient(180deg,#39434D 0 14%,rgba(0,0,0,.45) 14% 15.2%,transparent 15.2%),
+  linear-gradient(90deg,#2B333B 0 5%,transparent 5% 95%,#2B333B 95%),
+  repeating-linear-gradient(180deg,#4A555F 0 5px,#2A323A 5px 8px),
+  #2A323A}
+/* taller: perfiles de aluminio apilados */
+.art-taller{background:
+  repeating-linear-gradient(90deg,#39424B 0 8px,transparent 8px 22px),
+  repeating-linear-gradient(180deg,#2E363E 0 8px,transparent 8px 30px),
+  linear-gradient(160deg,#242B33,#151A1F)}
 
 /* ---------- servicios ---------- */
 .sec-head{display:flex;justify-content:space-between;align-items:end;gap:26px;flex-wrap:wrap;margin-bottom:42px}
@@ -190,14 +217,14 @@ header.hero{position:relative;background:var(--ink);color:#fff;padding:132px 0 0
 .tile.w2{grid-column:span 2}
 .tile.h2{grid-row:span 2}
 .tile .art{position:absolute;inset:0}
-.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:42px 16px 15px;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff;z-index:2}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:46px 16px 15px;background:linear-gradient(transparent,rgba(0,0,0,.55) 38%,rgba(0,0,0,.92));color:#fff;z-index:2}
 .tile .cap small{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-2);margin-bottom:3px}
 .tile .cap b{font-family:'Archivo',sans-serif;font-weight:700;font-size:.98rem;letter-spacing:-.01em}
 
 /* ---------- responsabilidad ---------- */
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
 .value{padding:28px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line)}
-.value .ico{width:44px;height:44px;border-radius:10px;background:rgba(240,78,30,.1);display:grid;place-items:center;margin-bottom:16px}
+.value .ico{width:44px;height:44px;border-radius:10px;background:rgba(30,111,217,.12);display:grid;place-items:center;margin-bottom:16px}
 .value .ico svg{width:22px;height:22px;fill:var(--brand)}
 .value h3{margin-bottom:7px}
 .value p{color:var(--muted);font-size:.93rem}
@@ -314,13 +341,14 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 <!-- ===================== NAV ===================== -->
 <nav>
   <div class="nav-in">
-    <a class="brand" href="#inicio" aria-label="Metalúrgica Roscini — inicio">
+    <a class="brand" href="#inicio" aria-label="BellMar Aberturas — inicio">
       <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
         <rect width="40" height="40" rx="8" fill="#1E1E1E"/>
-        <path d="M8 28V13l12-5 12 5v15" fill="none" stroke="#F04E1E" stroke-width="2.6"/>
-        <path d="M8 20h24M8 24.5h24" stroke="#fff" stroke-width="2.2"/>
+        <rect x="9" y="8" width="22" height="24" rx="2.5" fill="none" stroke="#1E6FD9" stroke-width="2.8"/>
+        <path d="M20 8v24M9 19h22" stroke="#fff" stroke-width="2.2"/>
+        <path d="M24 12.5h3.5v3.5" fill="none" stroke="#5AA0FF" stroke-width="1.6"/>
       </svg>
-      <span class="brand-txt">ROSCINI<small>Metalúrgica</small></span>
+      <span class="brand-txt">BELLMAR<small>Aberturas</small></span>
     </a>
 
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
@@ -329,11 +357,11 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 
     <div class="nav-links" id="nav-links">
       <a href="#servicios">Servicios</a>
-      <a href="#techos">Techos de chapa</a>
+      <a href="#alta-prestacion">Alta prestación</a>
       <a href="#trabajos">Trabajos</a>
       <a href="#proceso">Cómo trabajamos</a>
       <a href="#presupuesto">Contacto</a>
-      <a class="btn btn-wa btn-sm" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
+      <a class="btn btn-wa btn-sm" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
         Presupuesto
       </a>
@@ -346,11 +374,11 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Portones · Techos · Rejas · Pergolas</span>
-        <h1>Trabajos en metal <span class="nb"><span class="mark"><span>a medida</span></span>,</span> pensados para durar.</h1>
-        <p class="lead">Fabricamos e instalamos portones, techos metálicos, rejas, cierres y estructuras. Fabricación propia, medidas exactas e instalación incluida: un solo responsable de principio a fin.</p>
+        <span class="eyebrow">Ventanas · Puertas · Aluminio · PVC</span>
+        <h1>Aberturas que construyen <span class="nb"><span class="mark"><span>calidad</span></span>.</span></h1>
+        <p class="lead">Fabricamos e instalamos ventanas, puertas y cerramientos en aluminio y PVC. Somos una empresa joven con 30 años de experiencia: materiales de primera calidad, medidas exactas y entrega a domicilio.</p>
         <div class="hero-cta">
-          <a class="btn btn-wa" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
+          <a class="btn btn-wa" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
             Pedir presupuesto
           </a>
@@ -360,12 +388,12 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
       </div>
 
       <div class="hero-card rv">
-        <div class="art art-porton" role="img" aria-label="Portón corredizo de chapa con paneles horizontales"></div>
+        <div class="art art-corrediza" role="img" aria-label="Ventana corrediza de aluminio de dos hojas"></div>
         <span class="tag">Fabricación propia</span>
         <div class="foot">
           <div>
-            <b>Portón corredizo a medida</b>
-            <span>Diseño, fabricación e instalación</span>
+            <b>Ventana corrediza a medida</b>
+            <span>Aluminio o PVC · con o sin DVH</span>
           </div>
         </div>
       </div>
@@ -374,10 +402,10 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 
   <div class="bar">
     <div class="bar-in">
-      <div><b>A medida</b><span>Cada proyecto se calcula según el espacio y el uso</span></div>
+      <div><b>30 años de experiencia</b><span>Una empresa joven con oficio de décadas</span></div>
       <div><b>Fabricación propia</b><span>Taller equipado: no tercerizamos el trabajo</span></div>
-      <div><b>Instalación incluida</b><span>Nos vamos con el trabajo terminado y funcionando</span></div>
-      <div><b>Tiempos cumplidos</b><span>Fecha de entrega acordada por escrito</span></div>
+      <div><b>Aluminio y PVC</b><span>Dos sistemas con la misma exigencia de calidad</span></div>
+      <div><b>Entrega a domicilio</b><span>Llevamos, colocamos y probamos cada abertura</span></div>
     </div>
   </div>
 </header>
@@ -388,62 +416,62 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
     <div class="sec-head rv">
       <div>
         <span class="eyebrow">Servicios</span>
-        <h2>Soluciones metalúrgicas para casas, comercios y obras.</h2>
+        <h2>Aberturas para casas, obras y comercios.</h2>
       </div>
-      <p class="lead">Fabricación e instalación de portones, rejas, techos, cierres y estructuras. Todo medido, calculado y ejecutado por el mismo equipo.</p>
+      <p class="lead">Fabricación e instalación de ventanas, puertas, cerramientos y complementos. Todo medido, calculado y ejecutado por el mismo equipo.</p>
     </div>
 
     <div class="grid-svc">
       <article class="card rv">
-        <div class="art art-porton" role="img" aria-label="Portón corredizo"></div>
+        <div class="art art-corrediza" role="img" aria-label="Ventana corrediza de aluminio"></div>
         <div class="card-body">
-          <h3>Portones corredizos</h3>
-          <p>Portones resistentes y funcionales, con guías, rodamientos y refuerzos calculados para el peso real de la hoja. Preparados para automatizar.</p>
+          <h3>Ventanas corredizas</h3>
+          <p>La abertura más pedida. Perfilería reforzada, rodamientos de calidad y cierre firme, calculados para el tamaño real de la hoja.</p>
           <a class="more" href="#presupuesto">Consultar</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-levadizo" role="img" aria-label="Portón levadizo"></div>
+        <div class="art art-puerta" role="img" aria-label="Puerta de aluminio con paño vidriado"></div>
         <div class="card-body">
-          <h3>Portones levadizos</h3>
-          <p>Ideales cuando no hay lugar para correr la hoja. Mecanismo balanceado, apertura suave y terminaciones prolijas por dentro y por fuera.</p>
+          <h3>Puertas de aluminio</h3>
+          <p>Puertas de abrir, corredizas y de doble hoja. Herrajes de primera, cierre hermético y terminaciones prolijas por dentro y por fuera.</p>
           <a class="more" href="#presupuesto">Consultar</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-techo" role="img" aria-label="Techo de chapa"></div>
+        <div class="art art-pvc" role="img" aria-label="Ventana de PVC blanca"></div>
         <div class="card-body">
-          <h3>Techos metálicos</h3>
-          <p>Techos de chapa con estructura sólida y calculada, aislante y pendientes bien resueltas. Pensados para soportar el paso del tiempo.</p>
-          <a class="more" href="#techos">Ver precio por m²</a>
+          <h3>Aberturas de PVC</h3>
+          <p>Perfilería de PVC con refuerzo interior de acero: mucha más aislación térmica y acústica, sin mantenimiento y con una vida útil larguísima.</p>
+          <a class="more" href="#alta-prestacion">Ver alta prestación</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-reja" role="img" aria-label="Reja de barrotes verticales"></div>
+        <div class="art art-dvh" role="img" aria-label="Doble vidriado hermético"></div>
         <div class="card-body">
-          <h3>Rejas a medida</h3>
-          <p>Rejas para ventanas, puertas y frentes que suman seguridad sin arruinar la fachada. Medidas exactas, diseño a elección y anclaje firme.</p>
+          <h3>Vidrio DVH</h3>
+          <p>Doble vidriado hermético con cámara de aire: menos frío, menos calor, menos ruido de la calle y menos gasto de climatización todo el año.</p>
+          <a class="more" href="#alta-prestacion">Ver alta prestación</a>
+        </div>
+      </article>
+
+      <article class="card rv">
+        <div class="art art-motorizada" role="img" aria-label="Cortina de enrollar motorizada"></div>
+        <div class="card-body">
+          <h3>Aberturas motorizadas</h3>
+          <p>Cortinas de enrollar y aberturas grandes con motor y control remoto. Comodidad y seguridad, con la instalación prevista desde el proyecto.</p>
           <a class="more" href="#presupuesto">Consultar</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-pergola" role="img" aria-label="Pergola metálica"></div>
+        <div class="art art-celosia" role="img" aria-label="Postigón de celosía"></div>
         <div class="card-body">
-          <h3>Pergolas y galerías</h3>
-          <p>Estructuras metálicas para patios y quinchos: sombra, resistencia y una terminación que acompaña el resto de la casa.</p>
-          <a class="more" href="#presupuesto">Consultar</a>
-        </div>
-      </article>
-
-      <article class="card rv">
-        <div class="art art-cierre" role="img" aria-label="Cierre perimetral"></div>
-        <div class="card-body">
-          <h3>Cierres perimetrales</h3>
-          <p>Cerramientos de terrenos, obras y depósitos. Postes, paños y portones de acceso resueltos como un solo sistema.</p>
+          <h3>Celosías y postigones</h3>
+          <p>Celosías, postigones y paños fijos que completan la abertura: control de luz, ventilación y privacidad, en la misma línea y color.</p>
           <a class="more" href="#presupuesto">Consultar</a>
         </div>
       </article>
@@ -451,29 +479,29 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
   </div>
 </section>
 
-<!-- ===================== TECHOS (oferta) ===================== -->
-<section class="soft" id="techos">
+<!-- ===================== ALTA PRESTACIÓN (destacado) ===================== -->
+<section class="soft" id="alta-prestacion">
   <div class="wrap">
     <div class="offer rv">
-      <div class="offer-art art art-techo" role="img" aria-label="Techo de chapa con estructura metálica">
+      <div class="offer-art art art-dvh" role="img" aria-label="Doble vidriado hermético con cámara de aire">
         <div class="badge">
-          <small>Precio por m²</small>
-          <b>$70.000</b>
+          <small>Vidriado</small>
+          <b>DVH</b>
         </div>
       </div>
       <div class="offer-body">
-        <span class="eyebrow">Techo de chapa</span>
-        <h2>Calidad, rapidez y resistencia.</h2>
-        <p class="lead" style="font-size:.98rem">¿Buscás una solución confiable para tu techo? Tenemos lo que necesitás, con todo incluido en el precio.</p>
+        <span class="eyebrow">Línea alta prestación</span>
+        <h2>Más confort, menos consumo.</h2>
+        <p class="lead" style="font-size:.98rem">¿Querés mejorar tu hogar con más confort, seguridad y ahorro? La línea de alta prestación con DVH está pensada exactamente para eso.</p>
         <ul class="check">
-          <li><b>Flete e instalación</b> incluidos en el presupuesto</li>
-          <li><b>Aislante de 10 mm</b> para calor, frío y ruido</li>
-          <li><b>Estructura sólida y calculada</b> según la luz a cubrir</li>
-          <li><b>Instalación en 48 hs</b> una vez fabricado</li>
+          <li><b>Doble vidriado hermético (DVH)</b> contra el calor, el frío y el ruido</li>
+          <li><b>Burletes y cierre multipunto</b> que sellan de verdad</li>
+          <li><b>Perfilería reforzada</b> calculada según la medida del vano</li>
+          <li><b>Motorización opcional</b> en cortinas y aberturas grandes</li>
           <li><b>Financiación disponible</b> a convenir</li>
         </ul>
-        <a class="btn btn-brand" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20quiero%20consultar%20por%20un%20techo%20de%20chapa." target="_blank" rel="noopener">Consultar por mi techo</a>
-        <p class="fineprint">Precio de referencia por m² a modo informativo. El valor final depende de la superficie, la luz a cubrir y el tipo de chapa.</p>
+        <a class="btn btn-brand" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20quiero%20consultar%20por%20la%20l%C3%ADnea%20de%20alta%20prestaci%C3%B3n%20con%20DVH." target="_blank" rel="noopener">Consultar por alta prestación</a>
+        <p class="fineprint">Disponible en aluminio y en PVC, en blanco, negro, gris, anodizado y símil madera. El valor final depende de las medidas, el tipo de apertura y el vidrio elegido.</p>
       </div>
     </div>
   </div>
@@ -487,46 +515,46 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
         <span class="eyebrow">Trabajos</span>
         <h2>Cada proyecto es diferente.</h2>
       </div>
-      <p class="lead">Trabajos adaptados al espacio y a las necesidades de cada cliente: desde la fabricación hasta la instalación, cada detalle importa.</p>
+      <p class="lead">Aberturas adaptadas al vano, al uso y al estilo de cada casa: desde la fabricación hasta la colocación, cada detalle importa.</p>
     </div>
 
     <!--
-      Las texturas metálicas de abajo son marcadores de posición.
+      Las texturas de abajo son marcadores de posición.
       Para usar fotos reales, reemplazar cada <div class="art art-xxx"></div> por:
-      <img src="fotos/porton-corredizo.jpg" alt="Portón corredizo de chapa"
+      <img src="fotos/ventana-corrediza.jpg" alt="Ventana corrediza de aluminio"
            style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
     -->
     <div class="gallery">
       <div class="tile w2 h2 rv">
-        <div class="art art-porton"></div>
-        <div class="cap"><small>Portones</small><b>Portón corredizo de chapa, línea recta</b></div>
+        <div class="art art-corrediza"></div>
+        <div class="cap"><small>Ventanas</small><b>Corrediza de aluminio en negro</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-reja"></div>
-        <div class="cap"><small>Rejas</small><b>Reja de frente con barrotes</b></div>
+        <div class="art art-pvc"></div>
+        <div class="cap"><small>PVC</small><b>Ventana de PVC blanca con DVH</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-techo"></div>
-        <div class="cap"><small>Techos</small><b>Techo de chapa con aislante</b></div>
+        <div class="art art-puerta"></div>
+        <div class="cap"><small>Puertas</small><b>Puerta de aluminio con paño vidriado</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-levadizo"></div>
-        <div class="cap"><small>Portones</small><b>Portón levadizo para garaje</b></div>
+        <div class="art art-dvh"></div>
+        <div class="cap"><small>Vidrio</small><b>DVH con cámara de aire</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-pergola"></div>
-        <div class="cap"><small>Pergolas</small><b>Pergola metálica para patio</b></div>
+        <div class="art art-celosia"></div>
+        <div class="cap"><small>Complementos</small><b>Postigón de celosía a medida</b></div>
       </div>
       <div class="tile w2 rv">
-        <div class="art art-estructura"></div>
-        <div class="cap"><small>Estructuras</small><b>Estructura metálica para galpón</b></div>
+        <div class="art art-fijo"></div>
+        <div class="cap"><small>Cerramientos</small><b>Paño fijo de piso a techo</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-cierre"></div>
-        <div class="cap"><small>Cierres</small><b>Cierre perimetral de terreno</b></div>
+        <div class="art art-motorizada"></div>
+        <div class="cap"><small>Motorizadas</small><b>Cortina de enrollar con motor</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-porton"></div>
+        <div class="art art-taller"></div>
         <div class="cap"><small>Taller</small><b>Fabricación en taller propio</b></div>
       </div>
     </div>
@@ -539,27 +567,27 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
     <div class="sec-head rv">
       <div>
         <span class="eyebrow">Cómo trabajamos</span>
-        <h2 style="color:#fff">Del primer mensaje al trabajo instalado.</h2>
+        <h2 style="color:#fff">Del primer mensaje a la abertura colocada.</h2>
       </div>
-      <p class="lead">Un mal resultado no empieza en la fabricación: empieza antes. Por eso ordenamos el trabajo desde la primera consulta.</p>
+      <p class="lead">Una ventana que no cierra bien no falla en la colocación: falla antes. Por eso ordenamos el trabajo desde la primera consulta.</p>
     </div>
 
     <div class="steps">
       <div class="step rv">
         <h3>Consulta</h3>
-        <p>Nos escribís por WhatsApp con la idea, la foto o las medidas que tengas. Te decimos qué necesitamos saber para avanzar.</p>
+        <p>Nos escribís por WhatsApp con la idea, la foto o las medidas del vano. Te decimos qué necesitamos saber para avanzar.</p>
       </div>
       <div class="step rv">
         <h3>Medición y proyecto</h3>
-        <p>Vamos al lugar, tomamos medidas exactas y analizamos necesidades, materiales y espacio disponible.</p>
+        <p>Vamos al lugar, medimos los vanos y definimos sistema, tipo de apertura, vidrio y color según el uso de cada ambiente.</p>
       </div>
       <div class="step rv">
         <h3>Presupuesto a medida</h3>
-        <p>Te pasamos un presupuesto claro: materiales, plazo de fabricación y fecha de instalación. Sin sorpresas después.</p>
+        <p>Te pasamos un presupuesto claro: perfilería, vidrio, plazo de fabricación y fecha de colocación. Sin sorpresas después.</p>
       </div>
       <div class="step rv">
-        <h3>Fabricación e instalación</h3>
-        <p>Fabricamos en nuestro taller e instalamos con nuestro equipo. Entregamos el trabajo probado y funcionando.</p>
+        <h3>Fabricación y colocación</h3>
+        <p>Fabricamos en nuestro taller, entregamos a domicilio y colocamos con nuestro equipo. Te dejamos todo probado y funcionando.</p>
       </div>
     </div>
   </div>
@@ -570,32 +598,32 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <span class="eyebrow">Por qué Roscini</span>
+        <span class="eyebrow">Por qué BellMar</span>
         <h2>Trabajar con responsabilidad hace la diferencia.</h2>
       </div>
-      <p class="lead">No se trata solo de hacer un trabajo, sino de hacerlo bien. En cada proyecto priorizamos tres cosas.</p>
+      <p class="lead">No se trata solo de fabricar una abertura, sino de que funcione bien todos los días. En cada proyecto priorizamos tres cosas.</p>
     </div>
 
     <div class="values">
       <div class="value rv">
-        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h18v2H3zm2 4h14v2H5zm-2 4h18v2H3zm2 4h14v2H5zm-2 4h18v2H3z"/></svg></div>
-        <h3>Planificación</h3>
-        <p>Antes de cortar un caño ya sabemos medidas, materiales y cómo se resuelve cada detalle de la instalación.</p>
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6.5v11L12 22l9-4.5v-11zm0 2.2 6.6 3.3L12 10.8 5.4 7.5zM5 9.2l6 3v7.1l-6-3zm8 10.1v-7.1l6-3v7.1z"/></svg></div>
+        <h3>Materiales de primera calidad</h3>
+        <p>Perfilería, herrajes y vidrios de marcas reconocidas. Lo que no se ve es justamente lo que hace durar una abertura.</p>
       </div>
       <div class="value rv">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 5.3 9 18l-5.7-5.7 1.4-1.4L9 15.2 20.3 3.9z"/><path d="M3 20h18v2H3z"/></svg></div>
-        <h3>Ejecución cuidada</h3>
-        <p>Soldaduras prolijas, escuadras que cierran y terminaciones que se ven bien de cerca, no solo en la foto.</p>
+        <h3>Diseño y funcionalidad</h3>
+        <p>Escuadras que cierran, burletes que sellan y terminaciones que se ven bien de cerca, no solo en la foto.</p>
       </div>
       <div class="value rv">
-        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm1-13h-2v6l5 3 1-1.7-4-2.3z"/></svg></div>
-        <h3>Cumplimiento de tiempos</h3>
-        <p>Acordamos una fecha y la cumplimos. Si algo cambia, te avisamos antes: no después.</p>
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h11v9H3zm12 3h3.5l2.5 3v3h-6zM6.5 20a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm11 0a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6z"/></svg></div>
+        <h3>Entrega a domicilio</h3>
+        <p>Fabricamos, llevamos y colocamos. Acordamos una fecha y la cumplimos: si algo cambia, te avisamos antes, no después.</p>
       </div>
     </div>
 
     <div class="quote rv">
-      <p>“Antes de hacer un portón, hay algo más importante que el diseño: que funcione bien todos los días.”</p>
+      <p>“Antes del diseño hay algo más importante: que la ventana cierre bien todos los días.”</p>
     </div>
   </div>
 </section>
@@ -607,24 +635,24 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
       <div class="rv">
         <span class="eyebrow">Presupuesto a medida</span>
         <h2 style="color:#fff;margin:14px 0 16px">Contanos qué necesitás.</h2>
-        <p class="lead">Analizamos necesidades, materiales y espacios. Nuestro objetivo es ofrecer trabajos duraderos y funcionales. Si tenés un proyecto en mente, consultanos.</p>
+        <p class="lead">Analizamos el vano, el uso de cada ambiente y tu presupuesto para recomendarte el sistema que mejor te sirve. Si tenés un proyecto en mente, consultanos.</p>
 
         <ul class="contact-list">
           <li>
             <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg></span>
-            <a href="https://wa.me/542664544838" target="_blank" rel="noopener"><b>2664 54-4838</b><span>WhatsApp · consultas y presupuestos</span></a>
+            <a href="https://wa.me/54XXXXXXXXXX" target="_blank" rel="noopener"><b>+54 9 XXXX XX-XXXX</b><span>WhatsApp · consultas y presupuestos</span></a>
           </li>
           <li>
-            <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1z"/></svg></span>
-            <a href="tel:+542664563238"><b>2664 56-3238</b><span>Teléfono alternativo</span></a>
+            <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg></span>
+            <a href="https://instagram.com/bellmar_aluminios" target="_blank" rel="noopener"><b>@bellmar_aluminios</b><span>Mirá nuestros trabajos y novedades</span></a>
           </li>
           <li>
             <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg></span>
-            <a href="mailto:metalurgicaroscini@gmail.com"><b>metalurgicaroscini@gmail.com</b><span>Planos, medidas y consultas por escrito</span></a>
+            <a href="mailto:contacto@bellmaraberturas.com"><b>contacto@bellmaraberturas.com</b><span>Planos, medidas y consultas por escrito</span></a>
           </li>
           <li>
             <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
-            <span><b>San Luis, Argentina</b><span>Trabajamos en la ciudad y la zona</span></span>
+            <span><b>Fábrica y taller propio</b><span>Consultanos por tu zona de cobertura</span></span>
           </li>
         </ul>
       </div>
@@ -638,28 +666,28 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
           <div class="field">
             <label for="f-trabajo">¿Qué necesitás?</label>
             <select id="f-trabajo" name="trabajo">
-              <option>Portón corredizo</option>
-              <option>Portón levadizo</option>
-              <option>Techo de chapa</option>
-              <option>Reja</option>
-              <option>Pergola o galería</option>
-              <option>Cierre perimetral</option>
-              <option>Estructura metálica</option>
-              <option>Otro trabajo en metal</option>
+              <option>Ventana corrediza</option>
+              <option>Ventana de abrir u oscilobatiente</option>
+              <option>Puerta de aluminio</option>
+              <option>Abertura de PVC</option>
+              <option>Paño fijo o cerramiento</option>
+              <option>Celosía o postigón</option>
+              <option>Cortina de enrollar (motorizada)</option>
+              <option>Otra abertura</option>
             </select>
           </div>
           <div class="field">
             <label for="f-medidas">Medidas aproximadas</label>
-            <input id="f-medidas" name="medidas" type="text" placeholder="Ej: 4 m x 2,10 m">
+            <input id="f-medidas" name="medidas" type="text" placeholder="Ej: 1,50 m x 1,10 m">
           </div>
         </div>
         <div class="field">
           <label for="f-localidad">Localidad</label>
-          <input id="f-localidad" name="localidad" type="text" placeholder="¿Dónde es el trabajo?">
+          <input id="f-localidad" name="localidad" type="text" placeholder="¿Dónde es la obra?">
         </div>
         <div class="field">
           <label for="f-detalle">Contanos un poco más</label>
-          <textarea id="f-detalle" name="detalle" placeholder="El espacio, el uso que le vas a dar, plazos, o cualquier detalle que nos sirva."></textarea>
+          <textarea id="f-detalle" name="detalle" placeholder="Cantidad de aberturas, color, si querés DVH, si es obra nueva o reemplazo, plazos…"></textarea>
         </div>
         <button class="btn btn-wa" type="submit">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
@@ -684,23 +712,31 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 
       <details class="rv">
         <summary>¿Cuándo conviene pedir el presupuesto?</summary>
-        <p>Cuanto antes, mejor. Si el espacio todavía está en obra, podemos indicarte medidas y previsiones (columnas, dinteles, anclajes) para que después el trabajo entre perfecto y no haya que romper nada.</p>
+        <p>Cuanto antes, mejor. Si la obra todavía está en construcción, te pasamos las medidas de vano y las previsiones (dinteles, contramarcos, cajón de cortina) para que la abertura entre perfecta y no haya que romper nada después.</p>
+      </details>
+      <details class="rv">
+        <summary>¿Qué me conviene: aluminio o PVC?</summary>
+        <p>Los dos son excelentes; cambia la prioridad. El aluminio es más versátil en diseño, colores y grandes luces. El PVC aísla más del frío, el calor y el ruido, y prácticamente no necesita mantenimiento. En la visita te recomendamos el que mejor se adapte a tu casa y a tu presupuesto.</p>
+      </details>
+      <details class="rv">
+        <summary>¿Qué es el DVH y realmente sirve?</summary>
+        <p>Es un doble vidrio con una cámara de aire hermética entre las hojas. Reduce mucho la pérdida de calor en invierno, la entrada de calor en verano y el ruido de la calle, así que también baja el gasto de climatización. Se puede colocar tanto en aluminio como en PVC.</p>
       </details>
       <details class="rv">
         <summary>¿El presupuesto tiene costo?</summary>
         <p>No. La visita, la medición y el presupuesto son sin cargo y sin compromiso. Recién cuando aprobás el trabajo se define la seña y la fecha de fabricación.</p>
       </details>
       <details class="rv">
-        <summary>¿Cuánto tardan en entregar un trabajo?</summary>
-        <p>Depende del tipo y del tamaño. Al aprobar el presupuesto te damos una fecha concreta de fabricación e instalación, y la cumplimos. En techos de chapa, la instalación se realiza en 48 hs una vez fabricado.</p>
+        <summary>¿Cuánto tardan en entregar las aberturas?</summary>
+        <p>Depende del sistema, la cantidad, el color y el tipo de vidrio. Al aprobar el presupuesto te damos una fecha concreta de fabricación y colocación, y la cumplimos.</p>
       </details>
       <details class="rv">
-        <summary>¿La instalación está incluida?</summary>
-        <p>Sí. Fabricamos e instalamos con nuestro propio equipo, así hay un solo responsable por el resultado final. El flete también está contemplado en el presupuesto.</p>
+        <summary>¿La colocación está incluida?</summary>
+        <p>Sí. Fabricamos, entregamos a domicilio y colocamos con nuestro propio equipo, así hay un solo responsable por el resultado final. Te dejamos cada abertura probada y funcionando.</p>
       </details>
       <details class="rv">
-        <summary>¿Los portones quedan preparados para motor?</summary>
-        <p>Sí. Si nos avisás desde el principio, dejamos la estructura, los rodamientos y los refuerzos preparados para automatizar, ahora o más adelante.</p>
+        <summary>¿En qué colores se fabrican?</summary>
+        <p>Blanco, negro, gris, anodizado natural y símil madera, entre otros. En PVC también trabajamos terminaciones símil madera, y podemos combinar un color por fuera y otro por dentro.</p>
       </details>
       <details class="rv">
         <summary>¿Trabajan con financiación?</summary>
@@ -715,13 +751,13 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
   <div class="wrap rv">
     <span class="eyebrow">Fabricación e instalación</span>
     <h2>¿Tenés un proyecto en mente?</h2>
-    <p>Realizamos trabajos en metal resistentes, funcionales y pensados para durar. Escribinos y lo resolvemos juntos.</p>
+    <p>Fabricamos aberturas de aluminio y PVC pensadas para durar, con la calidad asegurada de 30 años de oficio. Escribinos y lo resolvemos juntos.</p>
     <div class="final-cta">
-      <a class="btn btn-wa" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20tengo%20un%20proyecto%20en%20mente%20y%20quiero%20un%20presupuesto." target="_blank" rel="noopener">
+      <a class="btn btn-wa" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20tengo%20un%20proyecto%20en%20mente%20y%20quiero%20un%20presupuesto." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
         Escribinos por WhatsApp
       </a>
-      <a class="btn btn-ghost" href="tel:+542664563238">Llamar al 2664 56-3238</a>
+      <a class="btn btn-ghost" href="https://instagram.com/bellmar_aluminios" target="_blank" rel="noopener">Ver trabajos en Instagram</a>
     </div>
   </div>
 </section>
@@ -734,38 +770,38 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
         <a class="brand" href="#inicio">
           <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
             <rect width="40" height="40" rx="8" fill="#1E1E1E"/>
-            <path d="M8 28V13l12-5 12 5v15" fill="none" stroke="#F04E1E" stroke-width="2.6"/>
-            <path d="M8 20h24M8 24.5h24" stroke="#fff" stroke-width="2.2"/>
+            <rect x="9" y="8" width="22" height="24" rx="2.5" fill="none" stroke="#1E6FD9" stroke-width="2.8"/>
+            <path d="M20 8v24M9 19h22" stroke="#fff" stroke-width="2.2"/>
+            <path d="M24 12.5h3.5v3.5" fill="none" stroke="#5AA0FF" stroke-width="1.6"/>
           </svg>
-          <span class="brand-txt">ROSCINI<small>Metalúrgica</small></span>
+          <span class="brand-txt">BELLMAR<small>Aberturas</small></span>
         </a>
-        <p>Fábrica de portones, techos, rejas y estructuras metálicas. Realizamos todo tipo de soluciones metalúrgicas. Nos distingue nuestra responsabilidad.</p>
+        <p>Fabricación e instalación de aberturas de aluminio y PVC: ventanas, puertas, cerramientos y complementos. Materiales de primera calidad, diseño, funcionalidad y entrega a domicilio.</p>
       </div>
       <div class="foot-col">
         <h4>Servicios</h4>
-        <a href="#servicios">Portones corredizos</a>
-        <a href="#servicios">Portones levadizos</a>
-        <a href="#techos">Techos metálicos</a>
-        <a href="#servicios">Rejas a medida</a>
-        <a href="#servicios">Pergolas y cierres</a>
+        <a href="#servicios">Ventanas corredizas</a>
+        <a href="#servicios">Puertas de aluminio</a>
+        <a href="#servicios">Aberturas de PVC</a>
+        <a href="#alta-prestacion">Vidrio DVH</a>
+        <a href="#servicios">Celosías y postigones</a>
       </div>
       <div class="foot-col">
         <h4>Contacto</h4>
-        <a href="https://wa.me/542664544838" target="_blank" rel="noopener">WhatsApp 2664 54-4838</a>
-        <a href="tel:+542664563238">Tel. 2664 56-3238</a>
-        <a href="mailto:metalurgicaroscini@gmail.com">metalurgicaroscini@gmail.com</a>
-        <a href="https://instagram.com/metalurgicaroscini" target="_blank" rel="noopener">Instagram @metalurgicaroscini</a>
-        <span>San Luis, Argentina</span>
+        <a href="https://wa.me/54XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp +54 9 XXXX XX-XXXX</a>
+        <a href="mailto:contacto@bellmaraberturas.com">contacto@bellmaraberturas.com</a>
+        <a href="https://instagram.com/bellmar_aluminios" target="_blank" rel="noopener">Instagram @bellmar_aluminios</a>
+        <span>Consultanos por tu zona de cobertura</span>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year">2026</span> Metalúrgica Roscini · Todos los derechos reservados</span>
-      <span>Portones · Techos · Rejas · Pergolas · Cierres · Estructuras</span>
+      <span>© <span id="year">2026</span> BellMar Aberturas · Todos los derechos reservados</span>
+      <span>Ventanas · Puertas · Aluminio · PVC · DVH · Cerramientos</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/542664544838?text=Hola%20Roscini%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+<a class="wa-float" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
   <span>WhatsApp</span>
 </a>
@@ -773,7 +809,7 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 <script>
 (function(){
   "use strict";
-  var WA = "542664544838";
+  var WA = "54XXXXXXXXXX";  /* COMPLETAR: número real, formato internacional sin + ni espacios */
 
   /* año dinámico */
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -820,7 +856,7 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 
     if(!nombre){ form.nombre.focus(); return; }
 
-    var msg = "Hola Roscini, soy " + nombre + "." +
+    var msg = "Hola BellMar, soy " + nombre + "." +
       "\nNecesito: " + trabajo +
       (medidas   ? "\nMedidas aproximadas: " + medidas : "") +
       (localidad ? "\nLocalidad: " + localidad : "") +
