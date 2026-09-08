@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <!--
-  BellMar Aberturas — Aluminio & PVC
+  TECHOS LIVIANOS UY — Eric Ojeda
+  Techos livianos, sobretechos, aleros y estructuras metálicas · Uruguay
   ------------------------------------------------------------------
-  DATOS A COMPLETAR antes de publicar (buscar y reemplazar en todo el archivo):
-    · 54XXXXXXXXXX              -> número de WhatsApp real (formato internacional, sin + ni espacios)
-    · +54 9 XXXX XX-XXXX        -> el mismo número, como se muestra en pantalla
-    · contacto@bellmaraberturas.com -> email real de la empresa
-    · "Consultanos por tu zona de cobertura" / "Fábrica y taller propio" -> ciudad y dirección reales
-  Instagram @bellmar_aluminios ya está enlazado.
+  DATOS REALES YA CARGADOS:
+    · WhatsApp: 093 369 947  ->  enlaces wa.me/59893369947
+    · Instagram: @techos_livianos.uy
+  OPCIONAL A COMPLETAR (buscar y reemplazar):
+    · contacto@techoslivianos.uy  -> email real, si la empresa quiere publicarlo
+    · "Taller propio · Montevideo" -> dirección o zona exacta del taller
+  FOTOS: cada <div class="art art-xxx"></div> es un marcador de posición.
+  Para usar fotos reales reemplazarlo por:
+    <img src="fotos/sobretecho.jpg" alt="Sobretecho de chapa"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
 -->
-<html lang="es-AR">
+<html lang="es-UY">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BellMar Aberturas — Ventanas y puertas de aluminio y PVC a medida</title>
-<meta name="description" content="Fábrica de aberturas de aluminio y PVC: ventanas, puertas, cerramientos, DVH y aberturas motorizadas. 30 años de experiencia, fabricación propia, entrega a domicilio e instalación.">
-<meta name="theme-color" content="#0E0E0E">
-<meta property="og:title" content="BellMar Aberturas — Aluminio &amp; PVC">
-<meta property="og:description" content="Fabricamos e instalamos ventanas, puertas y cerramientos en aluminio y PVC. Presupuesto a medida, sin cargo.">
+<title>Techos Livianos UY — Techos, sobretechos y estructuras metálicas a medida</title>
+<meta name="description" content="Especialistas en techos livianos y estructuras metálicas en Uruguay. Sobretechos, aleros, cocheras, galpones y containers. Diseño, fabricación y montaje. Cotización inmediata por WhatsApp 093 369 947.">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:title" content="Techos Livianos UY — Techos livianos y estructuras metálicas">
+<meta property="og:description" content="Sobretechos, aleros, cocheras y galpones a medida. Diseño y montaje propio, trabajos realizados en el día. Trabajamos en todo el país.">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_AR">
+<meta property="og:locale" content="es_UY">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0E0E'/%3E%3Crect x='7' y='6' width='18' height='20' rx='2' fill='none' stroke='%231E6FD9' stroke-width='2.4'/%3E%3Cpath d='M16 6v20M7 15h18' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23fff'/%3E%3Cpath d='M4 15 16 6l12 9' fill='none' stroke='%23D93A2B' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='M7 17v9h18v-9' fill='none' stroke='%2314171A' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/svg%3E">
 <style>
 :root{
   /* marca */
-  --brand:#1E6FD9;        /* azul BellMar */
-  --brand-2:#5AA0FF;      /* azul claro */
-  --brand-ink:#134C99;    /* azul oscuro */
-  --ink:#0E0E0E;          /* negro base */
-  --coal:#151515;         /* negro sección */
-  --graphite:#1E1E1E;     /* gris muy oscuro */
-  --steel:#2A2A2A;        /* gris metal */
+  --brand:#D93A2B;        /* rojo Techos Livianos */
+  --brand-dark:#B02A1E;
+  --brand-soft:#FCEDEB;
+  --ink:#14171A;          /* texto principal */
+  --ink-2:#2A2F35;
+  --muted:#616B73;        /* texto secundario */
+  --muted-2:#8A939A;
   --paper:#FFFFFF;
-  --paper-2:#F6F5F3;      /* gris papel */
-  --line:#E4E1DC;
-  --line-dark:#2E2E2E;
-  --muted:#6A6764;        /* texto secundario claro */
-  --muted-dark:#A8A5A1;   /* texto secundario oscuro */
+  --paper-2:#F6F7F9;      /* gris muy claro */
+  --paper-3:#EEF0F3;
+  --line:#E4E7EB;
+  --line-2:#D6DBE0;
+  --steel:#8A96A2;
   --wa:#25A05A;
-  --radius:12px;
+  --radius:14px;
   --maxw:1200px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -51,208 +56,226 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 ::selection{background:var(--brand);color:#fff}
 
-h1,h2,h3,h4,.display{font-family:'Archivo',system-ui,sans-serif;letter-spacing:-.025em;line-height:1.05}
-h1{font-weight:800;font-size:clamp(2.4rem,6.2vw,4.5rem)}
-h2{font-weight:800;font-size:clamp(1.9rem,4vw,3rem)}
-h3{font-weight:700;font-size:1.18rem;letter-spacing:-.015em;line-height:1.25}
+h1,h2,h3,h4{font-family:'Archivo',system-ui,sans-serif;letter-spacing:-.028em;line-height:1.06}
+h1{font-weight:800;font-size:clamp(2.35rem,6vw,4.4rem)}
+h2{font-weight:800;font-size:clamp(1.85rem,4vw,2.95rem)}
+h3{font-weight:700;font-size:1.16rem;letter-spacing:-.015em;line-height:1.25}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-section{padding:clamp(64px,8vw,110px) 0}
+section{padding:clamp(62px,8vw,108px) 0}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Archivo',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand)}
 .eyebrow::before{content:"";width:26px;height:2px;background:var(--brand)}
-.mark{background:var(--brand);color:#fff;padding:0 .18em;border-radius:3px;display:inline-block;transform:skewX(-4deg)}
+.mark{background:var(--brand);color:#fff;padding:0 .16em;border-radius:4px;display:inline-block;transform:skewX(-4deg)}
 .mark > span{display:inline-block;transform:skewX(4deg)}
 .nb{white-space:nowrap}
-[id]{scroll-margin-top:92px}
-.lead{color:var(--muted);font-size:1.06rem;max-width:38rem}
-.on-dark .lead,.on-dark p{color:var(--muted-dark)}
+[id]{scroll-margin-top:90px}
+.lead{color:var(--muted);font-size:1.06rem;max-width:39rem}
+.soft{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
 /* ---------- botones ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:-.01em;padding:14px 22px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:-.01em;padding:14px 22px;border-radius:9px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
 .btn svg{width:18px;height:18px;fill:currentColor;flex:none}
 .btn-wa{background:var(--wa);color:#fff}
-.btn-wa:hover{background:#1F8C4E;transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,160,90,.28)}
+.btn-wa:hover{background:#1F8C4E;transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,160,90,.26)}
 .btn-brand{background:var(--brand);color:#fff}
-.btn-brand:hover{background:#1857B8;transform:translateY(-2px);box-shadow:0 12px 26px rgba(30,111,217,.32)}
-.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-brand:hover{background:var(--brand-dark);transform:translateY(-2px);box-shadow:0 12px 26px rgba(217,58,43,.28)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-2px);box-shadow:0 12px 26px rgba(20,23,26,.26)}
+.btn-ghost{border-color:var(--line-2);color:var(--ink);background:var(--paper)}
 .btn-ghost:hover{border-color:var(--ink);background:var(--paper-2)}
-.on-dark .btn-ghost{border-color:#3A3A3A;color:#fff}
-.on-dark .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 .btn-sm{padding:10px 16px;font-size:.86rem}
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:5px}
 
 /* ---------- nav ---------- */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(14,14,14,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dark)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:box-shadow .25s}
+nav.scrolled{box-shadow:0 8px 26px rgba(20,23,26,.07)}
 .nav-in{max-width:var(--maxw);margin:0 auto;padding:0 22px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:11px;color:#fff}
-.brand-mark{width:36px;height:36px;flex:none}
-.brand-txt{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:.02em;line-height:1}
-.brand-txt small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.54rem;letter-spacing:.34em;color:var(--brand);margin-top:3px}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{font-size:.9rem;font-weight:500;color:#D6D3D0;transition:color .18s}
-.nav-links a:hover{color:#fff}
+.brand{display:flex;align-items:center;gap:11px;color:var(--ink)}
+.brand-mark{width:38px;height:38px;flex:none}
+.brand-txt{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.06rem;letter-spacing:-.01em;line-height:1}
+.brand-txt small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.54rem;letter-spacing:.32em;color:var(--brand);margin-top:4px}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);transition:color .18s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.btn{color:#fff}
 .nav-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
-.nav-toggle span{display:block;width:22px;height:2px;background:#fff;margin:4px 0;transition:transform .25s,opacity .2s}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:transform .25s,opacity .2s}
 .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
 /* ---------- hero ---------- */
-header.hero{position:relative;background:var(--ink);color:#fff;padding:132px 0 0;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-   radial-gradient(900px 460px at 78% -8%,rgba(30,111,217,.24),transparent 62%),
-   repeating-linear-gradient(122deg,rgba(255,255,255,.028) 0 2px,transparent 2px 9px);
-  pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;padding-bottom:76px}
+header.hero{position:relative;background:var(--paper);padding:126px 0 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+   radial-gradient(760px 420px at 84% -10%,rgba(217,58,43,.09),transparent 62%),
+   linear-gradient(#EFF1F4 1px,transparent 1px) 0 0/100% 46px,
+   linear-gradient(90deg,#EFF1F4 1px,transparent 1px) 0 0/46px 100%;
+  -webkit-mask-image:linear-gradient(#000,rgba(0,0,0,.35) 62%,transparent);
+  mask-image:linear-gradient(#000,rgba(0,0,0,.35) 62%,transparent)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.07fr .93fr;gap:48px;align-items:center;padding-bottom:74px}
 .hero h1{margin:20px 0 20px;max-width:13ch}
-.hero .lead{margin-bottom:32px}
+.hero .lead{margin-bottom:30px}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
-.hero-note{margin-top:20px;font-size:.86rem;color:var(--muted-dark)}
-.hero-note b{color:#fff;font-weight:600}
-.hero-note .tick{color:var(--brand);font-weight:700;margin-right:6px}
+.hero-note{margin-top:22px;font-size:.87rem;color:var(--muted);display:flex;align-items:flex-start;gap:9px}
+.hero-note b{color:var(--ink);font-weight:600}
+.hero-note .tick{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--brand-soft);color:var(--brand);font-size:.72rem;font-weight:700;flex:none}
+.trust{display:flex;align-items:center;gap:14px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line);flex-wrap:wrap}
+.trust b{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:-.02em;display:block}
+.trust span{font-size:.78rem;color:var(--muted)}
+.trust > div{padding-right:20px;border-right:1px solid var(--line)}
+.trust > div:last-child{border-right:0;padding-right:0}
 
 /* tarjeta visual del hero */
-.hero-card{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line-dark);background:var(--graphite);box-shadow:0 30px 70px rgba(0,0,0,.5)}
-.hero-card .art{height:400px}
-.hero-card .tag{position:absolute;top:16px;left:16px;background:var(--brand);color:#fff;font-family:'Archivo',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px;border-radius:6px}
-.hero-card .foot{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.9));display:flex;justify-content:space-between;align-items:end;gap:14px}
+.hero-card{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--paper-2);box-shadow:0 30px 64px rgba(20,23,26,.13)}
+.hero-card .art{height:410px}
+.hero-card .tag{position:absolute;top:16px;left:16px;background:var(--brand);color:#fff;font-family:'Archivo',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px;border-radius:6px;box-shadow:0 8px 20px rgba(217,58,43,.3)}
+.hero-card .foot{position:absolute;left:0;right:0;bottom:0;padding:52px 18px 16px;background:linear-gradient(transparent,rgba(10,12,14,.86));color:#fff;display:flex;justify-content:space-between;align-items:end;gap:14px}
 .hero-card .foot b{font-family:'Archivo',sans-serif;font-size:1rem;font-weight:700}
-.hero-card .foot span{font-size:.78rem;color:var(--muted-dark);display:block}
+.hero-card .foot span{font-size:.78rem;color:rgba(255,255,255,.75);display:block}
+.hero-card .flag{font-size:1.1rem}
 
 /* barra de datos */
-.bar{border-top:1px solid var(--line-dark);background:var(--coal);position:relative}
+.bar{border-top:1px solid var(--line);background:var(--paper-2);position:relative}
 .bar-in{max-width:var(--maxw);margin:0 auto;padding:0 22px;display:grid;grid-template-columns:repeat(4,1fr)}
-.bar-in > div{padding:26px 22px 26px 0;border-right:1px solid var(--line-dark)}
+.bar-in > div{padding:24px 22px 24px 0;border-right:1px solid var(--line);display:flex;gap:13px;align-items:flex-start}
 .bar-in > div:last-child{border-right:0}
-.bar-in b{display:block;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;color:#fff;letter-spacing:-.01em}
-.bar-in span{font-size:.83rem;color:var(--muted-dark)}
+.bar-in .ico{width:34px;height:34px;flex:none;border-radius:9px;background:var(--brand-soft);display:grid;place-items:center}
+.bar-in .ico svg{width:17px;height:17px;fill:var(--brand)}
+.bar-in b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;letter-spacing:-.01em}
+.bar-in span{font-size:.83rem;color:var(--muted);line-height:1.45;display:block}
 
-/* ---------- arte de aberturas (sin fotos) ---------- */
-.art{position:relative;background:#141A20;overflow:hidden}
-.art::after{content:"";position:absolute;inset:0;background:linear-gradient(155deg,rgba(255,255,255,.10),transparent 42%,rgba(0,0,0,.45))}
+/* ---------- ilustraciones de techos (marcadores de posición, sin fotos) ---------- */
+.art{position:relative;background:#E8EEF4;overflow:hidden}
+.art > *{position:relative;z-index:2}
+.art::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(165deg,rgba(255,255,255,.16),transparent 46%,rgba(20,23,26,.16))}
+.art-techo,.art-sobretecho,.art-alero,.art-cochera,.art-container,.art-estructura,.art-galpon,.art-quincho,.art-montaje{background-repeat:no-repeat;background-position:center;background-size:cover}
 
-/* ventana corrediza: dos hojas + montante central */
-.art-corrediza{background:
-  linear-gradient(90deg,transparent 48.4%,#3C4650 48.4% 51.6%,transparent 51.6%),
-  linear-gradient(180deg,#333D47 0 6%,transparent 6% 94%,#333D47 94%),
-  linear-gradient(150deg,#456A8D,#1C2833 58%,#233240)}
-/* puerta de aluminio: hoja con paño vidriado vertical */
-.art-puerta{background:
-  linear-gradient(90deg,transparent 32%,rgba(140,185,225,.40) 32% 68%,transparent 68%),
-  linear-gradient(90deg,#2A323A 0 8%,transparent 8% 92%,#2A323A 92%),
-  linear-gradient(180deg,#272F37,#161C22)}
-/* abertura de PVC: perfil blanco con vidrio */
-.art-pvc{background:
-  linear-gradient(90deg,#ECEFF2 0 7%,transparent 7% 93%,#ECEFF2 93%),
-  linear-gradient(180deg,#ECEFF2 0 9%,transparent 9% 91%,#ECEFF2 91%),
-  linear-gradient(150deg,#8FB3CE,#5C8099 62%,#3F5D77)}
-/* DVH: doble vidrio con cámara de aire */
-.art-dvh{background:
-  repeating-linear-gradient(122deg,rgba(255,255,255,.10) 0 2px,transparent 2px 26px),
-  linear-gradient(90deg,transparent 45%,#3A444E 45% 46.6%,transparent 46.6% 53.4%,#3A444E 53.4% 55%,transparent 55%),
-  linear-gradient(150deg,#48688A,#1D2A36)}
-/* celosías y postigones: lamas horizontales */
-.art-celosia{background:
-  linear-gradient(90deg,#414B55 0 6%,transparent 6% 94%,#414B55 94%),
-  repeating-linear-gradient(180deg,#414B55 0 10px,#1F262D 10px 15px),
-  #1F262D}
-/* paño fijo: vidrio grande con reflejo */
-.art-fijo{background:
-  linear-gradient(112deg,rgba(255,255,255,.17) 0 17%,transparent 17% 33%,rgba(255,255,255,.09) 33% 41%,transparent 41%),
-  linear-gradient(160deg,#4C7194,#243544 70%,#1A2733)}
-/* abertura motorizada: cortina de enrollar */
-.art-motorizada{background:
-  linear-gradient(180deg,#39434D 0 14%,rgba(0,0,0,.45) 14% 15.2%,transparent 15.2%),
-  linear-gradient(90deg,#2B333B 0 5%,transparent 5% 95%,#2B333B 95%),
-  repeating-linear-gradient(180deg,#4A555F 0 5px,#2A323A 5px 8px),
-  #2A323A}
-/* taller: perfiles de aluminio apilados */
-.art-taller{background:
-  repeating-linear-gradient(90deg,#39424B 0 8px,transparent 8px 22px),
-  repeating-linear-gradient(180deg,#2E363E 0 8px,transparent 8px 30px),
-  linear-gradient(160deg,#242B33,#151A1F)}
+/* techo liviano a dos aguas sobre estructura */
+.art-techo{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23E8EEF4'/%3E%3Ccircle cx='338' cy='46' r='26' fill='%23F7DED9'/%3E%3Crect y='198' width='400' height='62' fill='%23DBE2E8'/%3E%3Cpath d='M200 52 380 142v10H20v-10z' fill='%236F7B87'/%3E%3Cpath d='M200 52 380 142v10H200z' fill='%23616C77'/%3E%3Cg stroke='%23515B65' stroke-width='2.5' opacity='.5'%3E%3Cpath d='M200 52 92 142M200 52 146 142M200 52 254 142M200 52 308 142'/%3E%3C/g%3E%3Crect x='34' y='152' width='14' height='52' fill='%234A545E'/%3E%3Crect x='352' y='152' width='14' height='52' fill='%234A545E'/%3E%3Crect x='193' y='152' width='12' height='52' fill='%23414A53'/%3E%3C/svg%3E")}
+
+/* sobretecho: techo nuevo por encima del existente */
+.art-sobretecho{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23E8EEF4'/%3E%3Crect y='202' width='400' height='58' fill='%23DBE2E8'/%3E%3Crect x='62' y='152' width='276' height='52' fill='%23CBD3DA'/%3E%3Crect x='96' y='168' width='42' height='36' fill='%23AAB5BF'/%3E%3Crect x='262' y='168' width='42' height='36' fill='%23AAB5BF'/%3E%3Cpath d='M200 110 346 156v8H54v-8z' fill='%23495259'/%3E%3Cpath d='M200 42 386 128 386 140 200 54 14 140 14 128z' fill='%236F7B87'/%3E%3Cg stroke='%23515B65' stroke-width='2.5' opacity='.45'%3E%3Cpath d='M200 42 108 128M200 42 292 128'/%3E%3C/g%3E%3Cg stroke='%238D99A4' stroke-width='6'%3E%3Cpath d='M44 138v26M356 138v26M200 54v52'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* alero en voladizo sobre la fachada */
+.art-alero{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23EAF0F5'/%3E%3Crect y='206' width='400' height='54' fill='%23DDE3E9'/%3E%3Crect width='142' height='206' fill='%23D5DCE3'/%3E%3Crect x='34' y='104' width='70' height='102' fill='%23AEB9C3'/%3E%3Crect x='34' y='104' width='70' height='10' fill='%238C98A3'/%3E%3Cpath d='M118 88 374 148v13L118 101z' fill='%236F7B87'/%3E%3Cpath d='M142 104 314 145' stroke='%234A545E' stroke-width='8'/%3E%3Cpath d='M142 138 232 159' stroke='%234A545E' stroke-width='7'/%3E%3Crect x='352' y='158' width='12' height='48' fill='%234A545E'/%3E%3C/svg%3E")}
+
+/* cochera / techo para vehículos */
+.art-cochera{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23E8EEF4'/%3E%3Crect y='206' width='400' height='54' fill='%23DBE2E8'/%3E%3Cpath d='M22 70 378 106v13L22 83z' fill='%236F7B87'/%3E%3Cg stroke='%23515B65' stroke-width='2.5' opacity='.45'%3E%3Cpath d='M110 78v31M200 87v31M290 96v31'/%3E%3C/g%3E%3Crect x='30' y='83' width='13' height='123' fill='%234A545E'/%3E%3Crect x='356' y='119' width='13' height='87' fill='%234A545E'/%3E%3Cpath d='M152 166 168 142h58l19 24z' fill='%23C6CFD7'/%3E%3Crect x='118' y='166' width='172' height='36' rx='11' fill='%23AEB9C3'/%3E%3Ccircle cx='154' cy='202' r='13' fill='%233E464E'/%3E%3Ccircle cx='254' cy='202' r='13' fill='%233E464E'/%3E%3C/svg%3E")}
+
+/* container con sobretecho y alero */
+.art-container{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Cdefs%3E%3Cpattern id='c' width='16' height='10' patternUnits='userSpaceOnUse'%3E%3Crect width='7' height='10' fill='%233C4650'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='400' height='260' fill='%23E8EEF4'/%3E%3Crect y='214' width='400' height='46' fill='%23DBE2E8'/%3E%3Crect x='58' y='122' width='292' height='94' fill='%232E3740'/%3E%3Crect x='58' y='132' width='292' height='74' fill='url(%23c)'/%3E%3Crect x='58' y='122' width='292' height='11' fill='%23404A54'/%3E%3Crect x='58' y='205' width='292' height='11' fill='%23404A54'/%3E%3Cpath d='M286 132v74M306 132v74' stroke='%23616C78' stroke-width='3'/%3E%3Cpath d='M30 56 372 92v13L30 69z' fill='%236F7B87'/%3E%3Crect x='36' y='69' width='12' height='55' fill='%234A545E'/%3E%3Crect x='356' y='105' width='12' height='20' fill='%234A545E'/%3E%3C/svg%3E")}
+
+/* estructura metálica reticulada */
+.art-estructura{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23EAF0F5'/%3E%3Crect y='210' width='400' height='50' fill='%23DDE3E9'/%3E%3Cpath d='M30 140 74 92 118 140 162 92 206 140 250 92 294 140 338 92 370 140' fill='none' stroke='%236F7B87' stroke-width='7'/%3E%3Cpath d='M26 88h348M26 144h348' stroke='%234E5862' stroke-width='10' stroke-linecap='round'/%3E%3Crect x='28' y='144' width='15' height='66' fill='%234A545E'/%3E%3Crect x='357' y='144' width='15' height='66' fill='%234A545E'/%3E%3Cg fill='%23D93A2B'%3E%3Ccircle cx='74' cy='92' r='5'/%3E%3Ccircle cx='206' cy='140' r='5'/%3E%3Ccircle cx='338' cy='92' r='5'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* galpón de gran luz */
+.art-galpon{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Cdefs%3E%3Cpattern id='g' width='18' height='10' patternUnits='userSpaceOnUse'%3E%3Crect width='8' height='10' fill='%23B2BDC7'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='400' height='260' fill='%23E8EEF4'/%3E%3Crect y='212' width='400' height='48' fill='%23DBE2E8'/%3E%3Cpath d='M200 44 372 114H28z' fill='%236F7B87'/%3E%3Cpath d='M200 44 372 114H200z' fill='%23616C77'/%3E%3Crect x='28' y='114' width='344' height='98' fill='%23C4CDD5'/%3E%3Crect x='28' y='114' width='344' height='98' fill='url(%23g)' opacity='.7'/%3E%3Crect x='28' y='114' width='344' height='10' fill='%234E5862'/%3E%3Crect x='120' y='134' width='160' height='78' fill='%235B6570'/%3E%3Cpath d='M120 152h160M120 172h160M120 192h160' stroke='%237B8792' stroke-width='3'/%3E%3C/svg%3E")}
+
+/* quincho y galería con techo liviano */
+.art-quincho{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23EAF0F5'/%3E%3Crect y='200' width='400' height='60' fill='%23DDE3E9'/%3E%3Cpath d='M200 50 378 138v10H22v-10z' fill='%23A5713F'/%3E%3Cpath d='M200 50 378 138v10H200z' fill='%238C5C33'/%3E%3Cg stroke='%236F4A28' stroke-width='2.5' opacity='.5'%3E%3Cpath d='M200 50 96 138M200 50 304 138'/%3E%3C/g%3E%3Crect x='44' y='148' width='15' height='58' fill='%237A5230'/%3E%3Crect x='341' y='148' width='15' height='58' fill='%237A5230'/%3E%3Crect x='150' y='168' width='100' height='38' fill='%23C6CFD7'/%3E%3Cpath d='M162 168v38M186 168v38M212 168v38M238 168v38' stroke='%23AAB5BF' stroke-width='3'/%3E%3C/svg%3E")}
+
+/* taller: perfiles listos para el montaje */
+.art-montaje{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'%3E%3Crect width='400' height='260' fill='%23E4EAF0'/%3E%3Cpath d='M110 54 268 104' stroke='%234A545E' stroke-width='11' stroke-linecap='round'/%3E%3Cg fill='%23D93A2B'%3E%3Ccircle cx='288' cy='112' r='7'/%3E%3Ccircle cx='308' cy='96' r='4.5'/%3E%3Ccircle cx='300' cy='132' r='3.5'/%3E%3Ccircle cx='324' cy='120' r='3'/%3E%3C/g%3E%3Cg fill='%236F7B87'%3E%3Crect x='36' y='150' width='330' height='17' rx='4'/%3E%3Crect x='58' y='176' width='308' height='17' rx='4'/%3E%3Crect x='26' y='202' width='340' height='17' rx='4'/%3E%3C/g%3E%3Cg fill='%234E5862'%3E%3Crect x='36' y='150' width='330' height='5' rx='2'/%3E%3Crect x='58' y='176' width='308' height='5' rx='2'/%3E%3Crect x='26' y='202' width='340' height='5' rx='2'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* chapa: textura trapezoidal de cerca */
+.art-chapa{background:
+  repeating-linear-gradient(104deg,#C2CCD6 0 9px,#9EAAB5 9px 13px,#8B98A3 13px 18px),
+  #9EAAB5}
+
+/* ---------- secciones ---------- */
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:26px;flex-wrap:wrap;margin-bottom:42px}
+.sec-head h2{margin-top:12px;max-width:19ch}
+.sec-head .lead{font-size:.98rem}
 
 /* ---------- servicios ---------- */
-.sec-head{display:flex;justify-content:space-between;align-items:end;gap:26px;flex-wrap:wrap;margin-bottom:42px}
-.sec-head h2{margin-top:12px;max-width:18ch}
-.sec-head .lead{font-size:.98rem}
 .grid-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
-.card:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(14,14,14,.12);border-color:#D6D2CC}
-.card .art{height:158px}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 46px rgba(20,23,26,.11);border-color:var(--line-2)}
+.card .art{height:160px}
 .card-body{padding:22px 22px 24px;flex:1;display:flex;flex-direction:column}
 .card-body h3{margin-bottom:8px}
 .card-body p{color:var(--muted);font-size:.93rem;flex:1}
-.card-body .more{margin-top:14px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.84rem;color:var(--brand);display:inline-flex;align-items:center;gap:6px}
+.card-body .more{margin-top:15px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.84rem;color:var(--brand);display:inline-flex;align-items:center;gap:6px}
 .card-body .more::after{content:"→";transition:transform .2s}
 .card:hover .more::after{transform:translateX(4px)}
 
 /* ---------- oferta destacada ---------- */
-.soft{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.offer{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--paper)}
-.offer-art{position:relative;min-height:340px}
-.offer-art .badge{position:absolute;z-index:2;left:20px;bottom:20px;background:#fff;border-radius:10px;padding:14px 18px;box-shadow:0 14px 34px rgba(0,0,0,.28)}
-.offer-art .badge small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.offer-art .badge b{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.6rem;letter-spacing:-.02em}
-.offer-body{padding:clamp(26px,3.4vw,44px)}
-.offer-body h2{font-size:clamp(1.7rem,3vw,2.3rem);margin:12px 0 14px}
+.offer{display:grid;grid-template-columns:1.02fr .98fr;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--paper);box-shadow:0 24px 54px rgba(20,23,26,.08)}
+.offer-art{position:relative;min-height:350px;background-color:#E8EEF4;background-size:contain;background-position:center bottom}
+.offer-art .badge{position:absolute;z-index:2;left:20px;bottom:20px;background:#fff;border-radius:12px;padding:14px 18px;box-shadow:0 14px 34px rgba(20,23,26,.22)}
+.offer-art .badge small{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.offer-art .badge b{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-.02em}
+.offer-art .stock{position:absolute;z-index:2;top:20px;right:20px;background:var(--ink);color:#fff;font-family:'Archivo',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:8px 13px;border-radius:6px}
+.offer-body{padding:clamp(26px,3.4vw,46px)}
+.offer-body h2{font-size:clamp(1.65rem,3vw,2.25rem);margin:12px 0 14px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 4px}
+.pill{font-family:'Archivo',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);background:var(--brand-soft);border-radius:6px;padding:7px 11px}
 .check{list-style:none;margin:20px 0 26px;display:grid;gap:11px}
 .check li{display:flex;gap:11px;align-items:flex-start;font-size:.95rem;color:var(--muted)}
 .check li b{color:var(--ink);font-weight:600}
-.check li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:5px;background:var(--brand);
+.check li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:6px;background:var(--brand);
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat,linear-gradient(#000,#000);
   mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat}
-.fineprint{font-size:.78rem;color:var(--muted);margin-top:14px}
+.fineprint{font-size:.79rem;color:var(--muted-2);margin-top:14px}
 
 /* ---------- proceso ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
-.step{position:relative;padding:26px 22px;border:1px solid var(--line-dark);border-radius:var(--radius);background:var(--graphite)}
+.step{position:relative;padding:26px 22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);transition:border-color .2s,transform .2s}
+.step:hover{border-color:var(--brand);transform:translateY(-4px)}
 .step::before{counter-increment:s;content:"0" counter(s);font-family:'Archivo',sans-serif;font-weight:800;font-size:2.1rem;color:transparent;-webkit-text-stroke:1.5px var(--brand);display:block;margin-bottom:12px;letter-spacing:-.03em}
-.step h3{color:#fff;margin-bottom:7px}
-.step p{color:var(--muted-dark);font-size:.9rem}
+.step h3{margin-bottom:7px}
+.step p{color:var(--muted);font-size:.9rem}
 
 /* ---------- trabajos ---------- */
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:206px;gap:14px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:208px;gap:14px}
 .tile{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
 .tile.w2{grid-column:span 2}
 .tile.h2{grid-row:span 2}
 .tile .art{position:absolute;inset:0}
-.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:46px 16px 15px;background:linear-gradient(transparent,rgba(0,0,0,.55) 38%,rgba(0,0,0,.92));color:#fff;z-index:2}
-.tile .cap small{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-2);margin-bottom:3px}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:46px 16px 15px;background:linear-gradient(transparent,rgba(10,12,14,.5) 38%,rgba(10,12,14,.9));color:#fff;z-index:2}
+.tile .cap small{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#FF9083;margin-bottom:3px}
 .tile .cap b{font-family:'Archivo',sans-serif;font-weight:700;font-size:.98rem;letter-spacing:-.01em}
+.gallery-note{margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.87rem;color:var(--muted)}
 
-/* ---------- responsabilidad ---------- */
+/* ---------- valores ---------- */
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
 .value{padding:28px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line)}
-.value .ico{width:44px;height:44px;border-radius:10px;background:rgba(30,111,217,.12);display:grid;place-items:center;margin-bottom:16px}
-.value .ico svg{width:22px;height:22px;fill:var(--brand)}
+.value .ico{width:46px;height:46px;border-radius:12px;background:var(--brand-soft);display:grid;place-items:center;margin-bottom:16px}
+.value .ico svg{width:23px;height:23px;fill:var(--brand)}
 .value h3{margin-bottom:7px}
 .value p{color:var(--muted);font-size:.93rem}
-.quote{margin-top:44px;padding:34px;border-left:4px solid var(--brand);background:var(--paper);border-radius:0 var(--radius) var(--radius) 0}
-.quote p{font-family:'Archivo',sans-serif;font-weight:700;font-style:italic;font-size:clamp(1.15rem,2.4vw,1.6rem);letter-spacing:-.02em;line-height:1.3;max-width:34ch}
+.quote{margin-top:44px;padding:34px;border-left:4px solid var(--brand);background:var(--paper);border-radius:0 var(--radius) var(--radius) 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.quote p{font-family:'Archivo',sans-serif;font-weight:700;font-style:italic;font-size:clamp(1.12rem,2.4vw,1.55rem);letter-spacing:-.02em;line-height:1.3;max-width:36ch}
+.quote cite{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:.83rem;color:var(--muted);margin-top:14px;font-weight:500}
 
-/* ---------- presupuesto ---------- */
+/* ---------- cobertura ---------- */
+.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:30px}
+.zone{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-size:.88rem;font-weight:500;display:flex;align-items:center;gap:9px}
+.zone::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);flex:none}
+
+/* ---------- cotización ---------- */
 .quote-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:start}
-form{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(22px,3vw,34px);box-shadow:0 20px 50px rgba(14,14,14,.07)}
+form{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,34px);box-shadow:0 24px 54px rgba(20,23,26,.09)}
 .field{margin-bottom:16px}
-.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:7px;color:var(--ink)}
-.field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:.95rem;color:var(--ink);background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;transition:border-color .2s,background .2s}
+.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;font-family:inherit;font-size:.95rem;color:var(--ink);background:var(--paper-2);border:1px solid var(--line);border-radius:9px;padding:12px 14px;transition:border-color .2s,background .2s}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--brand);background:var(--paper);outline:none}
 .field textarea{resize:vertical;min-height:96px}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 form .btn{width:100%;margin-top:6px}
-.form-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
-.contact-list{list-style:none;display:grid;gap:14px;margin-top:26px}
-.contact-list li{display:flex;gap:13px;align-items:center}
-.contact-list .ico{width:40px;height:40px;flex:none;border-radius:10px;background:var(--graphite);border:1px solid var(--line-dark);display:grid;place-items:center}
-.contact-list .ico svg{width:18px;height:18px;fill:var(--brand)}
-.contact-list b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;color:#fff}
-.contact-list span{font-size:.82rem;color:var(--muted-dark)}
+.form-note{font-size:.79rem;color:var(--muted);text-align:center;margin-top:12px}
+.contact-list{list-style:none;display:grid;gap:12px;margin-top:26px}
+.contact-list li{display:flex;gap:13px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:13px 15px;transition:border-color .2s,transform .2s}
+.contact-list li:hover{border-color:var(--line-2);transform:translateX(3px)}
+.contact-list .ico{width:40px;height:40px;flex:none;border-radius:10px;background:var(--brand-soft);display:grid;place-items:center}
+.contact-list .ico svg{width:19px;height:19px;fill:var(--brand)}
+.contact-list b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem}
+.contact-list span{font-size:.82rem;color:var(--muted)}
 
 /* ---------- faq ---------- */
-.faq{max-width:820px;margin:0 auto}
+.faq{max-width:840px;margin:0 auto}
 details{border-bottom:1px solid var(--line);padding:4px 0}
-details summary{list-style:none;cursor:pointer;padding:20px 44px 20px 0;position:relative;font-family:'Archivo',sans-serif;font-weight:700;font-size:1.03rem;letter-spacing:-.015em}
+details summary{list-style:none;cursor:pointer;padding:20px 44px 20px 0;position:relative;font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:-.015em}
 details summary::-webkit-details-marker{display:none}
 details summary::after{content:"";position:absolute;right:6px;top:50%;width:13px;height:13px;margin-top:-7px;background:var(--brand);transition:transform .25s;
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 5h2v14h-2z'/%3E%3Cpath d='M5 11h14v2H5z'/%3E%3C/svg%3E") center/contain no-repeat;
@@ -261,61 +284,61 @@ details[open] summary::after{transform:rotate(135deg)}
 details p{color:var(--muted);font-size:.95rem;padding:0 44px 20px 0}
 
 /* ---------- cta final ---------- */
-.final{background:var(--brand);color:#fff;text-align:center;position:relative;overflow:hidden}
-.final::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(122deg,rgba(0,0,0,.06) 0 3px,transparent 3px 14px)}
+.final{background:var(--ink);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:
+   radial-gradient(700px 320px at 50% -20%,rgba(217,58,43,.28),transparent 65%),
+   repeating-linear-gradient(104deg,rgba(255,255,255,.03) 0 3px,transparent 3px 15px)}
 .final .wrap{position:relative}
-.final h2{margin:14px auto 16px;max-width:16ch}
-.final p{color:rgba(255,255,255,.9);max-width:36rem;margin:0 auto 30px}
-.final .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
-.final .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
-.final .btn-wa{background:#0E0E0E}
-.final .btn-wa:hover{background:#000;box-shadow:0 12px 26px rgba(0,0,0,.3)}
-.final .eyebrow{color:#fff}
-.final .eyebrow::before{background:#fff}
+.final h2{margin:14px auto 16px;max-width:17ch}
+.final p{color:rgba(255,255,255,.78);max-width:38rem;margin:0 auto 30px}
+.final .eyebrow{color:#FF8C7F}
+.final .eyebrow::before{background:#FF8C7F}
+.final .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;background:transparent}
+.final .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
 .final-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
 /* ---------- footer ---------- */
-footer{background:var(--ink);color:#fff;padding:56px 0 30px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid var(--line-dark)}
-.foot-grid p{color:var(--muted-dark);font-size:.9rem;margin-top:14px;max-width:32ch}
-.foot-col h4{font-family:'Archivo',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
-.foot-col a,.foot-col span{display:block;font-size:.9rem;color:var(--muted-dark);margin-bottom:9px;transition:color .18s}
-.foot-col a:hover{color:#fff}
-.foot-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:.8rem;color:var(--muted-dark)}
+footer{background:var(--paper);border-top:1px solid var(--line);padding:56px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+.foot-grid p{color:var(--muted);font-size:.9rem;margin-top:14px;max-width:34ch}
+.foot-col h4{font-family:'Archivo',sans-serif;font-size:.73rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.foot-col a,.foot-col span{display:block;font-size:.9rem;color:var(--muted);margin-bottom:9px;transition:color .18s}
+.foot-col a:hover{color:var(--ink)}
+.foot-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:.8rem;color:var(--muted-2)}
 
 /* ---------- whatsapp flotante ---------- */
-.wa-float{position:fixed;right:18px;bottom:18px;z-index:150;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:13px 18px;border-radius:40px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.9rem;box-shadow:0 14px 34px rgba(37,160,90,.36);transition:transform .18s}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:150;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:13px 18px;border-radius:40px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.9rem;box-shadow:0 14px 34px rgba(37,160,90,.34);transition:transform .18s}
 .wa-float:hover{transform:translateY(-3px)}
 .wa-float svg{width:22px;height:22px;fill:#fff;flex:none}
 
-/* ---------- reveal (solo con JS: sin JS el contenido se ve igual) ---------- */
+/* ---------- reveal ---------- */
 .js .rv{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
 .js .rv.on{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   .js .rv{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
-  .btn:hover,.card:hover,.wa-float:hover{transform:none}
+  .btn:hover,.card:hover,.step:hover,.wa-float:hover,.contact-list li:hover{transform:none}
 }
 
 /* ---------- responsive ---------- */
 @media (max-width:1040px){
-  .hero-grid{grid-template-columns:1fr;gap:36px;padding-bottom:60px}
-  .hero-card .art{height:300px}
+  .hero-grid{grid-template-columns:1fr;gap:36px;padding-bottom:58px}
+  .hero-card .art{height:310px}
   .bar-in{grid-template-columns:repeat(2,1fr)}
-  .bar-in > div{border-right:0;border-bottom:1px solid var(--line-dark)}
-  .bar-in > div:nth-child(odd){border-right:1px solid var(--line-dark)}
+  .bar-in > div{border-right:0;border-bottom:1px solid var(--line)}
+  .bar-in > div:nth-child(odd){border-right:1px solid var(--line)}
   .grid-svc{grid-template-columns:repeat(2,1fr)}
   .steps{grid-template-columns:repeat(2,1fr)}
   .offer{grid-template-columns:1fr}
-  .offer-art{min-height:230px}
+  .offer-art{min-height:250px}
   .quote-grid{grid-template-columns:1fr;gap:32px}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:820px){
   .nav-toggle{display:block}
-  .nav-links{position:fixed;top:72px;left:0;right:0;background:var(--ink);border-bottom:1px solid var(--line-dark);box-shadow:0 24px 40px rgba(0,0,0,.45);flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 22px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .22s,transform .22s}
+  .nav-links{position:fixed;top:72px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 24px 40px rgba(20,23,26,.12);flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 22px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .22s,transform .22s}
   .nav-links.open{transform:none;opacity:1;pointer-events:auto}
-  .nav-links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line-dark);font-size:1rem}
+  .nav-links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem;color:var(--ink)}
   .nav-links .btn{margin-top:16px}
   .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
   .values{grid-template-columns:1fr}
@@ -328,6 +351,8 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
   .tile.w2,.tile.h2{grid-column:auto;grid-row:auto}
   .field-row{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
+  .trust > div{border-right:0;padding-right:0}
+  .trust{gap:18px}
   .wa-float span{display:none}
   .wa-float{padding:15px;border-radius:50%}
   .btn{width:100%}
@@ -341,14 +366,14 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 <!-- ===================== NAV ===================== -->
 <nav>
   <div class="nav-in">
-    <a class="brand" href="#inicio" aria-label="BellMar Aberturas — inicio">
+    <a class="brand" href="#inicio" aria-label="Techos Livianos UY — inicio">
       <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
-        <rect width="40" height="40" rx="8" fill="#1E1E1E"/>
-        <rect x="9" y="8" width="22" height="24" rx="2.5" fill="none" stroke="#1E6FD9" stroke-width="2.8"/>
-        <path d="M20 8v24M9 19h22" stroke="#fff" stroke-width="2.2"/>
-        <path d="M24 12.5h3.5v3.5" fill="none" stroke="#5AA0FF" stroke-width="1.6"/>
+        <rect width="40" height="40" rx="9" fill="#F6F7F9"/>
+        <path d="M6 19 20 8l14 11" fill="none" stroke="#D93A2B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M9.5 21v11h21V21" fill="none" stroke="#14171A" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M16 32v-6h8v6" fill="none" stroke="#14171A" stroke-width="2.2" stroke-linejoin="round"/>
       </svg>
-      <span class="brand-txt">BELLMAR<small>Aberturas</small></span>
+      <span class="brand-txt">TECHOS LIVIANOS<small>URUGUAY</small></span>
     </a>
 
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
@@ -357,44 +382,51 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 
     <div class="nav-links" id="nav-links">
       <a href="#servicios">Servicios</a>
-      <a href="#alta-prestacion">Alta prestación</a>
+      <a href="#promo">Techo completo</a>
       <a href="#trabajos">Trabajos</a>
       <a href="#proceso">Cómo trabajamos</a>
-      <a href="#presupuesto">Contacto</a>
-      <a class="btn btn-wa btn-sm" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
+      <a href="#cotizar">Contacto</a>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/59893369947?text=Hola%2C%20quiero%20cotizar%20un%20techo%20liviano." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
-        Presupuesto
+        Cotizar
       </a>
     </div>
   </div>
 </nav>
 
 <!-- ===================== HERO ===================== -->
-<header class="hero on-dark" id="inicio">
+<header class="hero" id="inicio">
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Ventanas · Puertas · Aluminio · PVC</span>
-        <h1>Aberturas que construyen <span class="nb"><span class="mark"><span>calidad</span></span>.</span></h1>
-        <p class="lead">Fabricamos e instalamos ventanas, puertas y cerramientos en aluminio y PVC. Somos una empresa joven con 30 años de experiencia: materiales de primera calidad, medidas exactas y entrega a domicilio.</p>
+        <span class="eyebrow">Techos livianos · Estructuras metálicas</span>
+        <h1>Más sombra, más espacio, <span class="nb"><span class="mark"><span>menos obra</span></span>.</span></h1>
+        <p class="lead">Diseñamos, fabricamos y montamos techos livianos, sobretechos, aleros y estructuras metálicas a medida. Trabajos realizados en el día, sin romper nada y sin obra húmeda.</p>
         <div class="hero-cta">
-          <a class="btn btn-wa" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener">
+          <a class="btn btn-wa" href="https://wa.me/59893369947?text=Hola%2C%20quiero%20cotizar%20un%20techo%20liviano." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
-            Pedir presupuesto
+            Cotización inmediata
           </a>
           <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
         </div>
-        <p class="hero-note"><span class="tick" aria-hidden="true">✓</span><b>Presupuesto sin cargo</b> · respondemos el mismo día</p>
+        <p class="hero-note"><span class="tick" aria-hidden="true">✓</span><span><b>Cotización inmediata</b> por WhatsApp · trato directo, sin intermediarios</span></p>
+
+        <div class="trust">
+          <div><b>+380</b><span>trabajos publicados</span></div>
+          <div><b>+7.900</b><span>seguidores en Instagram</span></div>
+          <div><b>19</b><span>departamentos: todo el país</span></div>
+        </div>
       </div>
 
       <div class="hero-card rv">
-        <div class="art art-corrediza" role="img" aria-label="Ventana corrediza de aluminio de dos hojas"></div>
-        <span class="tag">Fabricación propia</span>
+        <div class="art art-sobretecho" role="img" aria-label="Sobretecho de chapa con alero incorporado"></div>
+        <span class="tag">Trabajos realizados en el día</span>
         <div class="foot">
           <div>
-            <b>Ventana corrediza a medida</b>
-            <span>Aluminio o PVC · con o sin DVH</span>
+            <b>Sobretecho con alero incorporado</b>
+            <span>Estructura metálica + chapa · a medida</span>
           </div>
+          <span class="flag" aria-label="Uruguay">🇺🇾</span>
         </div>
       </div>
     </div>
@@ -402,10 +434,22 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 
   <div class="bar">
     <div class="bar-in">
-      <div><b>30 años de experiencia</b><span>Una empresa joven con oficio de décadas</span></div>
-      <div><b>Fabricación propia</b><span>Taller equipado: no tercerizamos el trabajo</span></div>
-      <div><b>Aluminio y PVC</b><span>Dos sistemas con la misma exigencia de calidad</span></div>
-      <div><b>Entrega a domicilio</b><span>Llevamos, colocamos y probamos cada abertura</span></div>
+      <div>
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 10h3v11h6v-6h2v6h6V10h3z"/></svg></span>
+        <span><b>Soluciones a medida</b><span>Cada techo se calcula para tu espacio</span></span>
+      </div>
+      <div>
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+        <span><b>Trabajamos en todo el país</b><span>Montevideo, Canelones e interior</span></span>
+      </div>
+      <div>
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></span>
+        <span><b>Montaje rápido</b><span>La mayoría de los techos, en el día</span></span>
+      </div>
+      <div>
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6.5v11L12 22l9-4.5v-11zm0 2.2 6.6 3.3L12 10.8 5.4 7.5z"/></svg></span>
+        <span><b>Diseño y montaje propio</b><span>Un solo responsable de principio a fin</span></span>
+      </div>
     </div>
   </div>
 </header>
@@ -416,92 +460,100 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
     <div class="sec-head rv">
       <div>
         <span class="eyebrow">Servicios</span>
-        <h2>Aberturas para casas, obras y comercios.</h2>
+        <h2>Todo lo que se resuelve con estructura y chapa.</h2>
       </div>
-      <p class="lead">Fabricación e instalación de ventanas, puertas, cerramientos y complementos. Todo medido, calculado y ejecutado por el mismo equipo.</p>
+      <p class="lead">Casas, comercios, campos, containers y galpones. Medimos, calculamos la estructura y montamos con nuestro propio equipo.</p>
     </div>
 
     <div class="grid-svc">
       <article class="card rv">
-        <div class="art art-corrediza" role="img" aria-label="Ventana corrediza de aluminio"></div>
+        <div class="art art-techo" role="img" aria-label="Techo liviano a dos aguas"></div>
         <div class="card-body">
-          <h3>Ventanas corredizas</h3>
-          <p>La abertura más pedida. Perfilería reforzada, rodamientos de calidad y cierre firme, calculados para el tamaño real de la hoja.</p>
-          <a class="more" href="#presupuesto">Consultar</a>
+          <h3>Techos livianos</h3>
+          <p>Techos completos sobre estructura metálica: a un agua, a dos aguas o planos. Livianos, rápidos de montar y sin la obra húmeda de un techo tradicional.</p>
+          <a class="more" href="#cotizar">Cotizar</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-puerta" role="img" aria-label="Puerta de aluminio con paño vidriado"></div>
+        <div class="art art-sobretecho" role="img" aria-label="Sobretecho montado sobre chapa existente"></div>
         <div class="card-body">
-          <h3>Puertas de aluminio</h3>
-          <p>Puertas de abrir, corredizas y de doble hoja. Herrajes de primera, cierre hermético y terminaciones prolijas por dentro y por fuera.</p>
-          <a class="more" href="#presupuesto">Consultar</a>
+          <h3>Sobretechos</h3>
+          <p>Un techo nuevo por encima del existente. Termina con las filtraciones, corta el calor del verano y baja el ruido de la lluvia, sin desarmar lo que ya tenés.</p>
+          <a class="more" href="#cotizar">Cotizar</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-pvc" role="img" aria-label="Ventana de PVC blanca"></div>
+        <div class="art art-alero" role="img" aria-label="Alero metálico en voladizo"></div>
         <div class="card-body">
-          <h3>Aberturas de PVC</h3>
-          <p>Perfilería de PVC con refuerzo interior de acero: mucha más aislación térmica y acústica, sin mantenimiento y con una vida útil larguísima.</p>
-          <a class="more" href="#alta-prestacion">Ver alta prestación</a>
+          <h3>Aleros</h3>
+          <p>Aleros sobre puertas, ventanas, patios y galerías. Protegen la fachada del agua y del sol, y suman metros de sombra útil todo el año.</p>
+          <a class="more" href="#cotizar">Cotizar</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-dvh" role="img" aria-label="Doble vidriado hermético"></div>
+        <div class="art art-cochera" role="img" aria-label="Techo para vehículos tipo cochera"></div>
         <div class="card-body">
-          <h3>Vidrio DVH</h3>
-          <p>Doble vidriado hermético con cámara de aire: menos frío, menos calor, menos ruido de la calle y menos gasto de climatización todo el año.</p>
-          <a class="more" href="#alta-prestacion">Ver alta prestación</a>
+          <h3>Techos para vehículos</h3>
+          <p>Cocheras y carports para auto, camioneta o maquinaria. Estructura anclada y calculada para viento, con la altura libre que necesitás.</p>
+          <a class="more" href="#cotizar">Cotizar</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-motorizada" role="img" aria-label="Cortina de enrollar motorizada"></div>
+        <div class="art art-container" role="img" aria-label="Container con techo y alero incorporado"></div>
         <div class="card-body">
-          <h3>Aberturas motorizadas</h3>
-          <p>Cortinas de enrollar y aberturas grandes con motor y control remoto. Comodidad y seguridad, con la instalación prevista desde el proyecto.</p>
-          <a class="more" href="#presupuesto">Consultar</a>
+          <h3>Techos para containers</h3>
+          <p>Sobretechos y aleros para containers: aislación del calor directo sobre la chapa, protección de las aberturas y una galería para usar el frente.</p>
+          <a class="more" href="#cotizar">Cotizar</a>
         </div>
       </article>
 
       <article class="card rv">
-        <div class="art art-celosia" role="img" aria-label="Postigón de celosía"></div>
+        <div class="art art-estructura" role="img" aria-label="Estructura metálica y cabriadas"></div>
         <div class="card-body">
-          <h3>Celosías y postigones</h3>
-          <p>Celosías, postigones y paños fijos que completan la abertura: control de luz, ventilación y privacidad, en la misma línea y color.</p>
-          <a class="more" href="#presupuesto">Consultar</a>
+          <h3>Estructuras metálicas</h3>
+          <p>Cabriadas, columnas, entrepisos y galpones. Fabricamos la estructura según la luz a cubrir y las cargas reales, no “a ojo”.</p>
+          <a class="more" href="#cotizar">Cotizar</a>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ===================== ALTA PRESTACIÓN (destacado) ===================== -->
-<section class="soft" id="alta-prestacion">
+<!-- ===================== PROMO TECHO COMPLETO ===================== -->
+<section class="soft" id="promo">
   <div class="wrap">
     <div class="offer rv">
-      <div class="offer-art art art-dvh" role="img" aria-label="Doble vidriado hermético con cámara de aire">
+      <div class="offer-art art art-techo" role="img" aria-label="Techo completo de 5,50 m x 3,00 m">
+        <span class="stock">Hasta agotar stock</span>
         <div class="badge">
-          <small>Vidriado</small>
-          <b>DVH</b>
+          <small>Techo completo</small>
+          <b>5,50 × 3,00 m</b>
         </div>
       </div>
       <div class="offer-body">
-        <span class="eyebrow">Línea alta prestación</span>
-        <h2>Más confort, menos consumo.</h2>
-        <p class="lead" style="font-size:.98rem">¿Querés mejorar tu hogar con más confort, seguridad y ahorro? La línea de alta prestación con DVH está pensada exactamente para eso.</p>
+        <span class="eyebrow">Promoción vigente</span>
+        <h2>Techo completo de 16,5 m² listo para montar.</h2>
+        <p class="lead" style="font-size:.98rem">Una solución práctica y duradera para patios, galerías, cocheras y depósitos: estructura metálica, chapa y montaje, todo resuelto por el mismo equipo.</p>
+
+        <div class="pills">
+          <span class="pill">Sombra</span>
+          <span class="pill">Protección</span>
+          <span class="pill">Más espacio</span>
+        </div>
+
         <ul class="check">
-          <li><b>Doble vidriado hermético (DVH)</b> contra el calor, el frío y el ruido</li>
-          <li><b>Burletes y cierre multipunto</b> que sellan de verdad</li>
-          <li><b>Perfilería reforzada</b> calculada según la medida del vano</li>
-          <li><b>Motorización opcional</b> en cortinas y aberturas grandes</li>
-          <li><b>Financiación disponible</b> a convenir</li>
+          <li><span><b>Estructura metálica</b> calculada, tratada y lista para exterior</span></li>
+          <li><span><b>Chapa incluida</b> con la pendiente y el desagüe bien resueltos</span></li>
+          <li><span><b>Montaje incluido</b>, en general en el mismo día</span></li>
+          <li><span><b>Precio fijo dentro de Montevideo</b>, sin costo extra por traslado</span></li>
+          <li><span><b>Trabajamos en todo el país</b>: para el interior, consultanos según la ubicación</span></li>
         </ul>
-        <a class="btn btn-brand" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20quiero%20consultar%20por%20la%20l%C3%ADnea%20de%20alta%20prestaci%C3%B3n%20con%20DVH." target="_blank" rel="noopener">Consultar por alta prestación</a>
-        <p class="fineprint">Disponible en aluminio y en PVC, en blanco, negro, gris, anodizado y símil madera. El valor final depende de las medidas, el tipo de apertura y el vidrio elegido.</p>
+        <a class="btn btn-brand" href="https://wa.me/59893369947?text=Hola%2C%20quiero%20consultar%20por%20el%20techo%20completo%20de%205%2C50%20m%20x%203%2C00%20m." target="_blank" rel="noopener">Consultar precio por WhatsApp</a>
+        <p class="fineprint">La medida es orientativa: también fabricamos el mismo techo en otras medidas. El valor final depende de la altura, el tipo de anclaje y la accesibilidad del lugar.</p>
       </div>
     </div>
   </div>
@@ -513,181 +565,213 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
     <div class="sec-head rv">
       <div>
         <span class="eyebrow">Trabajos</span>
-        <h2>Cada proyecto es diferente.</h2>
+        <h2>Cada obra tiene su propia medida.</h2>
       </div>
-      <p class="lead">Aberturas adaptadas al vano, al uso y al estilo de cada casa: desde la fabricación hasta la colocación, cada detalle importa.</p>
+      <p class="lead">Techos y estructuras resueltos en casas, comercios, containers y campos de todo el país. Estas son algunas de las soluciones que hacemos.</p>
     </div>
 
-    <!--
-      Las texturas de abajo son marcadores de posición.
-      Para usar fotos reales, reemplazar cada <div class="art art-xxx"></div> por:
-      <img src="fotos/ventana-corrediza.jpg" alt="Ventana corrediza de aluminio"
-           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-    -->
     <div class="gallery">
       <div class="tile w2 h2 rv">
-        <div class="art art-corrediza"></div>
-        <div class="cap"><small>Ventanas</small><b>Corrediza de aluminio en negro</b></div>
+        <div class="art art-sobretecho"></div>
+        <div class="cap"><small>Sobretechos</small><b>Sobretecho con alero incorporado</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-pvc"></div>
-        <div class="cap"><small>PVC</small><b>Ventana de PVC blanca con DVH</b></div>
+        <div class="art art-alero"></div>
+        <div class="cap"><small>Aleros</small><b>Alero sobre entrada principal</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-puerta"></div>
-        <div class="cap"><small>Puertas</small><b>Puerta de aluminio con paño vidriado</b></div>
+        <div class="art art-cochera"></div>
+        <div class="cap"><small>Vehículos</small><b>Cochera para auto y camioneta</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-dvh"></div>
-        <div class="cap"><small>Vidrio</small><b>DVH con cámara de aire</b></div>
+        <div class="art art-container"></div>
+        <div class="cap"><small>Containers</small><b>Techo y galería sobre container</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-celosia"></div>
-        <div class="cap"><small>Complementos</small><b>Postigón de celosía a medida</b></div>
+        <div class="art art-estructura"></div>
+        <div class="cap"><small>Estructuras</small><b>Cabriadas y columnas a medida</b></div>
       </div>
       <div class="tile w2 rv">
-        <div class="art art-fijo"></div>
-        <div class="cap"><small>Cerramientos</small><b>Paño fijo de piso a techo</b></div>
+        <div class="art art-galpon"></div>
+        <div class="cap"><small>Galpones</small><b>Galpón de gran luz para depósito</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-motorizada"></div>
-        <div class="cap"><small>Motorizadas</small><b>Cortina de enrollar con motor</b></div>
+        <div class="art art-quincho"></div>
+        <div class="cap"><small>Quinchos</small><b>Quincho y galería con techo liviano</b></div>
       </div>
       <div class="tile rv">
-        <div class="art art-taller"></div>
-        <div class="cap"><small>Taller</small><b>Fabricación en taller propio</b></div>
+        <div class="art art-montaje"></div>
+        <div class="cap"><small>Taller</small><b>Fabricación previa al montaje</b></div>
       </div>
+    </div>
+
+    <div class="gallery-note rv">
+      <span>Publicamos cada trabajo terminado en Instagram: ahí se ve el antes, el durante y el resultado final.</span>
+      <a class="btn btn-ghost btn-sm" href="https://instagram.com/techos_livianos.uy" target="_blank" rel="noopener">Ver más en @techos_livianos.uy</a>
     </div>
   </div>
 </section>
 
 <!-- ===================== PROCESO ===================== -->
-<section class="on-dark" style="background:var(--coal);border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)" id="proceso">
+<section class="soft" id="proceso">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
         <span class="eyebrow">Cómo trabajamos</span>
-        <h2 style="color:#fff">Del primer mensaje a la abertura colocada.</h2>
+        <h2>Del primer mensaje al techo montado.</h2>
       </div>
-      <p class="lead">Una ventana que no cierra bien no falla en la colocación: falla antes. Por eso ordenamos el trabajo desde la primera consulta.</p>
+      <p class="lead">Un techo que gotea o una estructura que se mueve no falla en el montaje: falla antes. Por eso ordenamos el trabajo desde la primera consulta.</p>
     </div>
 
     <div class="steps">
       <div class="step rv">
         <h3>Consulta</h3>
-        <p>Nos escribís por WhatsApp con la idea, la foto o las medidas del vano. Te decimos qué necesitamos saber para avanzar.</p>
+        <p>Nos escribís por WhatsApp con una foto del lugar y las medidas aproximadas. Con eso ya podemos orientarte sobre la solución y el costo.</p>
       </div>
       <div class="step rv">
-        <h3>Medición y proyecto</h3>
-        <p>Vamos al lugar, medimos los vanos y definimos sistema, tipo de apertura, vidrio y color según el uso de cada ambiente.</p>
+        <h3>Cotización inmediata</h3>
+        <p>Te pasamos el presupuesto con la estructura, la chapa, el montaje y el plazo. Claro y detallado: sabés exactamente qué estás contratando.</p>
       </div>
       <div class="step rv">
-        <h3>Presupuesto a medida</h3>
-        <p>Te pasamos un presupuesto claro: perfilería, vidrio, plazo de fabricación y fecha de colocación. Sin sorpresas después.</p>
+        <h3>Fabricación</h3>
+        <p>Preparamos y armamos la estructura antes de ir a tu casa. Llegamos con todo cortado y listo, así el trabajo en el lugar es corto y limpio.</p>
       </div>
       <div class="step rv">
-        <h3>Fabricación y colocación</h3>
-        <p>Fabricamos en nuestro taller, entregamos a domicilio y colocamos con nuestro equipo. Te dejamos todo probado y funcionando.</p>
+        <h3>Montaje y entrega</h3>
+        <p>Montamos, anclamos, sellamos y dejamos el lugar limpio. En la mayoría de los casos, el techo queda terminado en el mismo día.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== RESPONSABILIDAD ===================== -->
-<section class="soft" id="nosotros">
+<!-- ===================== POR QUÉ NOSOTROS ===================== -->
+<section id="nosotros">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <span class="eyebrow">Por qué BellMar</span>
-        <h2>Trabajar con responsabilidad hace la diferencia.</h2>
+        <span class="eyebrow">Por qué elegirnos</span>
+        <h2>Especialistas, no todo terreno.</h2>
       </div>
-      <p class="lead">No se trata solo de fabricar una abertura, sino de que funcione bien todos los días. En cada proyecto priorizamos tres cosas.</p>
+      <p class="lead">Hacemos techos livianos y estructuras metálicas todos los días. Esa especialización es la que se nota en el detalle, en el plazo y en cómo aguanta el techo con el tiempo.</p>
     </div>
 
     <div class="values">
       <div class="value rv">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6.5v11L12 22l9-4.5v-11zm0 2.2 6.6 3.3L12 10.8 5.4 7.5zM5 9.2l6 3v7.1l-6-3zm8 10.1v-7.1l6-3v7.1z"/></svg></div>
-        <h3>Materiales de primera calidad</h3>
-        <p>Perfilería, herrajes y vidrios de marcas reconocidas. Lo que no se ve es justamente lo que hace durar una abertura.</p>
+        <h3>Estructura bien calculada</h3>
+        <p>Perfiles, separación de correas y anclajes según la luz a cubrir y el viento de la zona. Un techo liviano no es un techo endeble.</p>
       </div>
       <div class="value rv">
         <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 5.3 9 18l-5.7-5.7 1.4-1.4L9 15.2 20.3 3.9z"/><path d="M3 20h18v2H3z"/></svg></div>
-        <h3>Diseño y funcionalidad</h3>
-        <p>Escuadras que cierran, burletes que sellan y terminaciones que se ven bien de cerca, no solo en la foto.</p>
+        <h3>Terminaciones prolijas</h3>
+        <p>Cortes derechos, soldaduras limpias, tratamiento anticorrosivo y sellado en cada encuentro. Lo que no se ve es lo que hace durar el trabajo.</p>
       </div>
       <div class="value rv">
-        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h11v9H3zm12 3h3.5l2.5 3v3h-6zM6.5 20a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6zm11 0a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6z"/></svg></div>
-        <h3>Entrega a domicilio</h3>
-        <p>Fabricamos, llevamos y colocamos. Acordamos una fecha y la cumplimos: si algo cambia, te avisamos antes, no después.</p>
+        <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 10.6 4.3 2.5-.9 1.6L11 13.6V6.5h2z"/></svg></div>
+        <h3>Plazos que se cumplen</h3>
+        <p>Coordinamos día y hora, y avisamos si algo cambia: antes, no después. La mayoría de los trabajos se terminan en la misma jornada.</p>
       </div>
     </div>
 
     <div class="quote rv">
-      <p>“Antes del diseño hay algo más importante: que la ventana cierre bien todos los días.”</p>
+      <p>“Un buen techo no se nota. Se nota cuando llueve, cuando pega el sol y cuando pasan los años.”</p>
+      <cite>Eric Ojeda · Techos Livianos UY</cite>
+    </div>
+
+    <div class="rv" style="margin-top:52px">
+      <span class="eyebrow">Cobertura</span>
+      <h3 style="font-size:1.35rem;margin:12px 0 4px">Trabajamos en todo el país 🇺🇾</h3>
+      <p class="lead" style="font-size:.96rem">Dentro de Montevideo mantenemos precio fijo. Para el interior coordinamos según la ubicación y la cantidad de trabajo.</p>
+      <div class="zones">
+        <div class="zone">Montevideo</div>
+        <div class="zone">Canelones</div>
+        <div class="zone">Maldonado</div>
+        <div class="zone">San José</div>
+        <div class="zone">Colonia</div>
+        <div class="zone">Florida</div>
+        <div class="zone">Rocha</div>
+        <div class="zone">Resto del país</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== PRESUPUESTO ===================== -->
-<section class="on-dark" style="background:var(--ink)" id="presupuesto">
+<!-- ===================== COTIZAR ===================== -->
+<section class="soft" id="cotizar">
   <div class="wrap">
     <div class="quote-grid">
       <div class="rv">
-        <span class="eyebrow">Presupuesto a medida</span>
-        <h2 style="color:#fff;margin:14px 0 16px">Contanos qué necesitás.</h2>
-        <p class="lead">Analizamos el vano, el uso de cada ambiente y tu presupuesto para recomendarte el sistema que mejor te sirve. Si tenés un proyecto en mente, consultanos.</p>
+        <span class="eyebrow">Cotización sin cargo</span>
+        <h2 style="margin:14px 0 16px">Contanos qué necesitás techar.</h2>
+        <p class="lead">Con la medida aproximada del lugar y una foto ya podemos orientarte. Completá el formulario y se abre WhatsApp con el mensaje listo para enviar.</p>
 
         <ul class="contact-list">
           <li>
             <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg></span>
-            <a href="https://wa.me/54XXXXXXXXXX" target="_blank" rel="noopener"><b>+54 9 XXXX XX-XXXX</b><span>WhatsApp · consultas y presupuestos</span></a>
+            <a href="https://wa.me/59893369947" target="_blank" rel="noopener"><b>093 369 947</b><span>WhatsApp · cotización inmediata, trato directo</span></a>
           </li>
           <li>
             <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg></span>
-            <a href="https://instagram.com/bellmar_aluminios" target="_blank" rel="noopener"><b>@bellmar_aluminios</b><span>Mirá nuestros trabajos y novedades</span></a>
-          </li>
-          <li>
-            <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg></span>
-            <a href="mailto:contacto@bellmaraberturas.com"><b>contacto@bellmaraberturas.com</b><span>Planos, medidas y consultas por escrito</span></a>
+            <a href="https://instagram.com/techos_livianos.uy" target="_blank" rel="noopener"><b>@techos_livianos.uy</b><span>+380 trabajos publicados · mirá el antes y después</span></a>
           </li>
           <li>
             <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
-            <span><b>Fábrica y taller propio</b><span>Consultanos por tu zona de cobertura</span></span>
+            <span><b>Trabajamos en todo el país</b><span>Taller propio · Montevideo</span></span>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 10.6 4.3 2.5-.9 1.6L11 13.6V6.5h2z"/></svg></span>
+            <span><b>Lunes a sábado</b><span>Respondemos los mensajes durante todo el día</span></span>
           </li>
         </ul>
       </div>
 
-      <form id="form-presupuesto" class="rv" novalidate>
+      <form id="form-cotizar" class="rv" novalidate>
         <div class="field">
-          <label for="f-nombre">Nombre y apellido</label>
+          <label for="f-nombre">Nombre</label>
           <input id="f-nombre" name="nombre" type="text" placeholder="Tu nombre" required>
         </div>
         <div class="field-row">
           <div class="field">
             <label for="f-trabajo">¿Qué necesitás?</label>
             <select id="f-trabajo" name="trabajo">
-              <option>Ventana corrediza</option>
-              <option>Ventana de abrir u oscilobatiente</option>
-              <option>Puerta de aluminio</option>
-              <option>Abertura de PVC</option>
-              <option>Paño fijo o cerramiento</option>
-              <option>Celosía o postigón</option>
-              <option>Cortina de enrollar (motorizada)</option>
-              <option>Otra abertura</option>
+              <option>Techo liviano</option>
+              <option>Sobretecho</option>
+              <option>Alero</option>
+              <option>Techo para vehículos / cochera</option>
+              <option>Techo para container</option>
+              <option>Estructura metálica / galpón</option>
+              <option>Quincho o galería</option>
+              <option>Techo completo 5,50 × 3,00 m</option>
+              <option>Otro trabajo</option>
             </select>
           </div>
           <div class="field">
             <label for="f-medidas">Medidas aproximadas</label>
-            <input id="f-medidas" name="medidas" type="text" placeholder="Ej: 1,50 m x 1,10 m">
+            <input id="f-medidas" name="medidas" type="text" placeholder="Ej: 5,50 m x 3,00 m">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-depto">Departamento</label>
+            <select id="f-depto" name="depto">
+              <option>Montevideo</option>
+              <option>Canelones</option>
+              <option>Maldonado</option>
+              <option>San José</option>
+              <option>Colonia</option>
+              <option>Florida</option>
+              <option>Rocha</option>
+              <option>Otro departamento</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-localidad">Localidad o barrio</label>
+            <input id="f-localidad" name="localidad" type="text" placeholder="¿Dónde es el trabajo?">
           </div>
         </div>
         <div class="field">
-          <label for="f-localidad">Localidad</label>
-          <input id="f-localidad" name="localidad" type="text" placeholder="¿Dónde es la obra?">
-        </div>
-        <div class="field">
           <label for="f-detalle">Contanos un poco más</label>
-          <textarea id="f-detalle" name="detalle" placeholder="Cantidad de aberturas, color, si querés DVH, si es obra nueva o reemplazo, plazos…"></textarea>
+          <textarea id="f-detalle" name="detalle" placeholder="Altura disponible, si hay techo existente, si es sobre pared o columnas, para cuándo lo necesitás…"></textarea>
         </div>
         <button class="btn btn-wa" type="submit">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
@@ -706,41 +790,41 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
       <div class="sec-head rv" style="justify-content:center;text-align:center">
         <div style="margin:0 auto">
           <span class="eyebrow">Preguntas frecuentes</span>
-          <h2 style="margin:12px auto 0;max-width:20ch">¿Cuándo es el momento correcto para consultar?</h2>
+          <h2 style="margin:12px auto 0;max-width:22ch">Lo que nos consultan antes de contratar</h2>
         </div>
       </div>
 
       <details class="rv">
-        <summary>¿Cuándo conviene pedir el presupuesto?</summary>
-        <p>Cuanto antes, mejor. Si la obra todavía está en construcción, te pasamos las medidas de vano y las previsiones (dinteles, contramarcos, cajón de cortina) para que la abertura entre perfecta y no haya que romper nada después.</p>
+        <summary>¿Qué es exactamente un techo liviano?</summary>
+        <p>Es un techo apoyado sobre estructura metálica y cubierto con chapa, en lugar de losa u hormigón. Pesa mucho menos, se monta en horas en vez de semanas y no necesita obra húmeda, así que podés usar el espacio prácticamente enseguida.</p>
       </details>
       <details class="rv">
-        <summary>¿Qué me conviene: aluminio o PVC?</summary>
-        <p>Los dos son excelentes; cambia la prioridad. El aluminio es más versátil en diseño, colores y grandes luces. El PVC aísla más del frío, el calor y el ruido, y prácticamente no necesita mantenimiento. En la visita te recomendamos el que mejor se adapte a tu casa y a tu presupuesto.</p>
+        <summary>¿Qué es un sobretecho y cuándo conviene?</summary>
+        <p>Es un techo nuevo montado por encima del que ya tenés. Conviene cuando el techo actual filtra, está muy castigado o calienta demasiado en verano: se resuelve el problema sin desarmar nada y sin dejar la casa abierta. Además se puede sumar un alero en el mismo trabajo.</p>
       </details>
       <details class="rv">
-        <summary>¿Qué es el DVH y realmente sirve?</summary>
-        <p>Es un doble vidrio con una cámara de aire hermética entre las hojas. Reduce mucho la pérdida de calor en invierno, la entrada de calor en verano y el ruido de la calle, así que también baja el gasto de climatización. Se puede colocar tanto en aluminio como en PVC.</p>
+        <summary>¿Cuánto demora el montaje?</summary>
+        <p>La mayoría de los techos, aleros y cocheras quedan terminados en el mismo día. Preparamos la estructura antes en el taller, así el trabajo en tu casa es corto y ordenado. En galpones o estructuras grandes coordinamos un plazo concreto al aprobar el presupuesto.</p>
       </details>
       <details class="rv">
-        <summary>¿El presupuesto tiene costo?</summary>
-        <p>No. La visita, la medición y el presupuesto son sin cargo y sin compromiso. Recién cuando aprobás el trabajo se define la seña y la fecha de fabricación.</p>
+        <summary>¿La cotización tiene costo?</summary>
+        <p>No. La cotización es sin cargo y sin compromiso. Con una foto del lugar y las medidas aproximadas por WhatsApp ya podemos pasarte un valor orientativo el mismo día.</p>
       </details>
       <details class="rv">
-        <summary>¿Cuánto tardan en entregar las aberturas?</summary>
-        <p>Depende del sistema, la cantidad, el color y el tipo de vidrio. Al aprobar el presupuesto te damos una fecha concreta de fabricación y colocación, y la cumplimos.</p>
+        <summary>¿Trabajan en el interior del país?</summary>
+        <p>Sí, trabajamos en todo el país. Dentro de Montevideo mantenemos precio fijo; para el interior el traslado se coordina según la ubicación y el tamaño del trabajo. Contanos dónde es y te decimos cómo se resuelve.</p>
       </details>
       <details class="rv">
-        <summary>¿La colocación está incluida?</summary>
-        <p>Sí. Fabricamos, entregamos a domicilio y colocamos con nuestro propio equipo, así hay un solo responsable por el resultado final. Te dejamos cada abertura probada y funcionando.</p>
+        <summary>¿Qué materiales usan?</summary>
+        <p>Estructura de perfilería metálica con tratamiento anticorrosivo y cubierta de chapa, en el espesor y color que mejor se adapte al uso. Podemos incluir aislación térmica, canalón y bajada de agua cuando el trabajo lo pide.</p>
       </details>
       <details class="rv">
-        <summary>¿En qué colores se fabrican?</summary>
-        <p>Blanco, negro, gris, anodizado natural y símil madera, entre otros. En PVC también trabajamos terminaciones símil madera, y podemos combinar un color por fuera y otro por dentro.</p>
+        <summary>¿Hacen techos y aleros para containers?</summary>
+        <p>Sí, es uno de los trabajos que más hacemos. El sobretecho baja mucho la temperatura interior del container y el alero protege puertas y ventanas, además de generar una galería aprovechable al frente.</p>
       </details>
       <details class="rv">
-        <summary>¿Trabajan con financiación?</summary>
-        <p>Contamos con opciones de financiación a convenir según el trabajo. Consultanos por WhatsApp y vemos la forma de pago que mejor te sirva.</p>
+        <summary>¿Cómo son las formas de pago?</summary>
+        <p>Se coordina una seña al confirmar el trabajo y el saldo contra la entrega. Consultanos por WhatsApp y vemos juntos la modalidad que mejor te sirva.</p>
       </details>
     </div>
   </div>
@@ -749,15 +833,15 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 <!-- ===================== CTA FINAL ===================== -->
 <section class="final">
   <div class="wrap rv">
-    <span class="eyebrow">Fabricación e instalación</span>
-    <h2>¿Tenés un proyecto en mente?</h2>
-    <p>Fabricamos aberturas de aluminio y PVC pensadas para durar, con la calidad asegurada de 30 años de oficio. Escribinos y lo resolvemos juntos.</p>
+    <span class="eyebrow">Diseño, fabricación y montaje</span>
+    <h2>¿Tenés un espacio para techar?</h2>
+    <p>Mandanos una foto del lugar y la medida aproximada. Te pasamos la cotización el mismo día y coordinamos el montaje sin vueltas.</p>
     <div class="final-cta">
-      <a class="btn btn-wa" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20tengo%20un%20proyecto%20en%20mente%20y%20quiero%20un%20presupuesto." target="_blank" rel="noopener">
+      <a class="btn btn-wa" href="https://wa.me/59893369947?text=Hola%2C%20tengo%20un%20espacio%20para%20techar%20y%20quiero%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
-        Escribinos por WhatsApp
+        Escribinos al 093 369 947
       </a>
-      <a class="btn btn-ghost" href="https://instagram.com/bellmar_aluminios" target="_blank" rel="noopener">Ver trabajos en Instagram</a>
+      <a class="btn btn-ghost" href="https://instagram.com/techos_livianos.uy" target="_blank" rel="noopener">Ver trabajos en Instagram</a>
     </div>
   </div>
 </section>
@@ -769,39 +853,41 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
       <div>
         <a class="brand" href="#inicio">
           <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
-            <rect width="40" height="40" rx="8" fill="#1E1E1E"/>
-            <rect x="9" y="8" width="22" height="24" rx="2.5" fill="none" stroke="#1E6FD9" stroke-width="2.8"/>
-            <path d="M20 8v24M9 19h22" stroke="#fff" stroke-width="2.2"/>
-            <path d="M24 12.5h3.5v3.5" fill="none" stroke="#5AA0FF" stroke-width="1.6"/>
+            <rect width="40" height="40" rx="9" fill="#F6F7F9"/>
+            <path d="M6 19 20 8l14 11" fill="none" stroke="#D93A2B" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M9.5 21v11h21V21" fill="none" stroke="#14171A" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M16 32v-6h8v6" fill="none" stroke="#14171A" stroke-width="2.2" stroke-linejoin="round"/>
           </svg>
-          <span class="brand-txt">BELLMAR<small>Aberturas</small></span>
+          <span class="brand-txt">TECHOS LIVIANOS<small>URUGUAY</small></span>
         </a>
-        <p>Fabricación e instalación de aberturas de aluminio y PVC: ventanas, puertas, cerramientos y complementos. Materiales de primera calidad, diseño, funcionalidad y entrega a domicilio.</p>
+        <p>Especialistas en techos livianos y estructuras metálicas. Soluciones a medida: diseño, fabricación y montaje propio. Trabajamos en todo el país.</p>
       </div>
       <div class="foot-col">
         <h4>Servicios</h4>
-        <a href="#servicios">Ventanas corredizas</a>
-        <a href="#servicios">Puertas de aluminio</a>
-        <a href="#servicios">Aberturas de PVC</a>
-        <a href="#alta-prestacion">Vidrio DVH</a>
-        <a href="#servicios">Celosías y postigones</a>
+        <a href="#servicios">Techos livianos</a>
+        <a href="#servicios">Sobretechos</a>
+        <a href="#servicios">Aleros</a>
+        <a href="#servicios">Techos para vehículos</a>
+        <a href="#servicios">Techos para containers</a>
+        <a href="#servicios">Estructuras metálicas</a>
       </div>
       <div class="foot-col">
         <h4>Contacto</h4>
-        <a href="https://wa.me/54XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp +54 9 XXXX XX-XXXX</a>
-        <a href="mailto:contacto@bellmaraberturas.com">contacto@bellmaraberturas.com</a>
-        <a href="https://instagram.com/bellmar_aluminios" target="_blank" rel="noopener">Instagram @bellmar_aluminios</a>
-        <span>Consultanos por tu zona de cobertura</span>
+        <a href="https://wa.me/59893369947" target="_blank" rel="noopener">WhatsApp 093 369 947</a>
+        <a href="https://instagram.com/techos_livianos.uy" target="_blank" rel="noopener">Instagram @techos_livianos.uy</a>
+        <a href="#cotizar">Pedir cotización</a>
+        <span>Taller propio · Montevideo</span>
+        <span>Trabajamos en todo el país 🇺🇾</span>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year">2026</span> BellMar Aberturas · Todos los derechos reservados</span>
-      <span>Ventanas · Puertas · Aluminio · PVC · DVH · Cerramientos</span>
+      <span>© <span id="year">2026</span> Techos Livianos UY · Eric Ojeda · Todos los derechos reservados</span>
+      <span>Techos livianos · Sobretechos · Aleros · Estructuras metálicas</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/54XXXXXXXXXX?text=Hola%20BellMar%2C%20quiero%20pedir%20un%20presupuesto." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+<a class="wa-float" href="https://wa.me/59893369947?text=Hola%2C%20quiero%20cotizar%20un%20techo%20liviano." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5s-.2.3-.3.5c-.2.2-.4.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.3.7-.2s1.9.9 2.2 1c.3.2.5.3.6.4 0 .2 0 .7-.2 1.3z"/></svg>
   <span>WhatsApp</span>
 </a>
@@ -809,10 +895,16 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
 <script>
 (function(){
   "use strict";
-  var WA = "54XXXXXXXXXX";  /* COMPLETAR: número real, formato internacional sin + ni espacios */
+  var WA = "59893369947";  /* WhatsApp 093 369 947 en formato internacional */
 
   /* año dinámico */
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* sombra del nav al hacer scroll */
+  var navEl = document.querySelector('nav');
+  var onScroll = function(){ navEl.classList.toggle('scrolled', window.scrollY > 8); };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
 
   /* menú mobile */
   var toggle = document.querySelector('.nav-toggle');
@@ -845,23 +937,24 @@ footer{background:var(--ink);color:#fff;padding:56px 0 30px}
   }
 
   /* formulario -> WhatsApp con el mensaje pre-armado */
-  var form = document.getElementById('form-presupuesto');
+  var form = document.getElementById('form-cotizar');
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var nombre    = form.nombre.value.trim();
     var trabajo   = form.trabajo.value;
     var medidas   = form.medidas.value.trim();
+    var depto     = form.depto.value;
     var localidad = form.localidad.value.trim();
     var detalle   = form.detalle.value.trim();
 
     if(!nombre){ form.nombre.focus(); return; }
 
-    var msg = "Hola BellMar, soy " + nombre + "." +
+    var msg = "Hola Techos Livianos, soy " + nombre + "." +
       "\nNecesito: " + trabajo +
       (medidas   ? "\nMedidas aproximadas: " + medidas : "") +
-      (localidad ? "\nLocalidad: " + localidad : "") +
+      "\nZona: " + depto + (localidad ? " - " + localidad : "") +
       (detalle   ? "\nDetalle: " + detalle : "") +
-      "\n\nQuisiera un presupuesto. ¡Gracias!";
+      "\n\nQuisiera una cotización. ¡Gracias!";
 
     window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
   });
