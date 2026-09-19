@@ -31,7 +31,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Madermetal — Muebles en hierro y madera, rejas y portones a medida</title>
 <meta name="description" content="Fabricamos muebles para interior y exterior en hierro y madera, rejas de seguridad para hogar y comercio, portones, automatizaciones, parrilleros y emisores caloricos. Taller propio en Uruguay. Cotiza por WhatsApp.">
-<meta name="theme-color" content="#0B0B0D">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:title" content="Madermetal — Hierro y madera hechos a tu medida">
 <meta property="og:description" content="Muebles de hierro y madera, rejas de seguridad, portones y automatizaciones, parrilleros y emisores caloricos. Fabricacion propia, medida exacta.">
 <meta property="og:type" content="website">
@@ -45,23 +45,24 @@
   /* --- marca Madermetal --- */
   --brand:#E23B2C;          /* rojo del logo */
   --brand-dark:#BE2A1C;
-  --brand-soft:rgba(226,59,44,.13);
-  --wood:#C89257;           /* madera clara */
+  --brand-ink:#C5301F;     /* rojo para texto chico (AA sobre blanco) */
+  --brand-soft:rgba(226,59,44,.09);
+  --wood:#9A6528;           /* madera para texto (contraste sobre blanco) */
   --wood-2:#A97238;         /* madera oscura */
-  --wood-soft:rgba(200,146,87,.14);
+  --wood-soft:rgba(200,146,87,.16);
 
-  /* --- superficies oscuras --- */
-  --ink:#0B0B0D;            /* fondo de pagina */
-  --surface:#131316;
-  --surface-2:#1A1A1E;
-  --surface-3:#212127;
-  --line:#2A2A31;
-  --line-2:#3B3B45;
+  /* --- superficies claras --- */
+  --ink:#FFFFFF;            /* fondo de pagina */
+  --band:#F7F8FA;           /* franjas de seccion */
+  --surface:#FFFFFF;        /* tarjetas */
+  --surface-2:#EDEFF3;      /* ilustraciones e inputs */
+  --surface-3:#FFFFFF;      /* input enfocado */
+  --line:#E3E6EA;
+  --line-2:#C7CCD4;
 
   /* --- texto --- */
-  --text:#F4F3F1;
-  --muted:#A8A6A2;
-  --muted-2:#76747070;
+  --text:#15181C;
+  --muted:#5C636C;
 
   --wa:#25A05A;
   --radius:14px;
@@ -86,8 +87,8 @@ p{color:var(--muted)}
 section{padding:clamp(62px,8vw,108px) 0;position:relative}
 .sec-head{max-width:720px;margin-bottom:clamp(34px,4.6vw,56px)}
 .sec-head p{margin-top:15px;font-size:1.04rem}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:.71rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:var(--brand);margin-bottom:15px}
-.eyebrow::before{content:"";width:22px;height:2px;background:var(--brand);display:block}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:.71rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:var(--brand-ink);margin-bottom:15px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--brand-ink);display:block}
 .tint{color:var(--wood)}
 .mark{background:var(--brand);color:#fff;padding:0 .16em;border-radius:4px;display:inline-block;transform:skewX(-4deg)}
 .mark > span{display:inline-block;transform:skewX(4deg)}
@@ -104,8 +105,8 @@ section{padding:clamp(62px,8vw,108px) 0;position:relative}
 .btn-row{display:flex;flex-wrap:wrap;gap:13px}
 
 /* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:60;background:rgba(11,11,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .25s,background .25s}
-nav.scrolled{border-bottom-color:var(--line);background:rgba(11,11,13,.95)}
+nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .25s,background .25s}
+nav.scrolled{border-bottom-color:var(--line);background:rgba(255,255,255,.96)}
 .nav-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo{display:flex;align-items:center;gap:11px}
 .logo svg{width:38px;height:38px;flex:none}
@@ -123,7 +124,7 @@ nav.scrolled{border-bottom-color:var(--line);background:rgba(11,11,13,.95)}
 
 /* ---------- hero ---------- */
 .hero{position:relative;padding-top:clamp(48px,6vw,84px);padding-bottom:clamp(54px,6vw,92px);overflow:hidden}
-.hero::before{content:"";position:absolute;top:-220px;right:-180px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(226,59,44,.16),transparent 66%);pointer-events:none}
+.hero::before{content:"";position:absolute;top:-220px;right:-180px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(226,59,44,.10),transparent 66%);pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(34px,4.6vw,66px);align-items:center;position:relative}
 .hero h1 span.line{display:block}
 .hero-lead{margin-top:21px;font-size:clamp(1.02rem,1.5vw,1.16rem);max-width:520px}
@@ -133,11 +134,11 @@ nav.scrolled{border-bottom-color:var(--line);background:rgba(11,11,13,.95)}
 .hero-stats span{font-size:.83rem;color:var(--muted)}
 .hero-art{position:relative;aspect-ratio:4/4.4;border-radius:20px;overflow:hidden;background:var(--surface-2);border:1px solid var(--line)}
 .hero-art .tag{position:absolute;z-index:2;top:17px;left:17px;background:var(--brand);color:#fff;font-family:'Archivo',sans-serif;font-weight:700;font-size:.69rem;letter-spacing:.13em;text-transform:uppercase;padding:7px 12px;border-radius:6px;box-shadow:0 10px 24px rgba(226,59,44,.34)}
-.hero-art .note{position:absolute;z-index:2;bottom:17px;left:17px;right:17px;background:rgba(11,11,13,.78);backdrop-filter:blur(8px);border:1px solid var(--line-2);border-radius:11px;padding:12px 15px;font-size:.84rem;color:var(--text)}
+.hero-art .note{position:absolute;z-index:2;bottom:17px;left:17px;right:17px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border:1px solid var(--line-2);border-radius:11px;padding:12px 15px;font-size:.84rem;color:var(--text)}
 .hero-art .note b{color:var(--wood)}
 
 /* ---------- franja diferenciales ---------- */
-.strip{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0}
+.strip{background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0}
 .strip-in{display:grid;grid-template-columns:repeat(4,1fr)}
 .strip-it{padding:26px 22px;display:flex;gap:13px;align-items:flex-start;border-right:1px solid var(--line)}
 .strip-it:last-child{border-right:0}
@@ -148,18 +149,18 @@ nav.scrolled{border-bottom-color:var(--line);background:rgba(11,11,13,.95)}
 /* ---------- grillas de tarjetas ---------- */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
-.card:hover{transform:translateY(-5px);box-shadow:0 26px 50px rgba(0,0,0,.45);border-color:var(--line-2)}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 44px rgba(21,24,28,.10);border-color:var(--line-2)}
 .card-art{position:relative;aspect-ratio:16/10;background:var(--surface-2);overflow:hidden}
 .card-body{padding:22px;display:flex;flex-direction:column;gap:9px;flex:1}
 .card-body p{font-size:.92rem;line-height:1.6}
-.card-body .more{margin-top:auto;padding-top:11px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.85rem;color:var(--brand);display:inline-flex;align-items:center;gap:7px}
+.card-body .more{margin-top:auto;padding-top:11px;font-family:'Archivo',sans-serif;font-weight:700;font-size:.85rem;color:var(--brand-ink);display:inline-flex;align-items:center;gap:7px}
 .card-body .more::after{content:"→";transition:transform .2s}
 .card:hover .card-body .more::after{transform:translateX(4px)}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
 .tags span{font-size:.72rem;font-weight:600;color:var(--wood);background:var(--wood-soft);border-radius:5px;padding:4px 9px}
 
 /* ---------- destacado automatizacion ---------- */
-.feature{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.feature{background:var(--band);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center}
 .feature-txt{padding:clamp(28px,4vw,48px)}
 .feature-txt ul{list-style:none;margin:20px 0 26px;display:grid;gap:11px}
 .feature-txt li{display:flex;gap:11px;align-items:flex-start;font-size:.94rem;color:var(--muted)}
@@ -170,7 +171,7 @@ nav.scrolled{border-bottom-color:var(--line);background:rgba(11,11,13,.95)}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .tile{position:relative;aspect-ratio:1/1;border-radius:var(--radius);overflow:hidden;background:var(--surface-2);border:1px solid var(--line);transition:transform .22s,border-color .22s}
 .tile:hover{transform:translateY(-4px);border-color:var(--wood)}
-.tile .cap{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:34px 16px 15px;background:linear-gradient(to top,rgba(11,11,13,.94),transparent);font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem}
+.tile .cap{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:13px 16px 14px;background:rgba(21,24,28,.90);font-family:'Archivo',sans-serif;font-weight:700;font-size:.95rem;color:#fff}
 .tile .cap small{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:3px}
 
 /* ---------- proceso ---------- */
@@ -199,7 +200,7 @@ nav.scrolled{border-bottom-color:var(--line);background:rgba(11,11,13,.95)}
 
 /* ---------- formulario ---------- */
 .quote{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,4.4vw,56px);align-items:start}
-form{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,34px);box-shadow:0 30px 60px rgba(0,0,0,.4)}
+form{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,34px);box-shadow:0 26px 54px rgba(21,24,28,.09)}
 .field{margin-bottom:15px}
 .field label{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:.79rem;letter-spacing:.04em;margin-bottom:7px}
 .field input,.field select,.field textarea{width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-family:'Inter',sans-serif;font-size:.94rem;color:var(--text);transition:border-color .18s,background .18s}
@@ -231,11 +232,17 @@ details .ans{padding:0 21px 20px;font-size:.93rem;color:var(--muted);line-height
 .cta > *{position:relative}
 .cta p{max-width:560px;margin:16px auto 0}
 .cta .btn-row{justify-content:center;margin-top:30px}
+.cta{color:#F4F3F1}
+.cta .eyebrow{color:#FF6A5C}
+.cta .eyebrow::before{background:#FF6A5C}
+.cta p{color:#B9B7B3}
+.cta .btn-ghost{color:#F4F3F1;border-color:#3F444C}
+.cta .btn-ghost:hover{color:#E0B87F;border-color:#C89257}
 
 /* ---------- footer ---------- */
-footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(44px,5vw,66px) 0 26px}
+footer{background:var(--band);border-top:1px solid var(--line);padding:clamp(44px,5vw,66px) 0 26px}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:34px}
-.foot-col h4{font-family:'Archivo',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:15px}
+.foot-col h4{font-family:'Archivo',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand-ink);margin-bottom:15px}
 .foot-col ul{list-style:none;display:grid;gap:9px}
 .foot-col a,.foot-col li{font-size:.89rem;color:var(--muted);transition:color .18s}
 .foot-col a:hover{color:var(--text)}
@@ -363,10 +370,10 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
     <div class="hero-art">
       <span class="tag">Muebles a medida</span>
       <svg viewBox="0 0 400 440" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Estantería de hierro y madera">
-        <rect width="400" height="440" fill="#1A1A1E"/>
-        <rect x="0" y="330" width="400" height="110" fill="#141417"/>
+        <rect width="400" height="440" fill="#EDEFF3"/>
+        <rect x="0" y="330" width="400" height="110" fill="#E2E5EA"/>
         <!-- estructura de hierro -->
-        <g stroke="#3B3B45" stroke-width="7" stroke-linecap="round">
+        <g stroke="#454B54" stroke-width="7" stroke-linecap="round">
           <path d="M92 96v250M308 96v250"/>
           <path d="M92 96h216"/>
         </g>
@@ -382,15 +389,15 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
         <!-- objetos decorativos -->
         <g opacity=".72">
           <rect x="108" y="112" width="13" height="38" rx="2" fill="#E23B2C"/>
-          <rect x="126" y="120" width="11" height="30" rx="2" fill="#565660"/>
-          <rect x="142" y="106" width="14" height="44" rx="2" fill="#76747A"/>
-          <circle cx="278" cy="132" r="17" fill="none" stroke="#565660" stroke-width="5"/>
-          <rect x="112" y="196" width="46" height="36" rx="3" fill="#565660"/>
+          <rect x="126" y="120" width="11" height="30" rx="2" fill="#7C848E"/>
+          <rect x="142" y="106" width="14" height="44" rx="2" fill="#A0A7B0"/>
+          <circle cx="278" cy="132" r="17" fill="none" stroke="#7C848E" stroke-width="5"/>
+          <rect x="112" y="196" width="46" height="36" rx="3" fill="#7C848E"/>
           <rect x="252" y="204" width="13" height="28" rx="2" fill="#E23B2C"/>
-          <rect x="270" y="196" width="11" height="36" rx="2" fill="#76747A"/>
+          <rect x="270" y="196" width="11" height="36" rx="2" fill="#A0A7B0"/>
         </g>
         <!-- patas -->
-        <g stroke="#3B3B45" stroke-width="7" stroke-linecap="round">
+        <g stroke="#454B54" stroke-width="7" stroke-linecap="round">
           <path d="M92 346v22M308 346v22"/>
         </g>
       </svg>
@@ -435,10 +442,10 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
       <article class="card rv">
         <div class="card-art">
           <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Mesa de hierro y madera">
-            <rect width="400" height="250" fill="#1A1A1E"/>
+            <rect width="400" height="250" fill="#EDEFF3"/>
             <rect x="60" y="96" width="280" height="19" rx="4" fill="#C89257"/>
             <rect x="60" y="96" width="280" height="6" rx="3" fill="#DFAC72"/>
-            <g stroke="#3B3B45" stroke-width="8" stroke-linecap="round">
+            <g stroke="#454B54" stroke-width="8" stroke-linecap="round">
               <path d="M92 115v76M308 115v76M92 191h216M92 150h216"/>
             </g>
             <circle cx="200" cy="150" r="5" fill="#E23B2C"/>
@@ -455,9 +462,9 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
       <article class="card rv">
         <div class="card-art">
           <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Reja de seguridad">
-            <rect width="400" height="250" fill="#1A1A1E"/>
-            <rect x="70" y="42" width="260" height="166" rx="4" fill="none" stroke="#3B3B45" stroke-width="9"/>
-            <g stroke="#565660" stroke-width="6" stroke-linecap="round">
+            <rect width="400" height="250" fill="#EDEFF3"/>
+            <rect x="70" y="42" width="260" height="166" rx="4" fill="none" stroke="#454B54" stroke-width="9"/>
+            <g stroke="#7C848E" stroke-width="6" stroke-linecap="round">
               <path d="M110 52v146M150 52v146M190 52v146M230 52v146M270 52v146M310 52v146"/>
               <path d="M78 125h244"/>
             </g>
@@ -475,13 +482,13 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
       <article class="card rv">
         <div class="card-art">
           <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Portón corredizo">
-            <rect width="400" height="250" fill="#1A1A1E"/>
+            <rect width="400" height="250" fill="#EDEFF3"/>
             <rect x="46" y="58" width="308" height="140" rx="4" fill="#A97238"/>
             <g stroke="#8C5F2E" stroke-width="4">
               <path d="M84 58v140M122 58v140M160 58v140M198 58v140M236 58v140M274 58v140M312 58v140"/>
             </g>
-            <rect x="46" y="58" width="308" height="140" rx="4" fill="none" stroke="#3B3B45" stroke-width="9"/>
-            <path d="M40 206h320" stroke="#565660" stroke-width="7" stroke-linecap="round"/>
+            <rect x="46" y="58" width="308" height="140" rx="4" fill="none" stroke="#454B54" stroke-width="9"/>
+            <path d="M40 206h320" stroke="#7C848E" stroke-width="7" stroke-linecap="round"/>
             <circle cx="120" cy="212" r="9" fill="none" stroke="#E23B2C" stroke-width="5"/>
             <circle cx="280" cy="212" r="9" fill="none" stroke="#E23B2C" stroke-width="5"/>
           </svg>
@@ -497,13 +504,13 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
       <article class="card rv">
         <div class="card-art">
           <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Parrillero de hierro">
-            <rect width="400" height="250" fill="#1A1A1E"/>
-            <rect x="96" y="70" width="208" height="112" rx="6" fill="#212127" stroke="#3B3B45" stroke-width="7"/>
-            <g stroke="#565660" stroke-width="5" stroke-linecap="round">
+            <rect width="400" height="250" fill="#EDEFF3"/>
+            <rect x="96" y="70" width="208" height="112" rx="6" fill="#DCE0E6" stroke="#454B54" stroke-width="7"/>
+            <g stroke="#7C848E" stroke-width="5" stroke-linecap="round">
               <path d="M116 118h168M116 132h168M116 146h168"/>
             </g>
             <path d="M138 100c6-12-4-16 2-26M200 100c6-12-4-16 2-26M262 100c6-12-4-16 2-26" stroke="#E23B2C" stroke-width="5" fill="none" stroke-linecap="round"/>
-            <g stroke="#3B3B45" stroke-width="8" stroke-linecap="round">
+            <g stroke="#454B54" stroke-width="8" stroke-linecap="round">
               <path d="M120 182v34M280 182v34"/>
             </g>
             <rect x="96" y="196" width="208" height="14" rx="3" fill="#A97238"/>
@@ -520,15 +527,15 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
       <article class="card rv">
         <div class="card-art">
           <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Emisor calórico">
-            <rect width="400" height="250" fill="#1A1A1E"/>
-            <rect x="92" y="66" width="216" height="118" rx="8" fill="#212127" stroke="#3B3B45" stroke-width="7"/>
-            <g stroke="#565660" stroke-width="9" stroke-linecap="round">
+            <rect width="400" height="250" fill="#EDEFF3"/>
+            <rect x="92" y="66" width="216" height="118" rx="8" fill="#DCE0E6" stroke="#454B54" stroke-width="7"/>
+            <g stroke="#7C848E" stroke-width="9" stroke-linecap="round">
               <path d="M124 84v82M156 84v82M188 84v82M220 84v82M252 84v82M284 84v82"/>
             </g>
             <g stroke="#E23B2C" stroke-width="5" fill="none" stroke-linecap="round">
               <path d="M150 52c8-10-4-16 2-24M204 52c8-10-4-16 2-24M258 52c8-10-4-16 2-24"/>
             </g>
-            <g stroke="#3B3B45" stroke-width="7" stroke-linecap="round">
+            <g stroke="#454B54" stroke-width="7" stroke-linecap="round">
               <path d="M124 184v20M284 184v20"/>
             </g>
           </svg>
@@ -544,16 +551,16 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
       <article class="card rv">
         <div class="card-art">
           <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Puerta corrediza de madera y hierro">
-            <rect width="400" height="250" fill="#1A1A1E"/>
-            <path d="M40 60h320" stroke="#3B3B45" stroke-width="9" stroke-linecap="round"/>
+            <rect width="400" height="250" fill="#EDEFF3"/>
+            <path d="M40 60h320" stroke="#454B54" stroke-width="9" stroke-linecap="round"/>
             <circle cx="140" cy="60" r="11" fill="none" stroke="#E23B2C" stroke-width="5"/>
             <circle cx="268" cy="60" r="11" fill="none" stroke="#E23B2C" stroke-width="5"/>
             <rect x="104" y="74" width="200" height="132" rx="4" fill="#C89257"/>
             <g stroke="#A97238" stroke-width="5">
               <path d="M104 118h200M104 162h200M170 74v132M238 74v132"/>
             </g>
-            <rect x="104" y="74" width="200" height="132" rx="4" fill="none" stroke="#3B3B45" stroke-width="7"/>
-            <path d="M286 132v26" stroke="#3B3B45" stroke-width="7" stroke-linecap="round"/>
+            <rect x="104" y="74" width="200" height="132" rx="4" fill="none" stroke="#454B54" stroke-width="7"/>
+            <path d="M286 132v26" stroke="#454B54" stroke-width="7" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="card-body">
@@ -588,19 +595,19 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
       </div>
       <div class="feature-art">
         <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%" aria-label="Portón automatizado con control remoto">
-          <rect width="400" height="340" fill="#1A1A1E"/>
-          <rect x="0" y="262" width="400" height="78" fill="#141417"/>
+          <rect width="400" height="340" fill="#EDEFF3"/>
+          <rect x="0" y="262" width="400" height="78" fill="#E2E5EA"/>
           <!-- portón -->
-          <rect x="54" y="92" width="230" height="170" rx="4" fill="#212127" stroke="#3B3B45" stroke-width="8"/>
-          <g stroke="#565660" stroke-width="6" stroke-linecap="round">
+          <rect x="54" y="92" width="230" height="170" rx="4" fill="#DCE0E6" stroke="#454B54" stroke-width="8"/>
+          <g stroke="#7C848E" stroke-width="6" stroke-linecap="round">
             <path d="M92 104v146M130 104v146M168 104v146M206 104v146M244 104v146"/>
           </g>
           <!-- riel y ruedas -->
-          <path d="M34 266h280" stroke="#565660" stroke-width="7" stroke-linecap="round"/>
+          <path d="M34 266h280" stroke="#7C848E" stroke-width="7" stroke-linecap="round"/>
           <!-- motor -->
           <rect x="300" y="214" width="56" height="48" rx="6" fill="#E23B2C"/>
           <rect x="310" y="228" width="36" height="8" rx="3" fill="#0B0B0D" opacity=".45"/>
-          <path d="M328 214v-16" stroke="#565660" stroke-width="5" stroke-linecap="round"/>
+          <path d="M328 214v-16" stroke="#7C848E" stroke-width="5" stroke-linecap="round"/>
           <!-- ondas de señal -->
           <g stroke="#C89257" stroke-width="4.5" fill="none" stroke-linecap="round" opacity=".9">
             <path d="M330 184a22 22 0 0 1 30 0"/>
@@ -616,7 +623,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
 </section>
 
 <!-- ============================ TRABAJOS ============================ -->
-<section id="trabajos" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="trabajos" style="background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Trabajos realizados</span>
@@ -628,21 +635,21 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
     <div class="gal">
       <div class="tile rv">
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Puerta corrediza estilo granero">
-          <rect width="300" height="300" fill="#1C1C20"/>
-          <path d="M28 66h244" stroke="#3B3B45" stroke-width="9" stroke-linecap="round"/>
+          <rect width="300" height="300" fill="#EDEFF3"/>
+          <path d="M28 66h244" stroke="#454B54" stroke-width="9" stroke-linecap="round"/>
           <circle cx="104" cy="66" r="10" fill="none" stroke="#E23B2C" stroke-width="5"/>
           <circle cx="204" cy="66" r="10" fill="none" stroke="#E23B2C" stroke-width="5"/>
-          <rect x="66" y="80" width="170" height="160" rx="4" fill="#EDEAE4"/>
-          <g stroke="#CFC9BF" stroke-width="5"><path d="M66 134h170M66 188h170M151 80v160"/></g>
-          <rect x="66" y="80" width="170" height="160" rx="4" fill="none" stroke="#3B3B45" stroke-width="7"/>
+          <rect x="66" y="80" width="170" height="160" rx="4" fill="#E7E3DA"/>
+          <g stroke="#BEB7AA" stroke-width="5"><path d="M66 134h170M66 188h170M151 80v160"/></g>
+          <rect x="66" y="80" width="170" height="160" rx="4" fill="none" stroke="#454B54" stroke-width="7"/>
         </svg>
         <div class="cap"><small>Interior</small>Puertas corredizas</div>
       </div>
 
       <div class="tile rv">
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Leñero de hierro">
-          <rect width="300" height="300" fill="#1C1C20"/>
-          <path d="M70 96c0-22 18-40 40-40h80c22 0 40 18 40 40v112H70z" fill="none" stroke="#EDEAE4" stroke-width="8"/>
+          <rect width="300" height="300" fill="#EDEFF3"/>
+          <path d="M70 96c0-22 18-40 40-40h80c22 0 40 18 40 40v112H70z" fill="none" stroke="#454B54" stroke-width="8"/>
           <g>
             <circle cx="118" cy="170" r="17" fill="#A97238"/><circle cx="118" cy="170" r="6" fill="#8C5F2E"/>
             <circle cx="156" cy="182" r="15" fill="#C89257"/><circle cx="156" cy="182" r="5" fill="#8C5F2E"/>
@@ -650,20 +657,20 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
             <circle cx="140" cy="134" r="14" fill="#C89257"/><circle cx="140" cy="134" r="5" fill="#8C5F2E"/>
             <circle cx="176" cy="128" r="16" fill="#A97238"/><circle cx="176" cy="128" r="5" fill="#8C5F2E"/>
           </g>
-          <path d="M70 208h160" stroke="#EDEAE4" stroke-width="8" stroke-linecap="round"/>
+          <path d="M70 208h160" stroke="#454B54" stroke-width="8" stroke-linecap="round"/>
         </svg>
         <div class="cap"><small>Hogar</small>Leñeros y accesorios</div>
       </div>
 
       <div class="tile rv">
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Rack de TV en hierro y madera">
-          <rect width="300" height="300" fill="#1C1C20"/>
-          <rect x="44" y="40" width="212" height="112" rx="6" fill="#0E0E11" stroke="#3B3B45" stroke-width="7"/>
+          <rect width="300" height="300" fill="#EDEFF3"/>
+          <rect x="44" y="40" width="212" height="112" rx="6" fill="#2A2E34" stroke="#454B54" stroke-width="7"/>
           <rect x="60" y="182" width="180" height="16" rx="3" fill="#A97238"/>
-          <g stroke="#3B3B45" stroke-width="7" stroke-linecap="round">
+          <g stroke="#454B54" stroke-width="7" stroke-linecap="round">
             <path d="M72 198v46M228 198v46M72 226h156"/>
           </g>
-          <rect x="96" y="204" width="46" height="22" rx="3" fill="#565660"/>
+          <rect x="96" y="204" width="46" height="22" rx="3" fill="#7C848E"/>
           <circle cx="200" cy="215" r="9" fill="#E23B2C"/>
         </svg>
         <div class="cap"><small>Living</small>Racks y muebles de TV</div>
@@ -671,9 +678,9 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
 
       <div class="tile rv">
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Reja para ventana">
-          <rect width="300" height="300" fill="#1C1C20"/>
-          <rect x="52" y="52" width="196" height="196" rx="4" fill="none" stroke="#3B3B45" stroke-width="10"/>
-          <g stroke="#565660" stroke-width="7" stroke-linecap="round">
+          <rect width="300" height="300" fill="#EDEFF3"/>
+          <rect x="52" y="52" width="196" height="196" rx="4" fill="none" stroke="#454B54" stroke-width="10"/>
+          <g stroke="#7C848E" stroke-width="7" stroke-linecap="round">
             <path d="M90 60v180M130 60v180M170 60v180M210 60v180M60 150h180"/>
           </g>
           <path d="M52 52h196" stroke="#E23B2C" stroke-width="10" stroke-linecap="round"/>
@@ -683,13 +690,13 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
 
       <div class="tile rv">
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Portón de garaje">
-          <rect width="300" height="300" fill="#1C1C20"/>
+          <rect width="300" height="300" fill="#EDEFF3"/>
           <rect x="36" y="78" width="228" height="150" rx="4" fill="#A97238"/>
           <g stroke="#8C5F2E" stroke-width="5">
             <path d="M74 78v150M112 78v150M150 78v150M188 78v150M226 78v150"/>
           </g>
-          <rect x="36" y="78" width="228" height="150" rx="4" fill="none" stroke="#3B3B45" stroke-width="9"/>
-          <path d="M28 236h244" stroke="#565660" stroke-width="7" stroke-linecap="round"/>
+          <rect x="36" y="78" width="228" height="150" rx="4" fill="none" stroke="#454B54" stroke-width="9"/>
+          <path d="M28 236h244" stroke="#7C848E" stroke-width="7" stroke-linecap="round"/>
           <rect x="196" y="140" width="34" height="9" rx="4" fill="#E23B2C"/>
         </svg>
         <div class="cap"><small>Exterior</small>Portones a medida</div>
@@ -697,14 +704,14 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
 
       <div class="tile rv">
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Estantería de hierro y madera">
-          <rect width="300" height="300" fill="#1C1C20"/>
-          <g stroke="#3B3B45" stroke-width="8" stroke-linecap="round"><path d="M68 52v196M232 52v196"/></g>
+          <rect width="300" height="300" fill="#EDEFF3"/>
+          <g stroke="#454B54" stroke-width="8" stroke-linecap="round"><path d="M68 52v196M232 52v196"/></g>
           <rect x="58" y="94" width="184" height="14" rx="3" fill="#C89257"/>
           <rect x="58" y="154" width="184" height="14" rx="3" fill="#A97238"/>
           <rect x="58" y="214" width="184" height="14" rx="3" fill="#C89257"/>
           <rect x="88" y="62" width="12" height="32" rx="2" fill="#E23B2C"/>
-          <rect x="106" y="70" width="10" height="24" rx="2" fill="#565660"/>
-          <rect x="180" y="124" width="40" height="30" rx="3" fill="#565660"/>
+          <rect x="106" y="70" width="10" height="24" rx="2" fill="#7C848E"/>
+          <rect x="180" y="124" width="40" height="30" rx="3" fill="#7C848E"/>
         </svg>
         <div class="cap"><small>A medida</small>Estanterías y bibliotecas</div>
       </div>
@@ -751,22 +758,22 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
 </section>
 
 <!-- ============================ POR QUÉ ============================ -->
-<section id="nosotros" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="nosotros" style="background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap why">
     <div class="why-art rv">
       <svg viewBox="0 0 400 420" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" aria-label="Taller de herrería y carpintería">
-        <rect width="400" height="420" fill="#1C1C20"/>
-        <rect x="0" y="312" width="400" height="108" fill="#141417"/>
+        <rect width="400" height="420" fill="#EDEFF3"/>
+        <rect x="0" y="312" width="400" height="108" fill="#E2E5EA"/>
         <!-- banco de trabajo -->
         <rect x="46" y="292" width="308" height="20" rx="4" fill="#A97238"/>
-        <g stroke="#3B3B45" stroke-width="9" stroke-linecap="round"><path d="M74 312v56M326 312v56"/></g>
+        <g stroke="#454B54" stroke-width="9" stroke-linecap="round"><path d="M74 312v56M326 312v56"/></g>
         <!-- herramientas colgadas -->
-        <path d="M46 92h308" stroke="#3B3B45" stroke-width="7" stroke-linecap="round"/>
-        <g stroke="#565660" stroke-width="6" fill="none" stroke-linecap="round">
+        <path d="M46 92h308" stroke="#454B54" stroke-width="7" stroke-linecap="round"/>
+        <g stroke="#7C848E" stroke-width="6" fill="none" stroke-linecap="round">
           <path d="M96 92v58M96 150l-14 14M96 150l14 14"/>
-          <path d="M160 92v46"/><rect x="146" y="138" width="28" height="40" rx="4" fill="#565660" stroke="none"/>
-          <path d="M228 92v40"/><path d="M212 132h32v46h-32z" fill="#3B3B45" stroke="none"/>
-          <path d="M296 92v64"/><circle cx="296" cy="170" r="16" stroke="#565660"/>
+          <path d="M160 92v46"/><rect x="146" y="138" width="28" height="40" rx="4" fill="#7C848E" stroke="none"/>
+          <path d="M228 92v40"/><path d="M212 132h32v46h-32z" fill="#454B54" stroke="none"/>
+          <path d="M296 92v64"/><circle cx="296" cy="170" r="16" stroke="#7C848E"/>
         </g>
         <!-- chispas de soldadura -->
         <g stroke="#E23B2C" stroke-width="5" stroke-linecap="round">
@@ -774,7 +781,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
         </g>
         <circle cx="210" cy="228" r="13" fill="#E23B2C" opacity=".85"/>
         <!-- perfiles de hierro apilados -->
-        <g fill="#3B3B45">
+        <g fill="#454B54">
           <rect x="52" y="212" width="66" height="14" rx="3"/>
           <rect x="52" y="232" width="66" height="14" rx="3"/>
           <rect x="52" y="252" width="66" height="14" rx="3"/>
@@ -842,7 +849,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
 </section>
 
 <!-- ============================ COTIZAR ============================ -->
-<section id="cotizar" style="background:var(--surface);border-top:1px solid var(--line)">
+<section id="cotizar" style="background:var(--band);border-top:1px solid var(--line)">
   <div class="wrap quote">
     <div>
       <div class="sec-head rv" style="margin-bottom:26px">
@@ -923,7 +930,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding:clamp(
 </section>
 
 <!-- ============================ FAQ ============================ -->
-<section id="faq" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="faq" style="background:var(--band);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Preguntas frecuentes</span>
